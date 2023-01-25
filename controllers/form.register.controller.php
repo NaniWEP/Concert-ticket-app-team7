@@ -4,7 +4,7 @@
 require 'views/forms/form.register.view.php';
 require 'models/form.model.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if (isset($_SERVER['REQUEST_METHOD']) == 'POST') {
 
     $username = (!empty($_POST['user-name'])) ? $_POST['user-name'] : "No name";
     $email = (!empty($_POST['email'])) ? $_POST['email'] : "No email";
@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     
    
 };
-register( $username,$password,  $email);
+register( $username,$password,$email);
 
 header("Location:");
 
