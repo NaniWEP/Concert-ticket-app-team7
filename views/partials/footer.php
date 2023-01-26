@@ -1,4 +1,4 @@
-<footer class="p-4  sm:p-6 bg-[#202124]">
+<footer class="p-4  sm:p-6 bg-[#202124] w-full">
     <div class="md:flex md:justify-between">
         <div class="mb-6 md:mb-0">
             <a href="https://flowbite.com/" class="flex items-center">

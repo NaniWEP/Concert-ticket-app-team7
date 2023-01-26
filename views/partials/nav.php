@@ -1,4 +1,4 @@
-<nav class=" border-gray-200 dark:bg-gray-900 bg-[#202124]">
+<nav class=" border-gray-200 dark:bg-gray-900 bg-[#202124] w-full">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5 ">
         <a href="https://flowbite.com" class="flex ">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
