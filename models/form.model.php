@@ -1,8 +1,7 @@
 
 <?php
-require 'database/database.php';
 
-function register(string $username, string $password, string  $email ) : bool
+ function register(string $username, string $password, string  $email ) : bool
 {
     global $connection;
     $statement = $connection->prepare("insert into customers (name,email, password) values (:name,:email, :password)");
