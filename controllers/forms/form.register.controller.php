@@ -1,9 +1,12 @@
 
 <?php
+require "database/database.php";
+require "models/form.model.php";
+require 'views/forms/form.register.view.php'; 
 
-require 'views/forms/form.register.view.php';
-require 'models/form.model.php';
-
+if (isset($_POST['submit'])){
+    
+}
 if (isset($_SERVER['REQUEST_METHOD']) == 'POST') {
 
     $username = (!empty($_POST['user-name'])) ? $_POST['user-name'] : "No name";
@@ -18,7 +21,7 @@ if (isset($_SERVER['REQUEST_METHOD']) == 'POST') {
 register($username, $hash, $email);
 
 
-header("Location:");
+header("Location:/");
 
 
 
