@@ -1,3 +1,7 @@
+<?php
+require 'views/partials/head.php';
+?>
+
 <div class="relative flex flex-col justify-center min-h-screen overflow-hidden">
         <div
             class="w-full p-6 m-auto bg-white border-t border-[#B60505] rounded shadow-lg shadow-red-800/50 lg:max-w-md">
@@ -6,16 +10,18 @@
             <form action="" class="mt-6" method="post">
                
                 <div class="mt-4">
-                    <label for="email" class="block text-sm ">Email</label>
-                    <input type="email" name="email"
-                        class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-red-400 focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40">
+                    <label for="email" class="block font-sans ">Email</label>
+                    <input type="email" placeholder="email" name='email'  value='<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>'
+                        class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 <?php if ($colorErrorEmail){ echo "border-red-700";} ?>">                     
+                        <small class="text-red-600"> <?php echo $emailError; ?></small>
                 </div>
                 <div class="mt-4">
-                    <div>
                         <label for="password" class="block font-sans ">Password</label>
-                        <input type="password" name="password"
-                            class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-red-400 focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40">
-                    </div>
+                        <input type="password" placeholder="password" name='password'  value='<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>'
+                            class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 <?php if ($colorErrorPassword){ echo "border-red-700";} ?>"> 
+                            <small class="text-red-600"> <?php echo $passwordError; ?></small>
+                </div>
+                <div class="mt-6">
                     <a href="#" class="font-sans text-gray-600 hover:underline">Forget Password?</a>
                     <div class="mt-6">
                         <button
@@ -28,3 +34,4 @@
                     class="font-medium text-[#B60505] hover:underline">Sign up</a></p>
         </div>
     </div>
+
