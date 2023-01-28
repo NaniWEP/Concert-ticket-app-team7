@@ -3,7 +3,7 @@ require 'views/partials/head.php';
 require 'controllers/forms/login/form.login.controller.validate.php';
 ?>
 
-<div class="relative flex flex-col justify-center min-h-screen overflow-hidden">
+<div class="relative flex flex-col justify-center min-h-screen overflow-hidden w-96">
         <div
             class="w-full p-6 m-auto bg-white border-t border-[#B60505] rounded shadow-lg shadow-red-800/50 lg:max-w-md">
             <h1 class="text-3xl font-semibold text-center text-[#B60505]">LOGO</h1>
@@ -31,7 +31,7 @@ require 'controllers/forms/login/form.login.controller.validate.php';
                         </button>
                     </div>
             </form>
-            <p class="mt-8 text-xs font-light text-center text-gray-700"> Don't have an account? <a href="#"
+            <p class="mt-8 text-xs font-light text-center text-gray-700"> Don't have an account? <a href="/register"
                     class="font-medium text-[#B60505] hover:underline">Sign up</a></p>
         </div>
     </div>

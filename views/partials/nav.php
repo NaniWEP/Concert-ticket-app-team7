@@ -1,3 +1,4 @@
+<?php session_start();  ?>
 <nav class=" border-gray-200 dark:bg-gray-900 bg-[#202124] w-full top-0 sticky z-10">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5 ">
         <a href="https://flowbite.com" class="flex ">
@@ -23,12 +24,21 @@
         <div class="flex items-center">
             
             <a href=""><img src="/assets/cart.png" class="w-10 mr-8" alt=""></a>
-            <!-- <a href=""><img src="/assets/account.png" class="w-8" alt=""></a> -->
+                <?php
+                if(isset($_COOKIE['email']) )
+                {?>
+                    <!-- <a href=""><img src="/assets/account.png" class="w-8" alt=""></a> -->
+                    <a href="controllers/forms/logout/logout.controller.php" class="font-sans text-red-500">logout</a>
+                <?php  
+                }else
+                {?>
+                    <div class="text-red-600 ">
+                        <a href="/login" class="font-sans mr-1">login</a>|
+                        <a href="/register" class="font-sans ">register</a>
+                    </div>
+            <?php         
+                }?>
             
-            <div class="text-red-600 ">
-                <a href="" class="font-sans mr-1">login</a>|
-                <a href="" class="font-sans ">register</a>
-            </div>
         </div>
     </div>
     <div class="max-w-screen-xl px-4 py-3 md:px-6 md:-mr-96">

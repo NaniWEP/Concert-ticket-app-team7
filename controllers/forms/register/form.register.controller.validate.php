@@ -40,6 +40,7 @@ $formValid = true;
         else
         {
                 $userName = $_POST["username"];
+
                 
         }
 
@@ -114,5 +115,3 @@ $formValid = true;
         
     }
     
-
-
