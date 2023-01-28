@@ -8,7 +8,6 @@ CREATE TABLE customers(
   name varchar(255) not null,
   password varchar(255) not null,
   address varchar(255) not null,
-  date_of_birth date not null,
   email varchar(255) not null
 
 );

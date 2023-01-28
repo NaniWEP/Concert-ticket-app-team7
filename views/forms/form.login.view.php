@@ -1,5 +1,6 @@
 <?php
 require 'views/partials/head.php';
+require 'controllers/forms/login/form.login.controller.validate.php';
 ?>
 
 <div class="relative flex flex-col justify-center min-h-screen overflow-hidden">
