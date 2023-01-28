@@ -23,7 +23,12 @@
         <div class="flex items-center">
             
             <a href=""><img src="/assets/cart.png" class="w-10 mr-8" alt=""></a>
-            <a href=""><img src="/assets/account.png" class="w-8" alt=""></a>
+            <!-- <a href=""><img src="/assets/account.png" class="w-8" alt=""></a> -->
+            
+            <div class="text-red-600 ">
+                <a href="" class="font-sans mr-1">login</a>|
+                <a href="" class="font-sans ">register</a>
+            </div>
         </div>
     </div>
     <div class="max-w-screen-xl px-4 py-3 md:px-6 md:-mr-96">
