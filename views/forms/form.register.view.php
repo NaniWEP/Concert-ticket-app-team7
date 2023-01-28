@@ -1,6 +1,6 @@
 <?php  
     require 'views/partials/head.php';
-    require 'controllers/forms/register/form.register.controller.php';
+    require 'controllers/forms/register/form.register.controller.validate.php';
 ?>
 
     <div class="relative flex flex-col justify-center min-h-screen overflow-hidden">
