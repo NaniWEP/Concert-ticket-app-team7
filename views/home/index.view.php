@@ -10,15 +10,15 @@
             <div class=" ml-14">
                 <ul class="flex">
                   <li class="flex-1 ">
-                    <a class="text-center w-40 block border border-[#B60505] rounded py-2 px-4 
+                    <a class="text-center font-sans w-40 block border border-[#B60505] rounded py-2 px-4 
                     bg-[#B60505] hover:bg-red-800 text-white" href="#">Active Item</a>
                   </li>
                   <li class="flex-1">
-                    <a class="text-center ml-10 w-40 block border border-[#B60505] rounded py-2 px-4
+                    <a class="text-center font-sans ml-10 w-40 block border border-[#B60505] rounded py-2 px-4
                      bg-[#B60505] hover:bg-red-800 text-white" href="#">Nav Item</a>
                   </li>
                   <li class=" flex-1 ">
-                    <a class="text-center ml-10 w-40 block border border-[#B60505] rounded py-2 px-4
+                    <a class="text-center font-sans ml-10 w-40 block border border-[#B60505] rounded py-2 px-4
                      bg-[#B60505] hover:bg-red-800 text-white" href="#">Disabled Item</a>
                   </li>
                   <li class="flex-1">
@@ -26,11 +26,11 @@
                      bg-[#B60505] hover:bg-red-800 text-white" href="#">Disabled Item</a>
                   </li>
                   <li class="flex-1">
-                    <a class="text-center ml-10 w-40 block border border-[#B60505] rounded py-2 px-4
+                    <a class="text-center font-sans ml-10 w-40 block border border-[#B60505] rounded py-2 px-4
                      bg-[#B60505] hover:bg-red-800 text-white" href="#">Disabled Item</a>
                   </li>
                   <li class="flex-1">
-                    <a class="text-center ml-10 w-40 block border border-[#B60505] rounded py-2 px-4
+                    <a class="text-center font-sans ml-10 w-40 block border border-[#B60505] rounded py-2 px-4
                      bg-[#B60505] hover:bg-red-800 text-white" href="#">Disabled Item</a>
                   </li>
               </ul>
@@ -45,36 +45,36 @@
                             class="block object-cover object-center h-70 hover:scale-110 transition 
                             duration-300 ease-in-out cursor-pointer" alt="Louvre" />
                             <div id="contant">
-                                <h3>Involation</h3>
-                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                <h3 class="font-sans">Involation</h3>
+                                <p class="font-sans"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                     Nesciunt voluptate voluptates maxime, laudantium assumenda, </p>
                             </div>
                             <div id="btn-detail">
-                                <button id="more-information">more information</button>
-                                <button id="see-ticket">See ticket</button>
+                                <button id="more-information" class="font-sans">more information</button>
+                                <button id="see-ticket" class="font-sans">See ticket</button>
                             </div>
                         </div>
                         <p class="text-black ml-4 font-sans">12/janury/2023</p>
-                        <h1 class="text-black ml-4 font-bold text-xl hover:text-[#B60505]">
-                            mnis dolor accusamus magnam!</h1>
+                        <h1 class="text-black ml-4 font-bold font-sans text-xl mb-4 ">mnis accusamus magnam!</h1>
+
                     </div>
                     <div class="flex flex-wrap w-1/4  hover:shadow-2xl">
                       <div class=" p-2 md:p-4 " id="container-card">
-                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/best-disney-christmas-movies-1637328868.jpg"
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYzJZFS40ZTJhcVaoXxmmCRo2cy5oB37sZOw&usqp=CAU"
                         class="block object-cover object-center  h-70  hover:scale-110 transition duration-300 ease-in-out cursor-pointer" alt="Louvre" />
                         <div id="contant">
-                            <h3>Involation</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            <h3 class="font-sans">Involation</h3>
+                            <p class="font-sans"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                 Nesciunt voluptate voluptates maxime, laudantium assumenda, 
                                 </p>
                         </div>
                         <div id="btn-detail">
-                            <button id="more-information">more information</button>
-                            <button id="see-ticket">See ticket</button>
+                            <button id="more-information" class="font-sans">more information</button>
+                            <button id="see-ticket" class="font-sans">See ticket</button>
                         </div>
                       </div>
                         <p class="text-black ml-4 font-sans">12/janury/2023</p>
-                        <h1 class="text-black ml-4 font-bold text-xl">mnis dolor accusamus magnam!</h1>
+                        <h1 class="text-black ml-4 font-bold font-sans text-xl mb-4 ">mnis accusamus magnam!</h1>
                     </div>
                     <div class="flex flex-wrap w-1/4  hover:shadow-2xl">
                       <div class=" p-2 md:p-4 " id="container-card">
@@ -82,18 +82,18 @@
                           class="block object-cover object-center h-70 hover:scale-110 transition duration-300 
                           ease-in-out cursor-pointer" alt="Louvre" />
                           <div id="contant">
-                            <h3>Involation</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                            <h3 class="font-sans">Involation</h3>
+                            <p class="font-sans"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                                 Nesciunt voluptate voluptates maxime, laudantium assumenda, 
                                 </p>
                           </div>
                           <div id="btn-detail">
-                            <button id="more-information">more information</button>
-                            <button id="see-ticket">See ticket</button>
+                                <button id="more-information" class="font-sans">more information</button>
+                                <button id="see-ticket" class="font-sans">See ticket</button>
                           </div>
                       </div>
-                        <p class="text-black ml-4 font-sans">12/janury/2023</p>
-                        <h1 class="text-black ml-4 font-bold text-xl">mnis dolor accusamus magnam!</h1>
+                      <p class="text-black ml-4 font-sans">12/janury/2023</p>
+                      <h1 class="text-black ml-4 font-bold font-sans text-xl mb-4 ">mnis accusamus magnam!</h1>
                     </div>
                     <div class="flex flex-wrap w-1/4 hover:shadow-2xl">
                         <div class=" p-2 md:p-4 " id="container-card">
@@ -101,18 +101,18 @@
                           class="block object-cover object-center  h-70  hover:scale-110 transition 
                           duration-300 ease-in-out cursor-pointer" alt="Louvre" />
                           <div id="contant">
-                              <h3>Involation</h3>
-                              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                                  Nesciunt voluptate voluptates maxime, laudantium assumenda, 
-                                  </p>
+                            <h3 class="font-sans">Involation</h3>
+                            <p class="font-sans"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Nesciunt voluptate voluptates maxime, laudantium assumenda, 
+                                </p>
                           </div>
                           <div id="btn-detail">
-                              <button id="more-information">more information</button>
-                              <button id="see-ticket">See ticket</button>
+                                <button id="more-information" class="font-sans">more information</button>
+                                <button id="see-ticket" class="font-sans">See ticket</button>
                           </div>
                         </div>
                         <p class="text-black ml-4 font-sans">12/janury/2023</p>
-                        <h1 class="text-black ml-4 font-bold text-xl">mnis dolor accusamus magnam!</h1>
+                        <h1 class="text-black ml-4 font-bold font-sans text-xl mb-4 ">mnis accusamus magnam!</h1>
                     </div>
                   </div>
                 </div>

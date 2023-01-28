@@ -10,4 +10,4 @@
 </head>
 <!-- bg-[url('https://www.behr.com/colorfullybehr/wp-content/uploads/2016/12/iStock-450422439-scaled.jpg')] -->
 <body class=" font-sans ">
-    <div class=" flex flex-wrap m-0">
+    <div class=" flex flex-wrap m-0 ">

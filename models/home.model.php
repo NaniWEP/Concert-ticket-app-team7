@@ -8,3 +8,6 @@ function getUserData() : array
    $statement->execute();
    return $statement->fetchAll();
 }
+?>
+
+
