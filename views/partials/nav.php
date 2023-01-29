@@ -25,10 +25,10 @@
             
             <a href=""><img src="/assets/cart.png" class="w-10 mr-8" alt=""></a>
                 <?php
-                if(isset($_COOKIE['email']) )
+                if(isset($_COOKIE['email']) && isset($_COOKIE['email']))
                 {?>
-                    <!-- <a href=""><img src="/assets/account.png" class="w-8" alt=""></a> -->
                     <a href="controllers/forms/logout/logout.controller.php" class="font-sans text-red-500">logout</a>
+                    <a href=""><img src="/assets/account.png" class="w-8 ml-2" alt=""></a>                    
                 <?php  
                 }else
                 {?>
