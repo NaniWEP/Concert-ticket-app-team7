@@ -1,7 +1,7 @@
 <?php
 
 $hostname = "localhost";
-$database = "join_plush";
+$database = "my_php_project";
 $username = "root";
 $password = "";
 
