@@ -1,6 +1,6 @@
 
 <?php
-
+session_start();
 require "models/form.model.php";
 
 // =========================================================================================
@@ -40,6 +40,7 @@ $formValid = true;
         else
         {
                 $userName = $_POST["username"];
+
                 
         }
 
@@ -114,5 +115,3 @@ $formValid = true;
         
     }
     
-
-

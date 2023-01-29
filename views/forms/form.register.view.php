@@ -1,9 +1,9 @@
 <?php  
     require 'views/partials/head.php';
-    require 'controllers/forms/form.register.controller.php';
+    require 'controllers/forms/register/form.register.controller.validate.php';
 ?>
 
-    <div class="relative flex flex-col justify-center min-h-screen overflow-hidden">
+    <div class="relative flex flex-col justify-center min-h-screen overflow-hidden w-96">
         <div
             class="w-full p-6 m-auto bg-[#f5f5f5] border-t rounded-xl border-[#B60505]  shadow-lg shadow-red-800/50 lg:max-w-md">
             <h1 class="text-3xl font-semibold text-center text-[#B60505]">LOGO</h1>
@@ -19,15 +19,14 @@
                     <input type="email" placeholder="email" name='email'  value='<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>'
                         class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 <?php if ($colorErrorEmail){ echo "border-red-700";} ?>">                     
                         <small class="text-red-600"> <?php echo $emailError; ?></small>
-                    </div>
+                </div>
+
                 
                 <div class="mt-4">
-                    <div>
                         <label for="password" class="block font-sans ">Password</label>
                         <input type="password" placeholder="password" name='password'  value='<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>'
                             class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 <?php if ($colorErrorPassword){ echo "border-red-700";} ?>"> 
                             <small class="text-red-600"> <?php echo $passwordError; ?></small>
-                        </div>
                 </div>
                 <div class="mt-4">
                     <label for="password" class="block font-sans ">Comfirm password</label>
@@ -42,7 +41,7 @@
                     </button>
                 </div>
             </form>
-            <p class="mt-8 text-xs font-light text-center text-gray-700"> Have an account? <a href="#"
+            <p class="mt-8 text-xs font-light text-center text-gray-700"> Have an account? <a href="/login"
                 class="font-medium text-[#B60505] hover:underline">Log in</a></p>
         </div>
     </div>
