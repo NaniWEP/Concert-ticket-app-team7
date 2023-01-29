@@ -1,3 +1,7 @@
+
+<?php
+require 'views/partials/head.php';
+?>
 <section class=" body-font overflow-hidden bg-black text-white" >
           <div class="container px-5 py-24 mx-auto mr-96">
             <div class="lg:w-3/5 ml-24 flex flex-wrap">

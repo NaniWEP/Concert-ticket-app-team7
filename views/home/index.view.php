@@ -41,7 +41,7 @@
                   <div class="flex flex-wrap  ">
                     <div class="flex flex-wrap w-1/4   hover:shadow-2xl">
                         <div class=" p-2 md:p-4 " id="container-card">
-                            <img src="https://static.toiimg.com/photo/87360866.cms?imgsize=491524" 
+                            <img src="assets/moveis/the.giver(1).jfif" 
                             class="block object-cover object-center h-70 hover:scale-110 transition 
                             duration-300 ease-in-out cursor-pointer" alt="Louvre" />
                             <div id="contant">
@@ -50,7 +50,7 @@
                                     Nesciunt voluptate voluptates maxime, laudantium assumenda, </p>
                             </div>
                             <div id="btn-detail">
-                                <button id="more-information" class="font-sans">more information</button>
+                                <button id="more-information" class="font-sans"><a id="more-detail-btn" href="<?php echo "/detail?name=TheGiwer" ?>">more information</a></button>
                                 <button id="see-ticket" class="font-sans">See ticket</button>
                             </div>
                         </div>
@@ -60,7 +60,7 @@
                     </div>
                     <div class="flex flex-wrap w-1/4  hover:shadow-2xl">
                       <div class=" p-2 md:p-4 " id="container-card">
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYzJZFS40ZTJhcVaoXxmmCRo2cy5oB37sZOw&usqp=CAU"
+                        <img src="assets/moveis/san.andreas(2).jfif"
                         class="block object-cover object-center  h-70  hover:scale-110 transition duration-300 ease-in-out cursor-pointer" alt="Louvre" />
                         <div id="contant">
                             <h3 class="font-sans">Involation</h3>
@@ -69,7 +69,7 @@
                                 </p>
                         </div>
                         <div id="btn-detail">
-                            <button id="more-information" class="font-sans">more information</button>
+                            <button id="more-information" class="font-sans"><a id="more-detail-btn" href="<?php echo "/detail?name=SanAndreas" ?>">more information</a></button>
                             <button id="see-ticket" class="font-sans">See ticket</button>
                         </div>
                       </div>
@@ -78,7 +78,7 @@
                     </div>
                     <div class="flex flex-wrap w-1/4  hover:shadow-2xl">
                       <div class=" p-2 md:p-4 " id="container-card">
-                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXSLARqVjDNpkHcMktrNLCmm0tn-i9E_hUBw&usqp=CAU" 
+                          <img src="assets/moveis/venom(3).jfif" 
                           class="block object-cover object-center h-70 hover:scale-110 transition duration-300 
                           ease-in-out cursor-pointer" alt="Louvre" />
                           <div id="contant">
@@ -88,7 +88,7 @@
                                 </p>
                           </div>
                           <div id="btn-detail">
-                                <button id="more-information" class="font-sans">more information</button>
+                                <button id="more-information" class="font-sans"><a id="more-detail-btn" href="<?php echo "/detail?name=Venom" ?>">more information</a></button>
                                 <button id="see-ticket" class="font-sans">See ticket</button>
                           </div>
                       </div>
@@ -97,7 +97,7 @@
                     </div>
                     <div class="flex flex-wrap w-1/4 hover:shadow-2xl">
                         <div class=" p-2 md:p-4 " id="container-card">
-                          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYzJZFS40ZTJhcVaoXxmmCRo2cy5oB37sZOw&usqp=CAU"
+                          <img src="assets/moveis/spider.man(4).jfif"
                           class="block object-cover object-center  h-70  hover:scale-110 transition 
                           duration-300 ease-in-out cursor-pointer" alt="Louvre" />
                           <div id="contant">
@@ -107,7 +107,147 @@
                                 </p>
                           </div>
                           <div id="btn-detail">
-                                <button id="more-information" class="font-sans">more information</button>
+                                <button id="more-information" class="font-sans"><a id="more-detail-btn" href="<?php echo "/detail?name=SpiderMan" ?>">more information</a></button>
+                                <button id="see-ticket" class="font-sans">See ticket</button>
+                          </div>
+                        </div>
+                        <p class="text-black ml-4 font-sans">12/janury/2023</p>
+                        <h1 class="text-black ml-4 font-bold font-sans text-xl mb-4 ">mnis accusamus magnam!</h1>
+                    </div>
+
+                    <div class="flex flex-wrap w-1/4 hover:shadow-2xl">
+                        <div class=" p-2 md:p-4 " id="container-card">
+                          <img src="assets/moveis/divergent(5).jfif"
+                          class="block object-cover object-center  h-70  hover:scale-110 transition 
+                          duration-300 ease-in-out cursor-pointer" alt="Louvre" />
+                          <div id="contant">
+                            <h3 class="font-sans">Involation</h3>
+                            <p class="font-sans"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Nesciunt voluptate voluptates maxime, laudantium assumenda, 
+                                </p>
+                          </div>
+                          <div id="btn-detail">
+                                <button id="more-information" class="font-sans"><a id="more-detail-btn" href="<?php echo "/detail?name=Divergent" ?>">more information</a></button>
+                                <button id="see-ticket" class="font-sans">See ticket</button>
+                          </div>
+                        </div>
+                        <p class="text-black ml-4 font-sans">12/janury/2023</p>
+                        <h1 class="text-black ml-4 font-bold font-sans text-xl mb-4 ">mnis accusamus magnam!</h1>
+                    </div>
+
+                    <div class="flex flex-wrap w-1/4 hover:shadow-2xl">
+                        <div class=" p-2 md:p-4 " id="container-card">
+                          <img src="assets/moveis/john.wick(6).jfif"
+                          class="block object-cover object-center  h-70  hover:scale-110 transition 
+                          duration-300 ease-in-out cursor-pointer" alt="Louvre" />
+                          <div id="contant">
+                            <h3 class="font-sans">Involation</h3>
+                            <p class="font-sans"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Nesciunt voluptate voluptates maxime, laudantium assumenda, 
+                                </p>
+                          </div>
+                          <div id="btn-detail">
+                                <button id="more-information" class="font-sans"><a id="more-detail-btn" href="<?php echo "/detail?name=JohnWick" ?>">more information</a></button>
+                                <button id="see-ticket" class="font-sans">See ticket</button>
+                          </div>
+                        </div>
+                        <p class="text-black ml-4 font-sans">12/janury/2023</p>
+                        <h1 class="text-black ml-4 font-bold font-sans text-xl mb-4 ">mnis accusamus magnam!</h1>
+                    </div>
+
+                    <div class="flex flex-wrap w-1/4 hover:shadow-2xl">
+                        <div class=" p-2 md:p-4 " id="container-card">
+                          <img src="assets/moveis/the.gray.man(7).jfif"
+                          class="block object-cover object-center  h-70  hover:scale-110 transition 
+                          duration-300 ease-in-out cursor-pointer" alt="Louvre" />
+                          <div id="contant">
+                            <h3 class="font-sans">Involation</h3>
+                            <p class="font-sans"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Nesciunt voluptate voluptates maxime, laudantium assumenda, 
+                                </p>
+                          </div>
+                          <div id="btn-detail">
+                                <button id="more-information" class="font-sans"><a id="more-detail-btn" href="<?php echo "/detail?name=TheGrayMan" ?>">more information</a></button>
+                                <button id="see-ticket" class="font-sans">See ticket</button>
+                          </div>
+                        </div>
+                        <p class="text-black ml-4 font-sans">12/janury/2023</p>
+                        <h1 class="text-black ml-4 font-bold font-sans text-xl mb-4 ">mnis accusamus magnam!</h1>
+                    </div>
+
+                    <div class="flex flex-wrap w-1/4 hover:shadow-2xl">
+                        <div class=" p-2 md:p-4 " id="container-card">
+                          <img src="assets/moveis/suicide.squad(8).jfif"
+                          class="block object-cover object-center  h-70  hover:scale-110 transition 
+                          duration-300 ease-in-out cursor-pointer" alt="Louvre" />
+                          <div id="contant">
+                            <h3 class="font-sans">Involation</h3>
+                            <p class="font-sans"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Nesciunt voluptate voluptates maxime, laudantium assumenda, 
+                                </p>
+                          </div>
+                          <div id="btn-detail">
+                                <button id="more-information" class="font-sans"><a id="more-detail-btn" href="<?php echo "/detail?name=SuicideSquad" ?>">more information</a></button>
+                                <button id="see-ticket" class="font-sans">See ticket</button>
+                          </div>
+                        </div>
+                        <p class="text-black ml-4 font-sans">12/janury/2023</p>
+                        <h1 class="text-black ml-4 font-bold font-sans text-xl mb-4 ">mnis accusamus magnam!</h1>
+                    </div>
+
+                    <div class="flex flex-wrap w-1/4 hover:shadow-2xl">
+                        <div class=" p-2 md:p-4 " id="container-card">
+                          <img src="assets/moveis/The.lost.city(9).jfif"
+                          class="block object-cover object-center  h-70  hover:scale-110 transition 
+                          duration-300 ease-in-out cursor-pointer" alt="Louvre" />
+                          <div id="contant">
+                            <h3 class="font-sans">Involation</h3>
+                            <p class="font-sans"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Nesciunt voluptate voluptates maxime, laudantium assumenda, 
+                                </p>
+                          </div>
+                          <div id="btn-detail">
+                                <button id="more-information" class="font-sans"><a id="more-detail-btn" href="<?php echo "/detail?name=TheLostCity" ?>">more information</a></button>
+                                <button id="see-ticket" class="font-sans">See ticket</button>
+                          </div>
+                        </div>
+                        <p class="text-black ml-4 font-sans">12/janury/2023</p>
+                        <h1 class="text-black ml-4 font-bold font-sans text-xl mb-4 ">mnis accusamus magnam!</h1>
+                    </div>
+
+                    <div class="flex flex-wrap w-1/4 hover:shadow-2xl">
+                        <div class=" p-2 md:p-4 " id="container-card">
+                          <img src="assets/moveis/uncharted(10).jfif"
+                          class="block object-cover object-center  h-70  hover:scale-110 transition 
+                          duration-300 ease-in-out cursor-pointer" alt="Louvre" />
+                          <div id="contant">
+                            <h3 class="font-sans">Involation</h3>
+                            <p class="font-sans"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Nesciunt voluptate voluptates maxime, laudantium assumenda, 
+                                </p>
+                          </div>
+                          <div id="btn-detail">
+                                <button id="more-information" class="font-sans"><a id="more-detail-btn" href="<?php echo "/detail?name=Uncharted" ?>">more information</a></button>
+                                <button id="see-ticket" class="font-sans">See ticket</button>
+                          </div>
+                        </div>
+                        <p class="text-black ml-4 font-sans">12/janury/2023</p>
+                        <h1 class="text-black ml-4 font-bold font-sans text-xl mb-4 ">mnis accusamus magnam!</h1>
+                    </div>
+
+                    <div class="flex flex-wrap w-1/4 hover:shadow-2xl">
+                        <div class=" p-2 md:p-4 " id="container-card">
+                          <img src="assets/moveis/samaritan(11).jfif"
+                          class="block object-cover object-center  h-70  hover:scale-110 transition 
+                          duration-300 ease-in-out cursor-pointer" alt="Louvre" />
+                          <div id="contant">
+                            <h3 class="font-sans">Involation</h3>
+                            <p class="font-sans"> Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                                Nesciunt voluptate voluptates maxime, laudantium assumenda, 
+                                </p>
+                          </div>
+                          <div id="btn-detail">
+                                <button id="more-information" class="font-sans"><a id="more-detail-btn" href="<?php echo "/detail?name=Samaritan" ?>">more information</a></button>
                                 <button id="see-ticket" class="font-sans">See ticket</button>
                           </div>
                         </div>
