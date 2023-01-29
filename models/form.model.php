@@ -13,3 +13,11 @@
     ]);
     return $statement->rowCount() > 0;
 }
+
+function getUserData() : array
+{
+    global $connection;
+    $statement = $connection->prepare("select * from customers");
+    $statement->execute();
+    return $statement->fetchAll();
+}
