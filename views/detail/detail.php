@@ -48,7 +48,11 @@ require 'controllers/details/detail.php';
           </div>
 
           <div class="flex justify-center ">
-            <iframe width="1300" height="500" src="https://www.youtube.com/embed/M6YfhX83Cj8" title="65 - Official Trailer - Only In Cinemas March 17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="1300" height="500" src="<?php echo $trailer ?>" title="65 - Official Trailer - Only In Cinemas March 17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <!-- <iframe width="1366" height="768" src="https://www.youtube.com/embed/fH6B4S9ENY4" title="The Giver Official Trailer #1 (2014) - Jeff Bridges, Taylor Swift Movie HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+              
           </div>
         </section>
-      
+        
+
+        <iframe width="727" height="409" src="" title="San Andreas Official Trailer #2 (2015) - Dwayne Johnson Movie HD" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

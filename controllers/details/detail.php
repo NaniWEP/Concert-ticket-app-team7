@@ -10,6 +10,7 @@ $date = '';
 $language = '';
 $subtitle = '';
 $time = '';
+$trailer = '';
 
 
 foreach($datas as $data){
@@ -19,6 +20,7 @@ foreach($datas as $data){
         $language = $data['language'];
         $subtitle = $data['subtitle'];
         $time = $data['minute'];
+        $trailer = $data['trailer'];
 
     }
 }
