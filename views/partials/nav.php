@@ -34,7 +34,8 @@
                 {?>
                     <div class="text-red-600 ">
                         <a href="/login" class="font-sans mr-1">login</a>|
-                        <a href="/register" class="font-sans ">register</a>
+                        <!-- <a href="/register" class="font-sans ">register</a> -->
+                        <a href="views/partials/cards.php" class="font-sans ">register</a>
                     </div>
             <?php         
                 }?>

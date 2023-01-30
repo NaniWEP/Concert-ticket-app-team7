@@ -78,5 +78,6 @@
                 </div>
             </footer>
         </div>
+        <script src = 'views/js/banner.js' ></script>   
     </body>
 </html>

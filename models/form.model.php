@@ -21,3 +21,11 @@ function getUserData() : array
     $statement->execute();
     return $statement->fetchAll();
 }
+
+function getShowData() : array
+{
+   global $connection;
+   $statement = $connection->prepare("select * from movies");
+   $statement->execute();
+   return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
