@@ -6,7 +6,7 @@ $routes = [
     '/register' => 'controllers/forms/register/form.register.controller.php',
     '/login' => 'controllers/forms/login/form.login.controller.php',
     // '/register' => 'controllers/forms/form.controller.php',
-    '/detail' => 'views/detail/detail.php',
+    '/detail' => 'views/detail/detail.view.php',
 
 ];
 

@@ -19,13 +19,13 @@ function getUserData() : array
     global $connection;
     $statement = $connection->prepare("select * from customers");
     $statement->execute();
-    return $statement->fetchAll();
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
 function getShowData() : array
 {
    global $connection;
-   $statement = $connection->prepare("select * from movies");
+   $statement = $connection->prepare("select * from shows");
    $statement->execute();
    return $statement->fetchAll(PDO::FETCH_ASSOC);
 }

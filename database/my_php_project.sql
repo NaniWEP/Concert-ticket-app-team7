@@ -49,7 +49,7 @@ INSERT INTO `customers` (`id`, `name`, `email`, `password`) VALUES
 -- Table structure for table `movies`
 --
 
-CREATE TABLE `movies` (
+CREATE TABLE `shows` (
   `id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL,
   `description` varchar(225) NOT NULL,
@@ -58,25 +58,25 @@ CREATE TABLE `movies` (
   `subtitle` varchar(100) NOT NULL,
   `minute` time NOT NULL,
   `trailer` varchar(200) NOT NULL,
-  'poster' varchar(200) NOT NULL,
+  `poster` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `movies`
 --
 
-INSERT INTO `movies` (`id`, `name`, `description`, `date`, `language`, `subtitle`, `minute`, `trailer`, `poster`) VALUES
-(1, 'The Giver', 'The Giver is a morally driven and interesting story about a young boy called Jonas who lives in a society free of crime and sadness. At the age of 12, children are assigned their jobs, which they will train for and do for the', '2023-10-10', 'English', 'Khmer', '00:00:00', 'https://www.youtube.com/embed/fH6B4S9ENY4', ''),
-(3, 'San Andreas', 'In the aftermath of a massive earthquake in California, a rescue-chopper pilot makes a dangerous journey with his ex-wife across the state in order to rescue his daughter. In San Andreas, California is experiencing a statewid', '2023-05-10', 'English', 'Khmer', '00:00:00', 'https://www.youtube.com/embed/UN1G4BSyIos', ''),
-(4, 'Venom', 'venom, the poisonous secretion of an animal, produced by specialized glands that are often associated with spines, teeth, stings, or other piercing devices. The venom apparatus may be primarily for killing or paralyzing prey ', '2024-08-01', 'Thai', 'English', '02:40:21', 'https://www.youtube.com/embed/dajc5mgIpg0', ''),
-(5, 'Spider Man', 'Superhuman strength, agility, endurance, ability to stick to and climb walls and other surfaces, uses self-designed web-shooters allowing him to fire and swing from sticky webs, special \"Spider-Sense\" warns of incoming danger', '2023-08-10', 'English', 'Khmer', '00:00:00', 'https://www.youtube.com/embed/t06RUxPbp_c', ''),
-(6, 'Divergent', 'moving or extending in different directions from a common point : diverging from each other. divergent paths. see also divergent evolution. : differing from each other or from a standard.', '2023-08-23', 'France ', 'Khmer', '00:00:00', 'https://www.youtube.com/embed/Aw7Eln_xuWc', ''),
-(7, 'John Wick', 'John eventually became the top enforcer for the New York Russian crime syndicate, becoming a feared and ruthless hitman that people describe as \"a man of focus, commitment, and sheer will\". He was later nicknamed \"Baba Yaga\",', '2023-08-10', 'English', 'Khmer', '00:00:00', 'https://www.youtube.com/embed/C0BMx-qxsP4', ''),
-(8, 'The Gray Man', 'When the CIA\ s most skilled operative, whose true identity is known to none, accidentally uncovers dark agency secrets, a psychopathic former colleague puts a bounty on his head, setting off... Read all.', '2023-08-10', 'English', 'Khmer', '01:50:40', 'https://www.youtube.com/embed/BmllggGO4pM', ''),
-(9, 'Suicide Squad', 'In the film, a secret government agency led by Amanda Waller recruits imprisoned supervillains to execute dangerous black ops missions and save the world from a powerful threat in exchange for reduced sentences.', '2023-02-01', 'English', 'English', '00:00:00', 'https://www.youtube.com/embed/CmRih_VtVAs', ''),
-(10, 'The Lost City', 'While on tour promoting her new book with Alan, Loretta gets kidnapped by an eccentric billionaire who hopes she can lead him to an ancient city\ s lost treasure from her latest story. Determined to prove he can be a hero in r', '2023-03-10', 'English', 'Khmer', '03:00:00', 'https://www.youtube.com/embed/xohAPIRNzuo', ''),
-(11, '6 Uncharted', 'It follows a group of people that fake their deaths and decide to form a vigilante team in order to stage a coup d\ état against a ruthless dictator. 6 Underground premiered at The Shed in New York City on December 10, 2019, a', '2023-06-20', 'France', 'Khmer', '00:00:00', 'https://www.youtube.com/embed/eHp3MbsCbMg', ''),
-(12, 'Samaritan', 'The SAMARITAN was once the staunch defender of Granite City. But after an epic battle with his brother and rival, Nemesis, the Samaritan mysteriously disappeared from his life of crime fighting. Sam (Javon \"Wanna\" Walton) ', '2023-04-12', 'English', 'Khmer ', '00:00:00', 'https://www.youtube.com/embed/LgO3O5zokOw', '');
+INSERT INTO `shows` (`id`, `name`, `description`, `date`, `language`, `subtitle`, `minute`, `trailer`, `poster`) VALUES
+(1, 'The Giver', 'The Giver is a morally driven and interesting story about a young boy called Jonas who lives in a society free of crime and sadness. At the age of 12, children are assigned their jobs, which they will train for and do for the', '2023-10-10', 'English', 'Khmer', '00:00:00', 'https://www.youtube.com/embed/fH6B4S9ENY4', 'the.giver(1).jfif'),
+(3, 'San Andreas', 'In the aftermath of a massive earthquake in California, a rescue-chopper pilot makes a dangerous journey with his ex-wife across the state in order to rescue his daughter. In San Andreas, California is experiencing a statewid', '2023-05-10', 'English', 'Khmer', '00:00:00', 'https://www.youtube.com/embed/UN1G4BSyIos', 'san.andreas.jfif'),
+(4, 'Venom', 'venom, the poisonous secretion of an animal, produced by specialized glands that are often associated with spines, teeth, stings, or other piercing devices. The venom apparatus may be primarily for killing or paralyzing prey ', '2024-08-01', 'Thai', 'English', '02:40:21', 'https://www.youtube.com/embed/dajc5mgIpg0', 'venom(3).jfif'),
+(5, 'Spider Man', 'Superhuman strength, agility, endurance, ability to stick to and climb walls and other surfaces, uses self-designed web-shooters allowing him to fire and swing from sticky webs, special \"Spider-Sense\" warns of incoming danger', '2023-08-10', 'English', 'Khmer', '00:00:00', 'https://www.youtube.com/embed/t06RUxPbp_c', 'spider.man(4).jfif'),
+(6, 'Divergent', 'moving or extending in different directions from a common point : diverging from each other. divergent paths. see also divergent evolution. : differing from each other or from a standard.', '2023-08-23', 'France ', 'Khmer', '00:00:00', 'https://www.youtube.com/embed/Aw7Eln_xuWc', 'divergent(5).jfif'),
+(7, 'John Wick', 'John eventually became the top enforcer for the New York Russian crime syndicate, becoming a feared and ruthless hitman that people describe as \"a man of focus, commitment, and sheer will\". He was later nicknamed \"Baba Yaga\",', '2023-08-10', 'English', 'Khmer', '00:00:00', 'https://www.youtube.com/embed/C0BMx-qxsP4', 'john.wick(6).jfif'),
+(8, 'The Gray Man', 'When the CIA\ s most skilled operative, whose true identity is known to none, accidentally uncovers dark agency secrets, a psychopathic former colleague puts a bounty on his head, setting off... Read all.', '2023-08-10', 'English', 'Khmer', '01:50:40', 'https://www.youtube.com/embed/BmllggGO4pM', 'the.gray.man(7).jfif'),
+(9, 'Suicide Squad', 'In the film, a secret government agency led by Amanda Waller recruits imprisoned supervillains to execute dangerous black ops missions and save the world from a powerful threat in exchange for reduced sentences.', '2023-02-01', 'English', 'English', '00:00:00', 'https://www.youtube.com/embed/CmRih_VtVAs', 'suicide.squad(8).jfif'),
+(10, 'The Lost City', 'While on tour promoting her new book with Alan, Loretta gets kidnapped by an eccentric billionaire who hopes she can lead him to an ancient city\ s lost treasure from her latest story. Determined to prove he can be a hero in r', '2023-03-10', 'English', 'Khmer', '03:00:00', 'https://www.youtube.com/embed/xohAPIRNzuo', 'The.lost.city(9).jfif'),
+(11, '6 Uncharted', 'It follows a group of people that fake their deaths and decide to form a vigilante team in order to stage a coup d\ état against a ruthless dictator. 6 Underground premiered at The Shed in New York City on December 10, 2019, a', '2023-06-20', 'France', 'Khmer', '00:00:00', 'https://www.youtube.com/embed/eHp3MbsCbMg', 'uncharted(10).jfif'),
+(12, 'Samaritan', 'The SAMARITAN was once the staunch defender of Granite City. But after an epic battle with his brother and rival, Nemesis, the Samaritan mysteriously disappeared from his life of crime fighting. Sam (Javon \"Wanna\" Walton) ', '2023-04-12', 'English', 'Khmer ', '00:00:00', 'https://www.youtube.com/embed/LgO3O5zokOw', 'samritan(11).jfif');
 
 -- --------------------------------------------------------
 

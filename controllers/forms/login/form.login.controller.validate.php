@@ -69,7 +69,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         $email = $_POST['email'];
         foreach($datas as $data){
-            if ($data['email'] == $email){
+            if ($data['email'] == $email)
+            {
                 $emaillValueCookie = $_POST["email"];
 
             }else{
@@ -87,8 +88,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     elseif (isset($_POST["password"]))
     {
         $password = $_POST['password'];
-        foreach($datas as $data){
-            if ($data['email'] == $email && password_verify( $password,$data['password'])){
+        foreach($datas as $data)
+        {
+            if ($data['email'] == $email && password_verify( $password,$data['password']))
+            {
                 $formValid = true;
                 setcookie ("email",$_POST["email"], time() + 3600);
                 setcookie ("password",$_POST["password"], time() + 3600);
@@ -98,7 +101,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
             }
         }           
     }
-    if($formValid){
+    if($formValid)
+    {
         header("Location:/");
     }
 }
