@@ -1,7 +1,7 @@
 <?php session_start();  ?>
 <nav class=" border-gray-200 dark:bg-gray-900 bg-[#202124] w-full top-0 sticky z-10">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5 ">
-        <a href="https://flowbite.com" class="flex ">
+        <a href="/" class="flex ">
             <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Flowbite Logo" />
             <span class="self-center text-xl font-semibold whitespace-nowrap  dark:text-white text-white font-sans">Flowbite</span>
         </a>
@@ -14,11 +14,10 @@
                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </div>
-            <input type="search" id="default-search" class="block w-96 p-2 pl-10 text-sm text-gray-900  border
-             border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700
-              dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500
-               dark:focus:border-blue-500 font-sans" placeholder="Search..." required>
-            
+            <form action="/" method="get" class="flex flex-row gap-4">
+                <input type="search" name="search" id="default-search" class="block w-96 p-2 pl-10 text-sm text-gray-900  border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 font-sans" placeholder="Search..." required>
+                <button class='bg-red-500 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center'>search</button>    
+            </form>
         </div>
         </div>
         <div class="flex items-center">
@@ -35,7 +34,7 @@
                     <div class="text-red-600 ">
                         <a href="/login" class="font-sans mr-1">login</a>|
                         <!-- <a href="/register" class="font-sans ">register</a> -->
-                        <a href="views/partials/cards.php" class="font-sans ">register</a>
+                        <a href="/register" class="font-sans ">register</a>
                     </div>
             <?php         
                 }?>

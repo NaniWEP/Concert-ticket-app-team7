@@ -1,16 +1,21 @@
 <?php
-require 'models/detail.model.php';
+// require 'models/detail.model.php';
+require 'controllers/searchs/search.controller.php';
 
-$dataInfors = getShowData();
+
+// $dataInfors = getShowData();
 $title = '';
 $description = '';
 $poster = '';
-foreach ($dataInfors as $dataInfor){
+$style = "w-1/3";
+foreach ($showResult as $dataInfor)
+{
+    // print_r ($showResult);
     $title = $dataInfor['name'];
     $description = $dataInfor['description'];
     $poster = $dataInfor['poster'];
 ?>
-    <div class="flex flex-wrap w-1/4 hover:shadow-2xl">
+    <div class="flex flex-wrap w-1/5 hover:shadow-2xl">
         <div class=" p-2 md:p-4 " id="container-card">
             <img src="assets/moveis/<?=$poster?>"
             class="block object-cover object-center  h-70  hover:scale-110 transition 
@@ -21,7 +26,7 @@ foreach ($dataInfors as $dataInfor){
             </div>
             <div id="btn-detail">
                 <button id="more-information" class="font-sans"><a id="more-detail-btn" href="<?php echo "/detail?name=$title&picture=assets/moveis/$poster" ?>">more information</a></button>
-                <button id="see-ticket" class="font-sans">See ticket</button>
+                <button id="see-ticket" class="font-sans bg-red-500">See ticket</button>
             </div>
         </div>
     </div>
