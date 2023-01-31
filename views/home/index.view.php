@@ -6,6 +6,7 @@
         <?php require 'views/partials/banner.php'  ?>
           <!-- small  and card -->
           <div class="flex flex-col items-center justify-center mt-5">
+            
             <!-- small menue -->
             <div class="flex flex-row items-center gap-4 max-w-full">
                 <ul class="flex flex-row items-center gap-8 max-w-full">
@@ -13,11 +14,12 @@
               </ul>
             </div>
             <!-- card -->
-            <section class="overflow-hidden text-gray-700 ">
+            
+            <section class="overflow-hidden max-w-full text-gray-700 ">
+              
                 <div class="container px-5 py-2  lg:pt-12 lg:px-10">
-                  <div class="flex flex-wrap  ">
+                 <h2 class='text-white text-2xl '>Movie</h2>
                     <?php require 'views/partials/cards.php';?>
-                  </div>
                 </div>
             </section>
           </div>

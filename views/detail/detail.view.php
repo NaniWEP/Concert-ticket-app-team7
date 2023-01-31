@@ -48,7 +48,13 @@ require 'controllers/details/detail.controller.php';
           </div>
 
           <div class="flex justify-center ">
-            <iframe width="1300" height="500" src="<?php echo $trailer ?>" title="65 - Official Trailer - Only In Cinemas March 17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>              
+            <iframe width="1000" height="500" src="<?php echo $trailer ?>" title="65 - Official Trailer - Only In Cinemas March 17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>              
           </div>
+          <?php
+            require 'views/partials/footer.php';
+          ?>
         </section>
+
+
+
   

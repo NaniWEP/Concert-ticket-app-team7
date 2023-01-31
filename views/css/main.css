@@ -1,10 +1,12 @@
-*{
+*
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: serif;
+    /* font-family: serif; */
 }
-body{
+body
+{
     /* height: 100vh; */
     display: flex;
     justify-content: center;
@@ -14,18 +16,22 @@ body{
 
 }
 
-#container-card{
+#container-card
+{
     width: 500px;
     position: relative;
     overflow: hidden;
 }
-#container-card:hover img{
+#container-card:hover img
+{
     transform: scale(1.15);
 }
-#container-card img{
+#container-card img
+{
     width: 100%;
 }
-#contant{
+#contant
+{
     background-color: rgba(0,0,0, .7);
     position: absolute;
     top: -100%;
@@ -36,17 +42,20 @@ body{
 
     color: #fff;
 }
-#contant h3{
+#contant h3
+{
     text-align: center;
     font-size: 25px;
     border-bottom: 1px solid #808080;
     padding: 20px 10px;
 }
-#contant p{
+#contant p
+{
     padding: 20px 20px 15px 20px;
 
 }
-#btn-detail{
+#btn-detail
+{
 
     padding: 0 0 15px 60px ;
     position: absolute;
@@ -54,35 +63,46 @@ body{
     display: flex;
     flex-direction: column;
 }
-#btn-detail button{
+#btn-detail button
+{
     margin: 0 0 5px;
     cursor: pointer;
     border-radius: 5px;
     padding: 5px;
 }
-#btn-detail #see-ticket{
+#btn-detail #see-ticket
+{
     
     color: #f5f5f5;
 }
-#btn-detail #more-information{
+#btn-detail #more-information
+{
     
     background:  #f5f5f5;
     color: #060606;
 }
-#btn-detail #see-ticket:hover{
+#btn-detail #see-ticket:hover
+{
     background: rgb(153 27 27);
     
 }
-#btn-detail #more-information:hover{
+#btn-detail #more-information:hover
+{
     background: #060606;
     color: #f5f5f5;
 }
-#container-card:hover #btn-detail{
+#container-card:hover #btn-detail
+{
     bottom: 0;
     cursor: pointer;
 }
-#container-card:hover #contant{
+#container-card:hover #contant 
+{
     top: 0;
 }
 
 
+/* #card 
+{
+    box-shadow: rgba(255, 0, 8, 0.233) 0px 8px 24px, rgba(244, 17, 17, 0.1) 0px 16px 56px, rgba(240, 29, 29, 0.1) 0px 24px 80px;
+} */
