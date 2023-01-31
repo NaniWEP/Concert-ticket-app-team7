@@ -1,7 +1,7 @@
 
 <?php
 require 'views/partials/head.php';
-require 'controllers/details/detail.php';
+require 'controllers/details/detail.controller.php';
 ?>
 <section class=" body-font overflow-hidden bg-black text-white" >
           <div class="container px-5 py-24 mx-auto mr-96">
@@ -38,17 +38,23 @@ require 'controllers/details/detail.php';
                     </svg>
                   </div>
                   <div>
-                    <p>Date  : <?php echo  $date ;?></p>
-                    <p>Minute : <?php echo  $time ;?> s</p>
-                    <p>Language : <?php echo  $language ;?></p> 
-                    <p>Subtitle : <?php echo   $subtitle ;?></p>
+                    <p>Opening Date  : <?php echo  $date ;?></p>
+                    <p>Running Time  : <?php echo  $time ;?> s</p>
+                    <p>Language      : <?php echo  $language ;?></p> 
+                    <p>Subtitle      : <?php echo   $subtitle ;?></p>
                   </div>
                 </div>
             </div>
           </div>
 
           <div class="flex justify-center ">
-            <iframe width="1300" height="500" src="https://www.youtube.com/embed/M6YfhX83Cj8" title="65 - Official Trailer - Only In Cinemas March 17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe width="1000" height="500" src="<?php echo $trailer ?>" title="65 - Official Trailer - Only In Cinemas March 17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>              
           </div>
+          <?php
+            require 'views/partials/footer.php';
+          ?>
         </section>
-      
+
+
+
+  

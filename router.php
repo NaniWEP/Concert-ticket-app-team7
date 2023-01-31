@@ -3,11 +3,10 @@ $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
 
 $routes = [
     '/' => 'controllers/home/index.controller.php',
-    '/register' => 'controllers/forms/form.controller.php',
-    '/project' => '',
-    '/detail' => 'views/detail/detail.php',
     '/register' => 'controllers/forms/register/form.register.controller.php',
     '/login' => 'controllers/forms/login/form.login.controller.php',
+    '/detail' => 'views/detail/detail.view.php',
+
 ];
 
 if (array_key_exists($uri, $routes)) {

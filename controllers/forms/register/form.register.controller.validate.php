@@ -14,7 +14,7 @@ $password ="";
 $comfirmPasswordError = "";
 $comfirmPassword = "";
 $formValid = true;
-
+$datas = getUserData();
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
@@ -54,12 +54,19 @@ $formValid = true;
         {
             $email = $_POST["email"];
             $emailPattern = preg_match('/\\S+@\\S+\\.\\S+/', $email);
+            foreach($datas as $data){
+                if ($data['email'] == $email){
+                    $formValid = false;
+                    $colorErrorEmail  = true;
+                    $emailError = "This email is already in use.";
+                }
             if(!$emailPattern)
             {
                 $emailError = "Please enter a property email";
                 $colorErrorEmail  = true;
                 $formValid = false;
             }
+        }
             
         }
         if (empty($_POST["password"]))
@@ -109,9 +116,12 @@ $formValid = true;
 
         if($formValid)
         {
+            setcookie ("email",$_POST["email"], time() + 3600);
+            setcookie ("password",$_POST["password"], time() + 3600);
             register($userName, $hash, $email);
             header("Location:/");
         }
         
-    }
+    
+}
     
