@@ -1,4 +1,4 @@
-<?php session_start();  ?>
+
 <nav class=" border-gray-200 dark:bg-gray-900 bg-[#202124] w-full top-0 sticky z-10">
     <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl px-4 md:px-6 py-2.5 ">
         <a href="/" class="flex ">
@@ -21,20 +21,46 @@
         </div>
         </div>
         <div class="flex items-center">
-            
             <a href=""><img src="/assets/cart.png" class="w-10 mr-8" alt=""></a>
+            <img src="/assets/account.png" id = "account" class="w-8 cursor-pointer" alt="">
                 <?php
-                if(isset($_COOKIE['email']) && isset($_COOKIE['email']))
+                if(isset($_COOKIE['email']) && isset($_COOKIE['password']))
                 {?>
-                    <a href="controllers/forms/logout/logout.controller.php" class="font-sans text-red-500">logout</a>
-                    <a href=""><img src="/assets/account.png" class="w-8 ml-2" alt=""></a>                    
+                    <div id = "form-dialog" style="display: none" class="  sticky z-20"> 
+                        <dialog open class="bg-black">
+                            <section>
+                                <div  class="flex">
+                                    <i class="fa fa-user-circle mt-1 text-[#B60505]"></i> 
+                                    <a href="#" class="ml-2 hover:text-[#B60505] text-[#f5f5f5] font-sans"> <?= $_COOKIE['username']  ?> </a>
+                                </div>
+                                <div class="flex mt-2">
+                                    <i class="fa fa-sign-in mt-1 text-[#B60505]" aria-hidden="true" ></i> 
+                                    <a href="controllers/forms/logout/logout.controller.php" class="ml-3 hover:text-[#B60505] text-[#f5f5f5] font-sans"> Log out </a>
+                                </div> 
+                            </section>
+                        </dialog>
+                    </div>                  
                 <?php  
                 }else
                 {?>
-                    <div class="text-red-600 ">
-                        <a href="/login" class="font-sans mr-1">login</a>|
-                        <!-- <a href="/register" class="font-sans ">register</a> -->
-                        <a href="/register" class="font-sans ">register</a>
+                    <div id = "form-dialog" style="display: none" class="  sticky z-20"> 
+                        <dialog open class="bg-black">
+                            <section>
+                                
+                                <div  class="flex">
+                                    <i class="fa fa-user-o mt-1 text-[#B60505]"></i> 
+                                    <a href="#" class="ml-3 hover:text-[#B60505] text-[#f5f5f5] font-sans"> Admin </a>
+                                </div>
+                                <div class="flex mt-2">
+                                    <i class="fa fa-sign-in mt-1 text-[#B60505]" aria-hidden="true" ></i> 
+                                    <a href="/login" class="ml-3 hover:text-[#B60505] text-[#f5f5f5] font-sans"> Log in </a>
+                                </div> 
+                                <div class="flex  mt-2  ">
+                                    <i class="fa fa-user-plus mt-1 text-[#B60505]"  aria-hidden="true"></i> 
+                                    <a href="/register " class="ml-2 hover:text-[#B60505] text-[#f5f5f5]  font-sans"> Register  </a>
+                                </div>  
+                            </section>
+                        </dialog>
                     </div>
             <?php         
                 }?>

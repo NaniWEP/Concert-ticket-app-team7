@@ -118,6 +118,7 @@ $datas = getUserData();
         {
             setcookie ("email",$_POST["email"], time() + 3600);
             setcookie ("password",$_POST["password"], time() + 3600);
+            setcookie ("username",$_POST["username"], time() + 3600);
             register($userName, $hash, $email);
             header("Location:/");
         }

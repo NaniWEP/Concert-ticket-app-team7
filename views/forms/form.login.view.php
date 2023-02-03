@@ -6,7 +6,8 @@ require 'controllers/forms/login/form.login.controller.validate.php';
 <div class="relative flex flex-col justify-center min-h-screen overflow-hidden w-96">
         <div
             class="w-full p-6 m-auto bg-white border-t border-[#B60505] rounded shadow-lg shadow-red-800/50 lg:max-w-md">
-            <h1 class="text-3xl font-semibold text-center text-[#B60505]">LOGO</h1>
+            
+            <img src="../../assets/logo.png" class="w-16 ml-32 text-[#B60505]" alt="">
     
             <form action="" class="mt-6" method="post">
                
