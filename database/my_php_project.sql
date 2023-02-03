@@ -115,7 +115,7 @@ ALTER TABLE `customers`
 --
 -- Indexes for table `movies`
 --
-ALTER TABLE `movies`
+ALTER TABLE `shows`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -143,7 +143,7 @@ ALTER TABLE `customers`
 --
 -- AUTO_INCREMENT for table `movies`
 --
-ALTER TABLE `movies`
+ALTER TABLE `shows`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --

@@ -1,12 +1,21 @@
 
+<script>
+
+</script>
+
+
+
 <?php
 session_start();
 require "models/form.model.php";
 
-// =========================================================================================
+
+// ========================================================================================= //
 
 $userNameError ="";
 $userName = "";
+$userDateOfBirthError = "";
+$dateOfBirth = "";
 $emailError = "";
 $email = "";
 $passwordError = "";
@@ -16,12 +25,14 @@ $comfirmPassword = "";
 $formValid = true;
 $datas = getUserData();
 
+
+
     if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
-
+        // validation user name
         if (empty($_POST["username"]))
         {
-            $userNameError = "Please enter a username";
+            $userNameError = "Please enter an username";
             $colorErrorName  = true;
             $formValid = false;
         }
@@ -40,10 +51,18 @@ $datas = getUserData();
         else
         {
                 $userName = $_POST["username"];
-
-                
         }
-
+        // validation user date of birth
+        if (empty($_POST["date-of-birth"]))
+        {
+            $userDateOfBirthError = "Please enter your date of birth";
+            $colorErrorDateOfBirth  = true;
+            $formValid = false; 
+        }else
+        {
+            $dateOfBirth = $_POST["date-of-birth"];
+        }
+        // validation user email
         if (empty($_POST["email"])) 
         {
             $emailError = "Please enter an email";
@@ -84,8 +103,9 @@ $datas = getUserData();
 
             if (!$uppercase || !$lowercase || !$number || strlen($password) < 8 )
              {
-                    $passwordError = "Password should be contain a strong password";
+                    $passwordError = "Password should be contain a strong password: a-z, A-Z, 0-9 and at least 8";
                     $formValid = false;
+                    $colorErrorPasswordComfirm  = true;
             }
         }
         else{
@@ -106,6 +126,7 @@ $datas = getUserData();
 
                 $comfirmPasswordError = "Your password does not match";
                 $formValid = false;
+                $colorErrorComfirm  = true;
             }else 
             {
                 $hash = password_hash($password ,PASSWORD_BCRYPT);
@@ -119,10 +140,8 @@ $datas = getUserData();
             setcookie ("email",$_POST["email"], time() + 3600);
             setcookie ("password",$_POST["password"], time() + 3600);
             setcookie ("username",$_POST["username"], time() + 3600);
-            register($userName, $hash, $email);
+            register($userName, $hash, $email, $dateOfBirth );
             header("Location:/");
         }
-        
-    
 }
     
