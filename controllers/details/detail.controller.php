@@ -6,7 +6,7 @@ require 'models/detail.model.php';
 $movie_name = $_GET['name'];
 $datas = getShowData();
 $description = '';
-$date = '';
+$date_id = '';
 $language = '';
 $subtitle = '';
 $time = '';
@@ -16,16 +16,15 @@ $poster = '';
 
 foreach($datas as $data)
 {
-    if ($movie_name == $data['name']) 
+    if ($movie_name == $data['title']) 
     {
         $description = $data['description'];
-        $date = $data['date'];
+        $date_id = $data['id'];
         $language = $data['language'];
         $subtitle = $data['subtitle'];
-        $time = $data['minute'];
+        $time = $data['running_time'];
         $trailer = $data['trailer'];
-        $poster = $data['poster'];
 
     }
 }
-
+$date_time = getDatetime($date_id);

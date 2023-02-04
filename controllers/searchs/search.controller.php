@@ -21,7 +21,7 @@ if (!empty($_GET['search']))
 $query= 'select * from shows';
 if ($search != '')
 {
-    $query = "select * from shows where name like '%{$search}%'";;
+    $query = "select * from shows where title like '%{$search}%'";;
 }
 
 require 'models/search.model.php';

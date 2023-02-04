@@ -12,9 +12,9 @@ $description = '';
 $poster = '';
 foreach ($showResult as $dataInfor)
 {
-    $title = $dataInfor['name'];
+    $title = $dataInfor['title'];
     $description = $dataInfor['description'];
-    $poster = $dataInfor['poster'];
+    $poster = $dataInfor['img'];
 ?>
  
                     

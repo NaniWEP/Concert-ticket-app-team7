@@ -12,8 +12,9 @@
     <div class="relative flex flex-col justify-center min-h-screen overflow-hidden w-96">
         <div class="w-full p-6 m-auto bg-white border-t border-[#B60505] rounded shadow-lg shadow-red-800/50 lg:max-w-md">
         <div flex flex-col justify-center items-center >
-            <h1 class="text-3xl font-semibold text-center text-[#B60505] ">REGISTER</h1>
             <img src="../../assets/logo.png" class="w-16 ml-32 text-[#B60505]" alt="">
+            <h1 class="text-3xl font-semibold text-center text-[#B60505] ">REGISTER</h1>
+            
         </div>
                         <form action='' class="mt-6" method="post" >
                 <div class="mt-4">
@@ -28,9 +29,9 @@
                         <input type="date" name="date-of-birth" value='<?php echo isset($_POST['date-of-birth']) ? $_POST['date-of-birth'] : ''; ?>' 
                         class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 <?php if ($colorErrorDateOfBirth){ echo "border-[#B60505]";} ?>" placeholder="Select a date" />
                         <small class="text-[#B60505]"> <?php echo $userDateOfBirthError; ?></small>
-                        <button class="datepicker-toggle-button" data-mdb-toggle="datepicker">
+                        <!-- <button class="datepicker-toggle-button" data-mdb-toggle="datepicker">
                         <i class="fas fa-calendar datepicker-toggle-icon"></i>
-                        </button>
+                        </button> -->
                     </div>
                 </div>
                 <div class="mt-4">

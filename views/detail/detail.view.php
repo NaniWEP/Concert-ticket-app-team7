@@ -3,7 +3,9 @@
 require 'views/partials/head.php';
 require 'controllers/details/detail.controller.php';
 ?>
+
 <section class=" body-font overflow-hidden bg-black text-white" >
+
           <div class="container px-5 py-24 mx-auto mr-96">
             <div class="lg:w-3/5 ml-24 flex flex-wrap">
                 <img alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" src="<?php echo $_GET['picture']?>">
@@ -38,8 +40,9 @@ require 'controllers/details/detail.controller.php';
                     </svg>
                   </div>
                   <div>
-                    <p>Opening Date  : <?php echo  $date ;?></p>
-                    <p>Running Time  : <?php echo  $time ;?> s</p>
+                    <p>Opening Date  : <?php echo  $date_time['date'] ;?></p>
+                    <p>Opening time : <?php echo $date_time['time']?> pm</p>
+                    <p>Running Time  : <?php echo  $time ;?> mn</p>
                     <p>Language      : <?php echo  $language ;?></p> 
                     <p>Subtitle      : <?php echo   $subtitle ;?></p>
                   </div>
