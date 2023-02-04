@@ -12,6 +12,7 @@ $password = '';
 $email='';
 $emailError='';
 $datas = getUserData();
+$role_id = '';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
@@ -53,6 +54,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
                 setcookie("username", $data['name'], time() + 3600);
                 setcookie ("email",$_POST["email"], time() + 3600);
                 setcookie ("password",$_POST["password"], time() + 3600);
+                $role_id = $data['role_id'];
             }
             else{
                 $passwordError = "Your password is not correct";
@@ -60,8 +62,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         }           
     }
     if($formValid)
-    {
+    {   
+        if ($role_id == 3){
+            header("Location:/");
+        }
+    elseif($role_id == 2){
         header("Location:/");
+    }
+    elseif($role_id == 1){
+        header("Location:/");    
+    }
     }
 }
 

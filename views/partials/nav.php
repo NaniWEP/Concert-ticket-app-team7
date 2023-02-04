@@ -14,7 +14,7 @@
                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
             </div>
-            <form action="/" method="get" class="flex flex-row gap-4">
+            <form action="" method="get" class="flex flex-row gap-4">
                 <input type="search" name="search" id="default-search" class="block w-96 p-2 pl-10 text-sm text-gray-900  border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 font-sans" value='<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>' placeholder="Search..." required>
                 <button class='bg-red-500 hover:bg-red-800 text-white  py-2 px-4 rounded inline-flex items-center'>search</button>    
             </form>

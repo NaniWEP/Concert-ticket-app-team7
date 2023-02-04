@@ -12,8 +12,6 @@ $subtitle = '';
 $time = '';
 $trailer = '';
 $poster = '';
-
-
 foreach($datas as $data)
 {
     if ($movie_name == $data['title']) 
@@ -24,7 +22,6 @@ foreach($datas as $data)
         $subtitle = $data['subtitle'];
         $time = $data['running_time'];
         $trailer = $data['trailer'];
-
     }
 }
 $date_time = getDatetime($id);

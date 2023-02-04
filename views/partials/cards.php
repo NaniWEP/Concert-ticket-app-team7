@@ -12,9 +12,12 @@ $description = '';
 $poster = '';
 foreach ($showResult as $dataInfor)
 {
-    $title = $dataInfor['title'];
-    $description = $dataInfor['description'];
-    $poster = $dataInfor['img'];
+    if($dataInfor['type_id']==1){
+        $title = $dataInfor['title'];
+        $description = $dataInfor['description'];
+        $poster = $dataInfor['img'];
+    
+    
 ?>
  
                     
@@ -35,6 +38,7 @@ foreach ($showResult as $dataInfor)
         </div>
         
 <?php
+    }
 }
 ?>
 </div>

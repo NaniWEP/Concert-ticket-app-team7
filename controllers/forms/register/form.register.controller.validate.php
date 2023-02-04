@@ -132,7 +132,6 @@ $datas = getUserData();
                 $hash = password_hash($password ,PASSWORD_BCRYPT);
                 
             }
-
         }
 
         if($formValid)
