@@ -26,3 +26,4 @@ foreach($datas as $data)
 }
 $date_time = getDatetime($id);
 $type = type($id);
+require 'views/detail/detail.view.php';

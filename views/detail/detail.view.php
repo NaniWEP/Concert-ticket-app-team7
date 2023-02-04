@@ -1,7 +1,6 @@
 
 <?php
 require 'views/partials/head.php';
-require 'controllers/details/detail.controller.php';
 require 'views/partials/nav.php' 
 
 ?>
