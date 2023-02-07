@@ -6,11 +6,11 @@ require "models/admin.model.php";
 ?>
 <button class=" bg-red-500 text-white rounded-3xl px-2 py-2 mt-20 "><a href="register.php">ADD USER+</a></button> 
     
-    <div class="container w-full flex justify-center mt-10">
-        <div class="flex flex-col ml-20">
+    <div class="container w-full flex justify-center items-center mt-10 ">
+        <div class="flex flex-col ">
             <div class="w-full">
-                <div class="border-b border-gray-200 shadow">
-                    <table class="divide-y divide-gray-300 mr-20">
+                <div class="border-b border-gray-200 shadow " >
+                    <table class="divide-y divide-gray-300 ">
                         <thead class="bg-gray-50 ">
                             <tr>
                                 <th class="px-3 py-2 text-xs text-gray-500 ">
@@ -38,25 +38,25 @@ require "models/admin.model.php";
                             <?php
                             $datas = getShowData();
                             foreach ($datas as $data){
-                                ?>
+                            ?>
                                 <tr class="whitespace-nowrap">
-                                    <td class="px-4 py-3 text-sm text-gray-500">
-                                    <?php echo $data["id"]?>
+                                    <td class="px-4 py-3 text-sm text-gray-500 ">
+                                        <?php echo $data["id"]?>
                                       
                                     </td>
-                                    <td class="px-4 py-3">
-                                        <div class="text-sm text-gray-900 ml-20">
-                                            <?php echo $data["name"]?>
-                                        </div>
+                                    <td class="px-4 py-3 text-sm text-gray-900 flex flex-col items-center">
+                                        <?php echo $data["name"]?>
+
                                     </td>
-                                    <td class="px-4 py-3">
-                                        <div class="text-sm text-gray-500 ml-20"><?php echo $data["email"]?></div>
-                                    </td>
-                                    <td class="px-4 py-3">
-                                        <div class="text-sm text-gray-500"><?php echo $data["password"]?></div>
+                                    <td class="px-4 py-3 text-sm text-gray-500" >
+                                        <?php echo $data["email"]?>
                                     </td>
                                     <td class="px-4 py-3 text-sm text-gray-500">
-                                    <?php echo $data["role_id"]?>
+                                        <?php echo $data["password"]?>
+                                    </td>
+                                    <td class="px-4 py-3 text-sm text-gray-500">
+                                        <?php echo $data["role_id"]?>
+                                    
                                     </td>
                                     <td class="px-4 py-3">
                                        <button><a href="#">
