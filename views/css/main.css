@@ -145,3 +145,7 @@ dialog menu {
     justify-content: flex-end;
     border: none;
 }
+
+#table_row{
+    color: red;
+}
