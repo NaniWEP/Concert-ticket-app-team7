@@ -4,8 +4,7 @@
            global $connection;
            $msg ="";
            if(isset($_POST['upload'])){
-               $target = "assets/moveis/" . basename($_FILES['profile']['name']);
-               
+              $target = "assets/moveis/" . basename($_FILES['profile']['name']); 
                $image = $_FILES['profile']['name'];
 
                $statement=$connection->prepare('insert into shows (title, description, type_id, running_time, language, subtitle, img, trailer )
