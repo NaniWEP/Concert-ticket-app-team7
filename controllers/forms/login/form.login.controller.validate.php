@@ -18,8 +18,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     if(empty($_POST["email"]))
     {
-        $emailError = "Please enter your Eemail";
-        $colorErrorPass  = true;
+        $emailError = "Please enter your email";
+        $colorErrorEmail = true;
         $formValid = false;
     }
     elseif (isset($_POST["email"]))
@@ -29,9 +29,11 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
             if ($data['email'] == $email)
             {
                 $emaillValueCookie = $_POST["email"];
+                $colorErrorEmail = false;
 
             }else{
-                $emailError = "Does not find user's Eemail";
+                $emailError = "Does not find user's email";
+                $colorErrorEmail = true;
             }
         }
         
@@ -39,7 +41,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     if (empty($_POST["password"])) 
     {
         $passwordError = "Please enter your password";
-        $colorErrorPass  = true;
+        $colorErrorPassword = true;
         $formValid = false;
     }
     elseif (isset($_POST["password"]))
@@ -58,6 +60,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
             }
             else{
                 $passwordError = "Your password is not correct";
+                $colorErrorPassword = true;
             }
         }           
     }

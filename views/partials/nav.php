@@ -49,7 +49,7 @@
                                 
                                 <div  class="flex">
                                     <i class="fa fa-user-o mt-1 text-[#B60505]"></i> 
-                                    <a href="#" class="ml-3 hover:text-[#B60505] text-[#f5f5f5] font-sans"> Admin </a>
+                                    <a href="/adminLogin" class="ml-3 hover:text-[#B60505] text-[#f5f5f5] font-sans"> Admin </a>
                                 </div>
                                 <div class="flex mt-2">
                                     <i class="fa fa-sign-in mt-1 text-[#B60505]" aria-hidden="true" ></i> 
