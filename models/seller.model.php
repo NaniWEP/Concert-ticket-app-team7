@@ -24,17 +24,9 @@ function type_show($id) : array
     $statement->execute();
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
-
-function dateShow($id) : array{
-    global $connection;
-    $statement = $connection->prepare(" SELECT date_time.date,date_time.time FROM show_datetime right join date_time on date_time.id = show_datetime.datetime_id where show_id=$id ");
- 
-    $statement->execute();
-    return $statement->fetch();
-}
 //delete shows by id
 function deleteShow($id) {
     global $connection;
-    $statement = $connection->prepare(" delete from shows where id = $id ");
+    $statement = $connection->prepare(" DELETE from shows where id = $id ");
     $statement->execute();
 }
