@@ -1,14 +1,22 @@
 
 <?php
 require 'views/partials/head.php';
-require 'controllers/forms/create.show/form.create.show.controller.php'
+require 'controllers/forms/create.show/form.create.show.controller.validation.php';
+// if(isset($_POST['upload']))
+// {
+//     $image = $_FILES['image']['name'];
+//     $image_tmp_name=$_FILES['image']['tmp_name'];
+//     $image_folder='assets/movies/'. $image;
+//     move_uploaded_file($image_tmp_name, $image_folder);
+// }
 
 ?>
 
 <div class="min-h-screen bg-gray-100 p-0 sm:p-12">
   <div class="mx-auto max-w-md px-6 py-12 bg-white border-0 shadow-lg sm:rounded-3xl">
     <h1 class="text-2xl font-bold mb-8 ml-24">create new show</h1>
-    <form  method="post" >
+    <form action="" method="post">
+    <!-- enctype="multipart/form-data" -->
           <div class="relative z-0 w-full mb-5">
             <input type="text"  name="title" value='<?php echo isset($_POST['title']) ? $_POST['title'] : ''; ?>'
               class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
@@ -64,14 +72,14 @@ require 'controllers/forms/create.show/form.create.show.controller.php'
           </div>
 
           <div class="relative z-0 w-full mb-5">
-            <input type="file" name="profile" accept="*/images" value='<?php echo isset($_POST['profile']) ? $_POST['profile'] : ''; ?>'
+            <input type="file" name="image"  value='<?php echo isset($_POST['image']) ? $_POST['image'] : ''; ?>'
               class="pt-3 pb-2 pr-12 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
             <label for="duration" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">imgShow</label>
             <small class="text-[#B60505]"> <?php echo $imgShowError; ?></small>
           </div>
 
           <div class="relative z-0 w-full mb-5">
-            <input type="file" name="trailer" value='<?php echo isset($_POST['trailer']) ? $_POST['trailer'] : ''; ?>'
+            <input type="text" name="trailer" value='<?php echo isset($_POST['trailer']) ? $_POST['trailer'] : ''; ?>'
               class="pt-3 pb-2 pr-12 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
             <label for="duration" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">trailer</label>
             <small class="text-[#B60505]"> <?php echo $trailerError; ?></small>
