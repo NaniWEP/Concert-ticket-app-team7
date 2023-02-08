@@ -11,5 +11,5 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
-<body class=" font-sans max-w-full bg-black ">
+<body class=" font-sans max-w-full bg-white ">
     <div class=" flex flex-col items-center justify-center w-full m-0 ">

@@ -1,21 +1,15 @@
 
 <?php
 require 'views/partials/head.php';
-require 'controllers/forms/create.show/form.create.show.controller.validation.php';
-// if(isset($_POST['upload']))
-// {
-//     $image = $_FILES['image']['name'];
-//     $image_tmp_name=$_FILES['image']['tmp_name'];
-//     $image_folder='assets/movies/'. $image;
-//     move_uploaded_file($image_tmp_name, $image_folder);
-// }
+require 'controllers/forms/actions/form.create.show.controller.validation.php';
+
 
 ?>
 
 <div class="min-h-screen bg-gray-100 p-0 sm:p-12">
   <div class="mx-auto max-w-md px-6 py-12 bg-white border-0 shadow-lg sm:rounded-3xl">
     <h1 class="text-2xl font-bold mb-8 ml-24">create new show</h1>
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data" >
     <!-- enctype="multipart/form-data" -->
           <div class="relative z-0 w-full mb-5">
             <input type="text"  name="title" value='<?php echo isset($_POST['title']) ? $_POST['title'] : ''; ?>'

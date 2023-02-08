@@ -26,8 +26,18 @@ $timeError = "";
 $time = "";
 $formValid = true;
 
+$image = "";
+$image_tmp_name = "";
+$image_folder = "";
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
+    if(isset($_POST['upload']))
+{
+    $image = $_FILES['image']['name'];
+    $image_tmp_name=$_FILES['image']['tmp_name'];
+    $image_folder='assets/movies/'. $image;
+    move_uploaded_file($image_tmp_name, $image_folder);
+}
         // validation title
         if (empty($_POST["title"]))
         {
@@ -95,15 +105,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 $subtitle = $_POST["subtitle"];
         }
         // validation image
-        if (empty($_POST["image"]))
-        {   
-            $imgShowError = "Please enter img";
+        if ($_FILES['image']['name'] != '')
+        {
+            $imgShow = $_FILES['image']['name'];
+        }else
+        {
+            $imgShowError = "Please choose an image";
             $colorErrorName  = true;
             $formValid = false;
-        }
-        else
-        {
-                $imgShow = $_POST["image"];
         }
         // validation trailer
         if (empty($_POST["trailer"]))
@@ -138,17 +147,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         {
             $time = $_POST["time"];
         }
+        if ((isset($_POST['upload'])))
+        {
+                $image = $_FILES['image']['name'];
+                $image_tmp_name=$_FILES['image']['tmp_name'];
+                $image_folder='assets/movies/'. $image;
+                move_uploaded_file($image_tmp_name, $image_folder);
+                if($formValid)
+                {
+                    
+                    insertDataShow( $title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer);
+                    header("Location:/show");
+                }
+                if($formValid)
+                {
+                    insertDateTime( $date, $time);
+                    header("Location:/");
+                }
+        }
         
-        if($formValid)
-        {
-            insertDataShow( $title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer);
-            header("Location:/show");
-        }
-        if($formValid)
-        {
-            insertDateTime( $date, $time);
-            header("Location:/show");
-        }
 
 }
 

@@ -20,7 +20,7 @@
 
 <?php
 
-function insertDateTime( $date, $time) 
+function insertDateTime(string $date, string $time) : bool
     {
            global $connection;
                $statement=$connection->prepare('insert into date_time (date, time) values ( :date, :time)');

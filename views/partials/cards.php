@@ -23,6 +23,7 @@ foreach ($showResult as $dataInfor)
                     
     <div class="flex flex-wrap hover:shadow-2xl " id="card" >
         <div class=" p-2 md:p-4 " id="container-card">
+            
             <img src="assets/movies/<?=$poster?>"
                 class="block object-cover object-center  h-70  hover:scale-110 transition 
                 duration-300 ease-in-out cursor-pointer" alt="Louvre" />
