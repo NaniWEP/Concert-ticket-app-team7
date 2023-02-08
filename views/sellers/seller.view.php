@@ -1,6 +1,10 @@
 <?php
 require 'views/partials/head.php' ;
 require 'views/partials/nav.php';
+
+if(isset($_GET['showId'])){
+    deleteShow( $_GET['showId']);
+}
 $shows = getShowDataSeller($id['id']);
 ?>
 <div class = ' <?php if ((count($shows))<=0){echo "w-full h-screen";} ?>'>
@@ -84,7 +88,7 @@ $shows = getShowDataSeller($id['id']);
                                         </svg>
                                     </a>
                                 
-                                    <a href="/seller<?php deleteShow( $show['id']);?>" class='px-5 mt-6'>
+                                    <a href="/seller?showId=<?php echo $show['id']?>" class='px-5 mt-6'>
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-400" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
