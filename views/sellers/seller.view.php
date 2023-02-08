@@ -8,7 +8,7 @@ if(isset($_GET['showId'])){
 $shows = getShowDataSeller($id['id']);
 ?>
 <div class = ' <?php if ((count($shows))<=0){echo "w-full h-screen";} ?>'>
-<button class=' mr-auto ml-11 mt-7 text-white bg-red-500 border-0 py-2 px-4 focus:outline-none hover:bg-red-600 rounded'>Create show</button>
+<button class=' mr-auto ml-11 mt-7 text-white bg-red-500 border-0 py-2 px-4 focus:outline-none hover:bg-red-600 rounded'> <a href="/show"> Create show </a></button>
      <div class="container w-6/12 flex justify-center  mt-8 m-auto" >
         <div class="flex flex-col  ">
             <div class="w-full">
