@@ -12,7 +12,7 @@ function getUserId($user_email) : array
 function getShowDataSeller($id) : array
 {
     global $connection;
-    $statement = $connection->prepare("select * from shows right join users on shows.created_id = users.id where users.id = $id ");
+    $statement = $connection->prepare("select img,title,shows.id,trailer,type_id,running_time,language,subtitle from shows left join users on shows.created_id = users.id where users.id = $id ");
     $statement->execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
@@ -25,3 +25,11 @@ function type_show($id) : array
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
 
+
+function dateShow($id) : array{
+    global $connection;
+    $statement = $connection->prepare(" SELECT date_time.date,date_time.time FROM show_datetime right join date_time on date_time.id = show_datetime.datetime_id where show_id=$id ");
+ 
+    $statement->execute();
+    return $statement->fetch();
+ }

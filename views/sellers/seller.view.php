@@ -3,7 +3,6 @@ require 'views/partials/head.php' ;
 require 'views/partials/nav.php';
 
 $shows = getShowDataSeller($id['id']);
-echo (count($shows));
 if ((count($shows))>0){
 
 ?>  <button class=' mr-auto ml-11 mt-7 text-white bg-red-500 border-0 py-2 px-4 focus:outline-none hover:bg-red-600 rounded'>Create show</button>
@@ -47,6 +46,7 @@ if ((count($shows))>0){
                         <tbody class=" divide-y divide-gray-300">
                         <?php
                             foreach ($shows as $show){
+                                echo $show['id'];
                             ?>
                                 <tr class="whitespace-nowrap" id='table'>
                                     <td class="px-2 py-4 text-sm text-gray-500">
@@ -68,7 +68,7 @@ if ((count($shows))>0){
                                     <?php echo $show["running_time"]?>
                                     </td>
                                     <td class="px-6 py-4 text-sm ">
-                                    2023/10/12
+                                    <?php $date = dateShow($show['id']); echo $date['date']?>
                                     </td>
                                     <td class="px-6 py-4 text-sm ">
                                     <?php echo $show["language"]?>
@@ -76,22 +76,22 @@ if ((count($shows))>0){
                                     <td class="px-6 py-4 text-sm ">
                                     <?php echo $show["subtitle"]?>
                                     </td>
-                                    <td class="px-6 py-4">
-                                    <button><a href="#">
+                                    <td class="px-6 py-4 flex ">
+                                    <a href="/seller?action=edit&showId=<?php echo $show['id'];?>" class='px-5 mt-6'>
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-400" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                         </svg>
-                                    </a></button>
+                                    </a>
                                 
-                                <button><a href="#">
+                                    <a href="/seller?action=delete&showId=<?php echo $show['id'];?>" class='px-5 mt-6'>
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-400" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                 d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                                         </svg>
-                                    </a></button>
+                                    </a>
                                 </td>
                             </tr>   
 
