@@ -1,12 +1,11 @@
 
-
 <?php
 
 session_start();
 require "models/form.model.php";
 //====================================================================
 $passwordError = '';
-$formValid = false;
+$formValid = true;
 $userName = '';
 $password = '';
 $email='';
@@ -29,14 +28,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
             if ($data['email'] == $email)
             {
                 $emaillValueCookie = $_POST["email"];
-
             }else{
                 $emailError = "Does not find user's email";
                 $colorErrorEmail  = true;
             }
         }
-        
     }
+    
     if (empty($_POST["password"])) 
     {
         $passwordError = "Please enter your password";
@@ -51,25 +49,27 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
             if ($data['email'] == $email && password_verify( $password,$data['password']))
             {
-                $formValid = true;
-                setcookie("username", $data['name'], time() + 3600);
-                setcookie ("email",$_POST["email"], time() + 3600);
-                setcookie ("password",$_POST["password"], time() + 3600);
+                
                 $role_id = $data['role_id'];
             }
             else{
                 $passwordError = "Your password is not correct";
+                $formValid = false;
                 $colorErrorPassword  = true;
             }
         }           
     }
     if($formValid)
     {   
-        if ($role_id == 3){
+        if ($role_id == 1){
             header("Location:/");
+        }elseif($role_id == 2){
+            header("Location:/");
+        }if($role_id == 2 || $role_id == 1)
+        {
+            setcookie ("adminEmail",$_POST["email"], time() + 3600);
+            setcookie ("adminPassword",$_POST["password"], time() + 3600);
         }
     }
+
 }
-
-
-

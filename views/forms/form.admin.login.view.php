@@ -1,6 +1,6 @@
 <?php
   require 'views/partials/head.php';
-  require 'controllers/forms/login/form.login.controller.validate.php';
+  require 'controllers/forms/login.admin/form.admin.login.controller.validation.php';
 ?>
  <div class="flex w-full pl-6 pt-6">
         <a href="/" class="text-white " >
@@ -19,7 +19,7 @@
                 <div class="w-full">
                     <img src="../../assets/logo.png" class="w-16 ml-36 text-[#B60505]" alt="">
                     <h1 class="mb-4 text-2xl font-bold text-center text-gray-700">
-                        Admin
+                        Admin / Seller
                     </h1>
                     <form action="#" method="post">
                         <div>
