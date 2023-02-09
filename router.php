@@ -7,7 +7,8 @@ $routes = [
     '/login' => 'controllers/forms/login/form.login.controller.php',
     '/detail' => 'views/detail/detail.view.php',
     '/adminLogin' => 'views/forms/form.admin.login.view.php',
-    '/admin' => 'views/admin/admin.view.php'
+    '/admin' => 'views/admin/admin.view.php',
+    '/adduser' => 'controllers/admin/admin.adduser.controller.php'
 
 ];
 

@@ -1,3 +1,8 @@
+<?php
+require 'views/partials/head.php';
+// require 'controllers/add_user/admin.adduser.validation.php';
+?>
+
 
 <div class="relative flex flex-col justify-center min-h-screen overflow-hidden w-full ">
         <div
