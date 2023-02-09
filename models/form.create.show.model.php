@@ -19,7 +19,6 @@
 ?>
 
 <?php
-
 function insertDateTime(string $date, string $time) : bool
     {
            global $connection;
@@ -27,7 +26,36 @@ function insertDateTime(string $date, string $time) : bool
                $statement->execute([
                    ':date' => $date,
                    ':time' => $time,
+               ]);
+            return $statement->rowCount() > 0;
+    }
+?>
+
+<?php
+
+function insertShowDateTime(int $show_id, int $datetime_id) : bool
+    {
+           global $connection;
+               $statement=$connection->prepare('insert into show_datetime (show_id, datetime_id) values ( :showid, :datetimeid)');
+               $statement->execute([
+                   ':showid' => $show_id,
+                   ':datetimeid' => $datetime_id,
 
                ]);
             return $statement->rowCount() > 0;
     }
+?>
+
+
+<?php
+function getDateTimeData() : array
+{
+    global $connection;
+    $statement = $connection->prepare("select * from date_time");
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+?>
+
+

@@ -1,7 +1,7 @@
 <?php 
 require 'models/form.create.show.model.php';
-// require 'views/forms/form.create.show.view.php';
 
+require 'models/detail.model.php';
 // ========================================================================================= //
 
 $titleError ="";
@@ -25,19 +25,23 @@ $date = "";
 $timeError = "";
 $time = "";
 $formValid = true;
-
+$showId ='';
+$dateTimeId = "";
 $image = "";
 $image_tmp_name = "";
 $image_folder = "";
+$countFormvalid =0;
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
-    if(isset($_POST['upload']))
-{
-    $image = $_FILES['image']['name'];
-    $image_tmp_name=$_FILES['image']['tmp_name'];
-    $image_folder='assets/movies/'. $image;
-    move_uploaded_file($image_tmp_name, $image_folder);
-}
+        if(isset($_POST['upload']))
+        {
+            $image = $_FILES['image']['name'];
+            $image_tmp_name=$_FILES['image']['tmp_name'];
+            $image_folder='assets/movies/'. $image;
+            move_uploaded_file($image_tmp_name, $image_folder);
+        }
+               
         // validation title
         if (empty($_POST["title"]))
         {
@@ -155,13 +159,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 move_uploaded_file($image_tmp_name, $image_folder);
                 if($formValid)
                 {
-                    
                     insertDataShow( $title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer);
-                    header("Location:/show");
+                    $allDataShows = getShowData();
+                    foreach($allDataShows as $allDataShow){
+                        $showId = $allDataShow['id'];
+                    }
+                    $countFormvalid += 1;
                 }
                 if($formValid)
                 {
                     insertDateTime( $date, $time);
+                    $allDataDatetimes = getDateTimeData();
+                    foreach($allDataDatetimes as $allDataDatetime){
+                        $dateTimeId = $allDataDatetime['id'];
+                    }
+                    
+                    $countFormvalid +=1;
+                }
+                if($countFormvalid == 2){
+                    insertShowDateTime($showId,  $dateTimeId);
                     header("Location:/");
                 }
         }

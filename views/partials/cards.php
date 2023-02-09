@@ -1,5 +1,4 @@
 <?php
-// require 'models/detail.model.php';
 require 'controllers/searchs/search.controller.php';
 
 ?>

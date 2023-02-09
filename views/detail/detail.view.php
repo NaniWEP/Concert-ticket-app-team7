@@ -2,7 +2,7 @@
 <?php
 require 'views/partials/head.php';
 require 'controllers/details/detail.controller.php';
-require 'views/partials/nav.php' 
+require 'views/partials/nav.php' ;
 
 ?>
 <section class=" body-font overflow-hidden bg-black text-white" >
