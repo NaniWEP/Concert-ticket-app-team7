@@ -4,7 +4,7 @@ require '../partials/nav.php' ;
 require "models/admin.model.php";
 
 ?>
-<button class=" bg-red-500 text-white rounded-3xl px-2 py-2 mt-20 "><a href="register.php">ADD USER+</a></button> 
+<button class=" bg-red-500 text-white rounded-3xl px-2 py-2 mt-20 "><a href="/adduser">ADD USER+</a></button> 
     
     <div class="container w-full flex justify-center items-center mt-10 ">
         <div class="flex flex-col ">
