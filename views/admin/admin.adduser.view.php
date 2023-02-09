@@ -1,9 +1,7 @@
 <?php
 require 'views/partials/head.php';
-// require 'controllers/add_user/admin.adduser.validation.php';
+require 'controllers/admin/admin.adduser.validation.php';
 ?>
-
-
 <div class="relative flex flex-col justify-center min-h-screen overflow-hidden w-full ">
         <div
             class="w-full text-black  p-6 m-auto bg-[#f5f5f5] border-t rounded-xl border-[#B60505]  shadow-lg shadow-red-800/50 lg:max-w-md  ">
