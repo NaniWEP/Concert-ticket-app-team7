@@ -1,7 +1,7 @@
 
 <?php
 require 'views/partials/head.php';
-require 'controllers/forms/create.show/form.create.show.controller.php'
+require 'controllers/forms/actions/form.create.show.controller.php'
 
 ?>
 
@@ -10,10 +10,10 @@ require 'controllers/forms/create.show/form.create.show.controller.php'
     <h1 class="text-2xl font-bold mb-8 ml-24">create new show</h1>
     <form  method="post" >
           <div class="relative z-0 w-full mb-5">
-            <input type="text"  name="title" value='<?php echo isset($_POST['title']) ? $_POST['title'] : ''; ?>'
+            <input type="text"  name="title" value='<?php if(isset($_GET['showId'])){echo $edit_show['title'];}else{ echo isset($_POST['title']) ? $_POST['title'] : '';} ?>'
               class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
             <label for="title" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter title</label>
-            <small class="text-[#B60505]"> <?php echo $titleError; ?></small>
+            <small class="text-[#B60505]"> <?php echo $titleError; ?></small> 
           </div>
         <div class="flex space-x-4">
             <div class="relative z-0 w-full mb-5">

@@ -38,3 +38,4 @@ function getshowbyId($id) : array
     $statement->execute();
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
+

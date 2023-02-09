@@ -1,6 +1,7 @@
 <?php 
 require 'models/form.create.show.model.php';
 // require 'views/forms/form.create.show.view.php';
+require 'models/seller.model.php';
 
 // ========================================================================================= //
 
@@ -25,8 +26,9 @@ $date = "";
 $timeError = "";
 $time = "";
 $formValid = true;
-// $datas = getUserData();
 
+
+// $datas = getUserData();
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
@@ -153,4 +155,9 @@ $formValid = true;
             header("Location:/show");
         }
 }
-    
+ 
+
+
+//======================================================================//
+// $edit_show = ' ';
+

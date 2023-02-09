@@ -80,7 +80,7 @@ $shows = getShowDataSeller($id['id']);
                                     <?php echo $show["subtitle"]?>
                                     </td>
                                     <td class="px-6 py-4 flex ">
-                                    <a href="/seller?action=edit&showId=<?php echo $show['id'];?>" class='px-5 mt-6'>
+                                    <a href="/show?action=edit&showId=<?php echo $show['id'];?>" class='px-5 mt-6'>
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-400" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"

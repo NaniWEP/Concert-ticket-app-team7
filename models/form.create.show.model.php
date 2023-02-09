@@ -44,3 +44,4 @@ function insertDateTime( $date, $time) : bool
                ]);
             return $statement->rowCount() > 0;
 }
+
