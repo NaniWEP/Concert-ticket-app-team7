@@ -50,14 +50,113 @@ require 'views/partials/nav.php'
         </div>
     </div>
   </div>
-
   <div class="flex justify-center ">
     <iframe width="1150" height="500" src="<?php echo $trailer ?>" title="65 - Official Trailer - Only In Cinemas March 17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>              
+  </div>
+  <div class="bg-gray-200 border-l-[12px] border-[#B60505] m-10 p-10 flex mr-20 rounded-lg ">
+    <div  class="mr-20">
+      <div class="text-black text-lg hover:border-b-[3px] border-[#B60505] ">Today</div>
+      <div class="text-black text-lg ">6</div>
+      <div class="text-black text-lg">FEB</div>
+    </div>
+    <div class="mr-20">
+      <div class="text-black text-lg hover:border-b-[3px] border-[#B60505]">Today</div>
+      <div class="text-black text-lg">6</div>
+      <div class="text-black text-lg">FEB</div>
+    </div>
+    <div class="mr-20">
+      <div class="text-black text-lg hover:border-b-[3px] border-[#B60505]">Today</div>
+      <div class="text-black text-lg">6</div>
+      <div class="text-black text-lg">FEB</div>
+    </div>
+  </div>
+  <div class="container mx-auto px-20">
+      <div class="flex flex-col w-full" style="cursor: auto;">
+        <div class="grid gap-36 gap-y-10 grid-cols-1 sm:grid-cols-2 my-2  w-full">
+          <div class="metric-card  bg-slate-700  rounded-lg p-4 max-w-72 w-full " style="cursor: auto;">
+              <div class="w-12">
+                  <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:q-80/et00008457-phkwxjxyys-portrait.jpg" alt="">
+              </div>
+              <div class="text-white ">BestMount  ainT2020</div>
+              <div class="py-13">
+                  <div class="flex flex-wrap justify-center gap-4 p-4 ">
+                    <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
+                      15:25
+                      </div>
+                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
+                      20:20
+                    </div>
+                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white   text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
+                      15:02
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="metric-card bg-slate-700 rounded-lg p-4 max-w-72 w-full" style="cursor: auto;">
+              <div class="w-12">
+                  <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:q-80/et00008457-phkwxjxyys-portrait.jpg" alt="">
+              </div>
+              <div class="text-white ">BestMount  ainT2020</div>
+              <div class=" py-13">
+                  <div class="flex flex-wrap justify-center gap-4 p-4 ">
+                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
+                      14:12
+                    </div>
+                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
+                      16:40
+                     </div>
+                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
+                      13:50
+                    </div>
+                  </div>
+              </div>
+          </div>
+          <div class="metric-card bg-slate-700  rounded-lg p-4 max-w-72 w-full" style="cursor: auto;">
+              <div class="w-12">
+                  <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:q-80/et00008457-phkwxjxyys-portrait.jpg" alt="">
+              </div>
+              <div class="text-white ">BestMount  ainT2020</div>
+              <div class=" py-13">
+                  <div class="flex flex-wrap justify-center gap-4 p-4 ">
+                      <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
+                        18:20
+                      </div>
+                      <div class="border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
+                        20:10
+                      </div>
+                      <div class="border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
+                        17:08
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="metric-card bg-slate-700   rounded-lg p-4 max-w-72 w-full" style="cursor: auto;">
+              <div class="w-12 flex ">
+                  <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:q-80/et00008457-phkwxjxyys-portrait.jpg" alt="">
+              </div>
+              <div class="text-white ">BestMount  ainT2020</div>
+              <div class=" py-13">
+                  <div class="flex flex-wrap justify-center gap-4 p-4 ">
+                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
+                      12:32
+                    </div>
+                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
+                      23:22
+                    </div>
+                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
+                      15:40
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+      </div>
   </div>
   <?php
     require 'views/partials/footer.php';
   ?>
 </section>
+
 
 
 
