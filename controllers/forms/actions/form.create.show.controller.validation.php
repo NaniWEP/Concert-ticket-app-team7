@@ -1,7 +1,9 @@
 <?php 
 require 'models/form.create.show.model.php';
-
 require 'models/detail.model.php';
+// require 'models/seller.model.php';
+// $user_email = $_COOKIE['email'] ;
+// $sellerId = getUserId($user_email);
 // ========================================================================================= //
 
 $titleError ="";
@@ -9,7 +11,7 @@ $title = "";
 $descriptionError = "";
 $description = "";
 $typeIdError = "";
-$typeId = '"';
+$typeId = "";
 $runningTimeError = "";
 $runningTime = "";
 $languageError = "";
@@ -22,15 +24,20 @@ $trailerError = "";
 $trailer = "";
 $dateError = "";
 $date = "";
+$nameVenueError = "";
+$nameVenue = "";
+$addressError = "";
+$address = "";
 $timeError = "";
 $time = "";
 $formValid = true;
-$showId ='';
+$showId = "";
 $dateTimeId = "";
 $image = "";
 $image_tmp_name = "";
 $image_folder = "";
 $countFormvalid =0;
+
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {
@@ -151,6 +158,31 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         {
             $time = $_POST["time"];
         }
+
+        // validation name venue
+        if (empty($_POST["name-venue"]))
+        {
+            $nameVenueError = "Please enter name venue";
+            $colorErrorName  = true;
+            $formValid = false;
+        }
+        else
+        {
+            $nameVenue = $_POST["name-venue"];
+        }
+
+        // validation time
+        if (empty($_POST["address"]))
+        {
+            $addressError = "Please enter address";
+            $colorErrorName  = true;
+            $formValid = false;
+        }
+        else
+        {
+            $address = $_POST["address"];
+        }
+
         if ((isset($_POST['upload'])))
         {
                 $image = $_FILES['image']['name'];
@@ -159,7 +191,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 move_uploaded_file($image_tmp_name, $image_folder);
                 if($formValid)
                 {
-                    insertDataShow( $title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer);
+                    insertDataShow( $title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer, 8 );
                     $allDataShows = getShowData();
                     foreach($allDataShows as $allDataShow){
                         $showId = $allDataShow['id'];
@@ -178,10 +210,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 }
                 if($countFormvalid == 2){
                     insertShowDateTime($showId,  $dateTimeId);
-                    header("Location:/");
+                    header("Location:/seller");
                 }
+                
         }
-        
-
 }
 

@@ -67,10 +67,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
             header("Location:/");
         }
     elseif($role_id == 2){
-        header("Location:/");
+        header("Location:/seller");
     }
     elseif($role_id == 1){
-        header("Location:/");    
+        header("Location:/admin");    
     }
     }
 }

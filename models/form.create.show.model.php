@@ -1,9 +1,9 @@
 <?php 
-	function insertDataShow(string $title, string $description, int $type_id, int $running_time, string $language, string $subtitle, string $img, string  $trailer) : bool
+	function insertDataShow(string $title, string $description, int $type_id, int $running_time, string $language, string $subtitle, string $img, string  $trailer, int $created_id) : bool
     {
            global $connection;
-               $statement=$connection->prepare('insert into shows (title, description, type_id, running_time, language, subtitle, img, trailer )
-               values (:title, :description, :type_id, :running_time, :language, :subtitle, :image, :trailer )');
+               $statement=$connection->prepare('insert into shows (title, description, type_id, running_time, language, subtitle, img, trailer, created_id )
+               values (:title, :description, :type_id, :running_time, :language, :subtitle, :image, :trailer, :created_id )');
                $statement->execute([
                    ':title' => $title,
                    ':description' => $description,
@@ -13,6 +13,7 @@
                    ':subtitle' => $subtitle,
                    ':image' => $img,
                    ':trailer' => $trailer,
+                   ':created_id' => $created_id,
                ]);
             return $statement->rowCount() > 0;
     }
@@ -32,6 +33,19 @@ function insertDateTime(string $date, string $time) : bool
 ?>
 
 <?php
+// function insertDataVenue(string $name, string $address) : bool
+//     {
+//            global $connection;
+//                $statement=$connection->prepare('insert into venues (name, address) values ( :name, :address)');
+//                $statement->execute([
+//                    ':name' => $name,
+//                    ':address' => $address,
+//                ]);
+//             return $statement->rowCount() > 0;
+//     }
+?>
+
+<?php
 
 function insertShowDateTime(int $show_id, int $datetime_id) : bool
     {
@@ -44,8 +58,8 @@ function insertShowDateTime(int $show_id, int $datetime_id) : bool
                ]);
             return $statement->rowCount() > 0;
     }
-?>
 
+?>
 
 <?php
 function getDateTimeData() : array
@@ -55,7 +69,19 @@ function getDateTimeData() : array
     $statement->execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
-
 ?>
+
+<?php
+function getDataVenue() : array
+{
+    global $connection;
+    $statement = $connection->prepare("select * from venues");
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+
+
 
 
