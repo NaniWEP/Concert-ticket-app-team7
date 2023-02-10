@@ -8,6 +8,7 @@ $routes = [
     '/detail' => 'views/detail/detail.view.php',
     '/show' => 'views/forms/form.create.show.view.php',
     '/seller' => 'controllers/sellers/seller.controller.php',
+    '/edit' =>'controllers/forms/actions/form.edit.show.controller.php',
 
 ];
 

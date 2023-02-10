@@ -1,6 +1,5 @@
 
 <?php
-
 require 'models/detail.model.php';
 
 $movie_name = $_GET['name'];

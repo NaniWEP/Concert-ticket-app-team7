@@ -1,14 +1,9 @@
 <?php 
-	function insertDataShow(string $title, string $description, int $type_id, int $running_time, string $language, string $subtitle, string $img, string  $trailer) : bool
+	function insertDataShow(string $title, string $description, int $type_id, int $running_time, string $language, string $subtitle, string $img, string  $trailer, int $created_id) : bool
     {
            global $connection;
-           $msg ="";
-           if(isset($_POST['upload'])){
-              $target = "assets/moveis/" . basename($_FILES['profile']['name']); 
-               $image = $_FILES['profile']['name'];
-
-               $statement=$connection->prepare('insert into shows (title, description, type_id, running_time, language, subtitle, img, trailer )
-               values (:title, :description, :type_id, :running_time, :language, :subtitle, :image, :trailer )');
+               $statement=$connection->prepare('insert into shows (title, description, type_id, running_time, language, subtitle, img, trailer,created_id )
+               values (:title, :description, :type_id, :running_time, :language, :subtitle, :image, :trailer,:created_id )');
                $statement->execute([
                    ':title' => $title,
                    ':description' => $description,
@@ -18,30 +13,50 @@
                    ':subtitle' => $subtitle,
                    ':image' => $img,
                    ':trailer' => $trailer,
+                   ':created_id'=> $created_id
                ]);
-               if(move_uploaded_file($_FILES['profile']['tmp_name'], $target)){
-                    echo $target;
-                    $msg ="image upload successfully";
-                }
-                else{
-                    $msg ="image upload is have problem";
-                }
-           }
             return $statement->rowCount() > 0;
     }
 ?>
 
 <?php
-
-function insertDateTime( $date, $time) : bool
+function insertDateTime(string $date, string $time) : bool
     {
            global $connection;
                $statement=$connection->prepare('insert into date_time (date, time) values ( :date, :time)');
                $statement->execute([
                    ':date' => $date,
                    ':time' => $time,
+               ]);
+            return $statement->rowCount() > 0;
+    }
+?>
+
+<?php
+
+function insertShowDateTime(int $show_id, int $datetime_id) : bool
+    {
+           global $connection;
+               $statement=$connection->prepare('insert into show_datetime (show_id, datetime_id) values ( :showid, :datetimeid)');
+               $statement->execute([
+                   ':showid' => $show_id,
+                   ':datetimeid' => $datetime_id,
 
                ]);
             return $statement->rowCount() > 0;
+
 }
 
+?>
+
+
+<?php
+function getDateTimeData() : array
+{
+    global $connection;
+    $statement = $connection->prepare("select * from date_time");
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+?>

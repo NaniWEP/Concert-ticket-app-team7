@@ -53,7 +53,7 @@ $shows = getShowDataSeller($id['id']);
                             ?>
                                 <tr class="whitespace-nowrap" id='table'>
                                     <td class="px-2 py-4 text-sm text-gray-500">
-                                    <img src="assets/moveis/<?php echo $show["img"]?>" alt=""> 
+                                    <img src="assets/movies/<?php echo $show["img"]?>" alt=""> 
                                       
                                     </td>
                                     <td class="px-4 py-4">
@@ -80,7 +80,7 @@ $shows = getShowDataSeller($id['id']);
                                     <?php echo $show["subtitle"]?>
                                     </td>
                                     <td class="px-6 py-4 flex ">
-                                    <a href="/show?action=edit&showId=<?php echo $show['id'];?>" class='px-5 mt-6'>
+                                    <a href="/edit?action=edit&showId=<?php echo $show['id'];?>&type=<?php echo $show['type_id'];?>" class='px-5 mt-6'>
                                         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-400" fill="none"
                                             viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
