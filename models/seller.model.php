@@ -1,6 +1,7 @@
 <?php
 $user_email = $_COOKIE['email'] ;
 $id = getUserId($user_email);
+// $sellerId = $id ;
 function getUserId($user_email) : array
 {
     global $connection;

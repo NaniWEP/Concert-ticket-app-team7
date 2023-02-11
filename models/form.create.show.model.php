@@ -2,8 +2,8 @@
 	function insertDataShow(string $title, string $description, int $type_id, int $running_time, string $language, string $subtitle, string $img, string  $trailer, int $created_id) : bool
     {
            global $connection;
-               $statement=$connection->prepare('insert into shows (title, description, type_id, running_time, language, subtitle, img, trailer,created_id )
-               values (:title, :description, :type_id, :running_time, :language, :subtitle, :image, :trailer,:created_id )');
+               $statement=$connection->prepare('insert into shows (title, description, type_id, running_time, language, subtitle, img, trailer, created_id )
+               values (:title, :description, :type_id, :running_time, :language, :subtitle, :image, :trailer, :created_id )');
                $statement->execute([
                    ':title' => $title,
                    ':description' => $description,
@@ -13,13 +13,11 @@
                    ':subtitle' => $subtitle,
                    ':image' => $img,
                    ':trailer' => $trailer,
-                   ':created_id'=> $created_id
+                   ':created_id' => $created_id,
                ]);
             return $statement->rowCount() > 0;
     }
-?>
 
-<?php
 function insertDateTime(string $date, string $time) : bool
     {
            global $connection;
@@ -30,9 +28,7 @@ function insertDateTime(string $date, string $time) : bool
                ]);
             return $statement->rowCount() > 0;
     }
-?>
 
-<?php
 
 function insertShowDateTime(int $show_id, int $datetime_id) : bool
     {
@@ -45,12 +41,7 @@ function insertShowDateTime(int $show_id, int $datetime_id) : bool
                ]);
             return $statement->rowCount() > 0;
 
-}
-
-?>
-
-
-<?php
+     }
 function getDateTimeData() : array
 {
     global $connection;
@@ -59,4 +50,14 @@ function getDateTimeData() : array
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
 
-?>
+function getDataVenue() : array
+{
+    global $connection;
+    $statement = $connection->prepare("select * from venues");
+    $statement->execute();
+    return $statement->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+
+

@@ -54,7 +54,6 @@ $shows = getShowDataSeller($id['id']);
                                 <tr class="whitespace-nowrap" id='table'>
                                     <td class="px-2 py-4 text-sm text-gray-500">
                                     <img src="assets/movies/<?php echo $show["img"]?>" alt=""> 
-                                      
                                     </td>
                                     <td class="px-4 py-4">
                                         <div class="text-sm ">
