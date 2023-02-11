@@ -20,3 +20,10 @@ function getShowData() : array
    $statement->execute();
    return $statement->fetchAll();
 }
+//  ---------------DELETE USER
+function deleteUser($id)
+{
+    global $connection;
+    $statement = $connection -> prepare("DELETE from users where id = $id ");
+    $statement->execute();
+}
