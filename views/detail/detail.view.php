@@ -53,36 +53,28 @@ require 'views/partials/nav.php'
   <div class="flex justify-center ">
     <iframe width="1150" height="500" src="<?php echo $trailer ?>" title="65 - Official Trailer - Only In Cinemas March 17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>              
   </div>
-  <div class="bg-gray-200 border-l-[12px] border-[#B60505] m-10 p-10 flex mr-20 rounded-lg ">
-    <div  class="mr-20">
-      <div class="text-black text-lg hover:border-b-[3px] border-[#B60505] ">Today</div>
-      <div class="text-black text-lg ">6</div>
-      <div class="text-black text-lg">FEB</div>
-    </div>
-    <div class="mr-20">
-      <div class="text-black text-lg hover:border-b-[3px] border-[#B60505]">Today</div>
-      <div class="text-black text-lg">6</div>
-      <div class="text-black text-lg">FEB</div>
-    </div>
-    <div class="mr-20">
-      <div class="text-black text-lg hover:border-b-[3px] border-[#B60505]">Today</div>
-      <div class="text-black text-lg">6</div>
-      <div class="text-black text-lg">FEB</div>
+  <div class="bg-gray-200 border-l-[12px] border-t-[8px] border-[#B60505] m-10 p-10 flex mr-20 rounded-lg ">
+    <div  class="mr-20 flex ">
+      <div class="text-[#B60505] text-2xl hover:border-b-[3px] border-[#B60505] ">Today</div>
+      <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-alt-circle-right" class="w-20 h-8" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+        <path fill="blackColor" d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"></path>
+      </svg>
+      <div class="text-black text-2xl "><?php echo  $date_time['date'];?></div>
     </div>
   </div>
   <div class="container mx-auto px-20">
       <div class="flex flex-col w-full" style="cursor: auto;">
         <div class="grid gap-36 gap-y-10 grid-cols-1 sm:grid-cols-2 my-2  w-full">
           <div class="metric-card  bg-slate-700  rounded-lg p-4 max-w-72 w-full " style="cursor: auto;">
-              <div class="w-12">
-                  <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:q-80/et00008457-phkwxjxyys-portrait.jpg" alt="">
+              <div class="w-20">
+                  <img src="../../assets/moveis../../major-logo.png" alt="">
               </div>
-              <div class="text-white ">BestMount  ainT2020</div>
+              <div class="text-white ">MAJOR CINEPLEX</div>
               <div class="py-13">
                   <div class="flex flex-wrap justify-center gap-4 p-4 ">
                     <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
                       15:25
-                      </div>
+                    </div>
                     <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
                       20:20
                     </div>
@@ -93,10 +85,10 @@ require 'views/partials/nav.php'
               </div>
           </div>
           <div class="metric-card bg-slate-700 rounded-lg p-4 max-w-72 w-full" style="cursor: auto;">
-              <div class="w-12">
-                  <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:q-80/et00008457-phkwxjxyys-portrait.jpg" alt="">
+              <div class="w-20">
+                  <img src="../../assets/moveis../../legend-logo.png" alt="">
               </div>
-              <div class="text-white ">BestMount  ainT2020</div>
+              <div class="text-white ">LEGEND CINEMA</div>
               <div class=" py-13">
                   <div class="flex flex-wrap justify-center gap-4 p-4 ">
                     <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
@@ -112,10 +104,10 @@ require 'views/partials/nav.php'
               </div>
           </div>
           <div class="metric-card bg-slate-700  rounded-lg p-4 max-w-72 w-full" style="cursor: auto;">
-              <div class="w-12">
-                  <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:q-80/et00008457-phkwxjxyys-portrait.jpg" alt="">
+              <div class="w-20">
+                  <img src="../../assets/moveis../../major-logo.png" alt="">
               </div>
-              <div class="text-white ">BestMount  ainT2020</div>
+              <div class="text-white ">MAJOR CINEPLEX</div>
               <div class=" py-13">
                   <div class="flex flex-wrap justify-center gap-4 p-4 ">
                       <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
@@ -131,10 +123,10 @@ require 'views/partials/nav.php'
               </div>
           </div>
           <div class="metric-card bg-slate-700   rounded-lg p-4 max-w-72 w-full" style="cursor: auto;">
-              <div class="w-12 flex ">
-                  <img src="https://assets-in.bmscdn.com/discovery-catalog/events/tr:w-400,h-600,bg-CCCCCC:w-400.0,h-660.0,cm-pad_resize,bg-000000,fo-top:oi-discovery-catalog@@icons@@like_202006280402.png,ox-24,oy-617,ow-29:q-80/et00008457-phkwxjxyys-portrait.jpg" alt="">
+              <div class="w-20  ">
+                  <img src="../../assets/moveis../../legend-logo.png" alt="">
               </div>
-              <div class="text-white ">BestMount  ainT2020</div>
+              <div class="text-white ">LEGEND CINEMA</div>
               <div class=" py-13">
                   <div class="flex flex-wrap justify-center gap-4 p-4 ">
                     <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
