@@ -27,3 +27,11 @@ function deleteUser($id)
     $statement = $connection -> prepare("DELETE from users where id = $id ");
     $statement->execute();
 }
+// --------------------EDIT USER
+function getUserById($id) : array
+{
+    global $connection;
+    $statement = $connection->prepare("select * from users where id = $id");
+    $statement->execute();
+    return $statement -> fetch(PDO::FETCH_ASSOC);
+}
