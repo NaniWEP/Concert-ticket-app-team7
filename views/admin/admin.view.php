@@ -1,8 +1,12 @@
 <?php
-require '../partials/head.php';
-require '../partials/nav.php' ;
+require 'views/partials/head.php';
+require 'views/partials/nav.php' ;
 require "models/admin.model.php";
-
+// DELETR USER-------------
+if (isset($_GET['showId']))
+{
+    deleteUser($_GET['showId']);
+}
 ?>
 <button class=" bg-red-500 text-white rounded-3xl px-2 py-2 mt-20 "><a href="/adduser">ADD USER+</a></button> 
     
@@ -55,24 +59,23 @@ require "models/admin.model.php";
                                         <?php echo $data["password"]?>
                                     </td>
                                     <td class="px-4 py-3 text-sm text-gray-500">
-                                        <?php echo $data["role_id"]?>
-                                    
+                                        <?php echo $data["role_id"]?>                 
                                     </td>
-                                    <td class="px-4 py-3">
-                                       <button><a href="#">
+                                    <td class="flex px-8 py-3">
+                                       <a href="">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-400" fill="none"
-                                                viewBox="0 0 24 24" stroke="currentColor">
+                                                viewBox="0 0 24 24" stroke="currentColor" name="edit">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
                                             </svg>
-                                        </a></button>
-                                        <button><a href="#">
+                                        </a>
+                                        <a href="/admin?showId=<?php echo $data["id"] ?>">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-red-400" fill="none"
                                                 viewBox="0 0 24 24" stroke="currentColor">
                                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                                     d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
                                             </svg>
-                                        </a></button>
+                                        </a>
                                     </td>                                
                                 <?php
                                 }
