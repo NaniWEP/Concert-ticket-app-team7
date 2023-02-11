@@ -27,7 +27,7 @@ function type_show($id) : array
 //delete shows by id
 function deleteShow($id) {
     global $connection;
-    $statement = $connection->prepare(" DELETE from shows where id = $id ");
+    $statement = $connection->prepare(" delete from shows where id = $id ");
     $statement->execute();
 }
 

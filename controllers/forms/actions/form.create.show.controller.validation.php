@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         // validation language
         if (empty($_POST["language"]))
         {
-            $languageError = "Please enter description";
+            $languageError = "Please enter language";
             $colorErrorName  = true;
             $formValid = false;
         }
