@@ -1,9 +1,8 @@
 <?php 
 require 'models/form.create.show.model.php';
 require 'models/detail.model.php';
-// require 'models/seller.model.php';
-// $user_email = $_COOKIE['email'] ;
-// $sellerId = getUserId($user_email);
+require 'models/seller.model.php';
+
 // ========================================================================================= //
 
 $titleError ="";
@@ -185,13 +184,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 
         if ((isset($_POST['upload'])))
         {
-                $image = $_FILES['image']['name'];
-                $image_tmp_name=$_FILES['image']['tmp_name'];
-                $image_folder='assets/movies/'. $image;
-                move_uploaded_file($image_tmp_name, $image_folder);
-                if($formValid)
-                {
-                    insertDataShow( $title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer, 8 );
+            $image = $_FILES['image']['name'];
+            $image_tmp_name=$_FILES['image']['tmp_name'];
+            $image_folder='assets/movies/'. $image;
+            move_uploaded_file($image_tmp_name, $image_folder);
+            if($formValid)
+            {
+                    $user_email = $_COOKIE['email'] ;
+                    $sellerId = getUserId($user_email);
+                    insertDataShow( $title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer, $sellerId['id']);
                     $allDataShows = getShowData();
                     foreach($allDataShows as $allDataShow){
                         $showId = $allDataShow['id'];
