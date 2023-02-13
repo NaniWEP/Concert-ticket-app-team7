@@ -1,7 +1,17 @@
 <?php
 require 'views/partials/head.php';
 require 'controllers/forms/actions/form.create.show.controller.validation.php';
-
+$date='';
+$time='';
+$type ='';
+$runningTime = '';
+$trailer = '';
+$description = '';
+$title = '';
+$language = '';
+$subtitle = ''; 
+$venueName = '';
+$venueAddress ='';
 if(isset($_GET['showId'])){
   $id = $_GET['showId'];
   $dateTime = getDatetime($id);
