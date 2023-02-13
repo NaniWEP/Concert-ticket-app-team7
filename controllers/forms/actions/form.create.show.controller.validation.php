@@ -188,36 +188,46 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
             $image_tmp_name=$_FILES['image']['tmp_name'];
             $image_folder='assets/movies/'. $image;
             move_uploaded_file($image_tmp_name, $image_folder);
-         
+            if(!isset($_GET['action'])){
+                if($formValid){
+                    $user_email = $_COOKIE['email'] ;
+                    $sellerId = getUserId($user_email);
+                    insertDataShow( $title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer, $sellerId['id']);  
+                
+                    
+                    $allDataShows = getShowData();
+                    foreach($allDataShows as $allDataShow){
+                        $showId = $allDataShow['id'];
+                    }
+                    $countFormvalid += 1;
+                }
                 if($formValid)
                 {
-                        $user_email = $_COOKIE['email'] ;
-                        $sellerId = getUserId($user_email);
-                        if(!isset($_GET['action'])){
-                            insertDataShow( $title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer, $sellerId['id']);  
-                        }
-                        
-                        $allDataShows = getShowData();
-                        foreach($allDataShows as $allDataShow){
-                            $showId = $allDataShow['id'];
-                        }
-                        $countFormvalid += 1;
+                    insertDateTime( $date, $time);
+                    $allDataDatetimes = getDateTimeData();
+                    foreach($allDataDatetimes as $allDataDatetime){
+                        $dateTimeId = $allDataDatetime['id'];
                     }
-                    if($formValid)
-                    {
-                        insertDateTime( $date, $time);
-                        $allDataDatetimes = getDateTimeData();
-                        foreach($allDataDatetimes as $allDataDatetime){
-                            $dateTimeId = $allDataDatetime['id'];
-                        }
-                        
-                        $countFormvalid +=1;
-                    }
-                    if($countFormvalid == 2){
-                        insertShowDateTime($showId,  $dateTimeId);
-                        header("Location:/seller");
-                    }
+                    
+                    $countFormvalid +=1;
+                }
+                if($countFormvalid == 2){
+                    insertShowDateTime($showId,  $dateTimeId);
+                    header("Location:/seller");
+                }
+            }
+            else{
+                editShow( $_GET['showId'],$title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer); 
+                header("Location:/seller");
+            }
+                
                
         }        
 }
+
+
+
+
+
+
 
