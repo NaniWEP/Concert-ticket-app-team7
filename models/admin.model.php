@@ -31,7 +31,19 @@ function deleteUser($id)
 function getUserById($id) : array
 {
     global $connection;
-    $statement = $connection->prepare("select * from users where id = $id");
-    $statement->execute();
+    $statement = $connection->prepare("select * from users where id = :id");
+    $statement->execute([
+        ':id'=>$id
+    ]);
+    return $statement -> fetch(PDO::FETCH_ASSOC);
+}
+// ------------------ROLE OF SELLRT
+function getRowById($id) : array
+{
+    global $connection;
+    $statement = $connection->prepare("select name from roles where id = :id");
+    $statement->execute([
+        ':id'=>$id
+    ]);
     return $statement -> fetch(PDO::FETCH_ASSOC);
 }

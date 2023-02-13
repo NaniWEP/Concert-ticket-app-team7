@@ -15,10 +15,7 @@ if (isset($_GET['showId']))
                 <div class="border-b border-gray-200 shadow " >
                     <table class="divide-y divide-gray-300 ">
                         <thead class="text-white ">
-                            <tr class="">
-                                <th class="px-8 py-2">
-                                    ID
-                                </th>
+                            <tr class="">                              
                                 <th class="px-8 py-2 ">
                                     Name
                                 </th>
@@ -41,10 +38,7 @@ if (isset($_GET['showId']))
                             $datas = getShowData();
                             foreach ($datas as $data){
                             ?>
-                                <tr class="whitespace-nowrap">
-                                    <td class="px-4 py-3 text-sm text-red-500 text-center">
-                                        <?php echo $data["id"]?>  
-                                    </td>
+                                <tr class="whitespace-nowrap">                               
                                     <td class="px-4 py-3 text-sm text-red-500 flex flex-col items-center">
                                         <?php echo $data["name"]?>
                                     </td>
@@ -55,7 +49,7 @@ if (isset($_GET['showId']))
                                         <?php echo $data["password"]?>
                                     </td>
                                     <td class="px-4 py-2 text-sm text-red-500 text-center">
-                                        <?php echo $data["role_id"]?>                 
+                                        <?php $role = getRowById($data["role_id"]) ; echo $role['name'] ?>                 
                                     </td>
                                     <td class="flex px-10 py-5">
                                        <a href="/adduser?showId=<?php echo $data["id"] ?>">
