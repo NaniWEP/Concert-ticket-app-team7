@@ -1,17 +1,7 @@
 <?php
 require 'views/partials/head.php';
 require 'controllers/forms/actions/form.create.show.controller.validation.php';
-$date='';
-$time='';
-$type ='';
-$runningTime = '';
-$trailer = '';
-$description = '';
-$title = '';
-$language = '';
-$subtitle = ''; 
-$venueName = '';
-$venueAddress ='';
+
 if(isset($_GET['showId'])){
   $id = $_GET['showId'];
   $dateTime = getDatetime($id);
@@ -141,7 +131,13 @@ $getVenues = getDataVenue();
           </div>
           <div class="mt-6">
                 <button  name="upload" type="submit" class="w-full px-4 py-2 tracking-wide text-white  font-sans transition-colors duration-200 transform bg-[#B60505] rounded-md hover:bg-[#B60505] focus:outline-none focus:bg-[#B60505]">
-                   Crate
+                   <?php if(isset($_GET['action'])){
+                    echo 'Save';
+                    }
+                    else{
+                      echo 'Crate';
+                    }?>
+                
                 </button>
           </div>
     </form>

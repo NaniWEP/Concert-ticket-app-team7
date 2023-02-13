@@ -217,8 +217,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 }
             }
             else{
-                editShow( $_GET['showId'],$title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer); 
-                header("Location:/seller");
+                if($formValid){
+                    editShow( $_GET['showId'],$title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer); 
+                    header("Location:/seller");
+                }
+                
             }
                 
                
