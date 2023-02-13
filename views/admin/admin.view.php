@@ -8,9 +8,7 @@ if (isset($_GET['showId']))
     deleteUser($_GET['showId']);
 }
 ?>
-<button class=' mr-auto ml-11 mt-10 text-white bg-red-500 border-0 py-2 px-4 focus:outline-none hover:bg-red-600 rounded'><a href="/adduser">ADD USER+</a></button>
-<!-- <button class=" bg-red-500 text-white rounded px-8 py-3 mt-20 ml-96"><a href="/adduser">ADD USER+</a></button>  -->
-    
+<button class=' mr-auto ml-11 mt-10 text-white bg-red-500 border-0 py-2 px-4 focus:outline-none hover:bg-red-600 rounded'><a href="/adduser">ADD USER+</a></button>   
     <div class="container w-full flex justify-center items-center mt-10 ">
         <div class="flex flex-col ">
             <div class="w-full">
@@ -18,25 +16,24 @@ if (isset($_GET['showId']))
                     <table class="divide-y divide-gray-300 ">
                         <thead class="text-white ">
                             <tr class="">
-                                <th class="px-12 py-2">
+                                <th class="px-8 py-2">
                                     ID
                                 </th>
-                                <th class="px-14 py-2 ">
+                                <th class="px-8 py-2 ">
                                     Name
                                 </th>
-                                <th class="px-12 py-2 ">
+                                <th class="px-8 py-2 ">
                                     Email
                                 </th>
-                                <th class="px-14 py-2 ">
+                                <th class="px-8 py-2 ">
                                     Password
                                 </th>
-                                <th class="px-14 py-2 ">
+                                <th class="px-8 py-2 ">
                                     Roles
                                 </th>
-                                <th class="px-14 py-2 ">
+                                <th class="px-8 py-2 ">
                                     Action
-                                </th>
-                                
+                                </th>                               
                             </tr>
                         </thead>
                         <tbody class="bg-black divide-y ">
@@ -45,24 +42,22 @@ if (isset($_GET['showId']))
                             foreach ($datas as $data){
                             ?>
                                 <tr class="whitespace-nowrap">
-                                    <td class="px-10 py-3 text-sm text-red-500 ">
-                                        <?php echo $data["id"]?>
-                                      
+                                    <td class="px-4 py-3 text-sm text-red-500 text-center">
+                                        <?php echo $data["id"]?>  
                                     </td>
                                     <td class="px-4 py-3 text-sm text-red-500 flex flex-col items-center">
                                         <?php echo $data["name"]?>
-
                                     </td>
-                                    <td class="px-4 py-3 text-sm text-red-500" >
+                                    <td class="px-4 py-2 text-sm text-red-500" >
                                         <?php echo $data["email"]?>
                                     </td>
-                                    <td class="px-4 py-3 text-sm text-red-500">
+                                    <td class="px-4 py-2 text-sm text-red-500">
                                         <?php echo $data["password"]?>
                                     </td>
-                                    <td class="px-20 py-3 text-sm text-red-500">
+                                    <td class="px-4 py-2 text-sm text-red-500 text-center">
                                         <?php echo $data["role_id"]?>                 
                                     </td>
-                                    <td class="flex px-14 py-5">
+                                    <td class="flex px-10 py-5">
                                        <a href="/adduser?showId=<?php echo $data["id"] ?>">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-blue-400" fill="none"
                                                 viewBox="0 0 24 24" stroke="currentColor" name="edit">

@@ -19,8 +19,8 @@ require 'controllers/admin/admin.adduser.validation.php';
                 </div>
                 <div class="mt-4">
                         <label for="password" class="block font-sans ">Password</label>
-                        <input type="password" placeholder="password" name='password'  value='<?php echo isset($_GET['password']) ? $_GET['password'] : ''; ?>'
-                        class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 ">                                    
+                        <input type="password" placeholder="password" name='password' value='<?php echo isset($_GET['password']) ? $_GET['password'] : ''; ?>'
+                        class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 ">                               
                 </div>              
                 <label class="block mt-6">
                     <span class="text-gray-700 focus:border-black">Roles</span>
