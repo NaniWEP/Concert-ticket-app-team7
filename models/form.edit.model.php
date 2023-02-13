@@ -17,9 +17,21 @@ function getVenuebyId($id) : array
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
 
-function editShow(int $id,string $img,string $title, string $description, int $type_id, int $running_time, string $language, string $subtitle, string  $trailer, int $created_id) :bool{
+function editShow(int $id,string $title, string $description, int $type_id, int $running_time, string $language, string $subtitle, string $img, string  $trailer) :bool{
     global $connection;
-    $statement = $connection->prepare("update shows set img= $img, title = $title, description = $description, type_id = $type_id, running_time= $running_time , language = $language, subtitle = $subtitle, img = 'sfsfsafdasf', trailer = $trailer,created_id = $created_id where id=$id ");
-    $statement->execute();
-    return $statement->fetch(PDO::FETCH_ASSOC);
+    echo $subtitle;
+    $statement = $connection->prepare("update shows set title = :title ,img = :img,description=:description,type_id=:type_id,running_time=:running_time,trailer=:trailer,language=:language,subtitle=:subtitle where id= :id ");
+    $statement->execute([
+        ':title'=>$title,
+        ':id' => $id,
+        ':img'=>$img,
+        ':description'=>$description,
+        ':type_id'=>$type_id,
+        ':running_time'=>$running_time,
+        ':trailer'=>$trailer,
+        ':language'=>$language,
+        ':subtitle'=>$subtitle
+    ]
+    );
+    return $statement->rowCount() > 0;
 }

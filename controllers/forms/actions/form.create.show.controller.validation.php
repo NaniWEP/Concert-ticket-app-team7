@@ -193,7 +193,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 {
                         $user_email = $_COOKIE['email'] ;
                         $sellerId = getUserId($user_email);
-                        insertDataShow( $title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer, $sellerId['id']);  
+                        if(!isset($_GET['action'])){
+                            insertDataShow( $title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer, $sellerId['id']);  
+                        }
+                        
                         $allDataShows = getShowData();
                         foreach($allDataShows as $allDataShow){
                             $showId = $allDataShow['id'];
