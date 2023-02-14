@@ -33,6 +33,7 @@ $time = "";
 $formValid = true;
 $showId ='';
 $dateTimeId = "";
+$venueId = "";
 $image = "";
 $image_tmp_name = "";
 $image_folder = "";
@@ -192,9 +193,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 if($formValid){
                     $user_email = $_COOKIE['email'] ;
                     $sellerId = getUserId($user_email);
-                    insertDataShow( $title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer, $sellerId['id']);  
-                
-                    
+                    insertDataShow( $title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer, $sellerId['id']);     
                     $allDataShows = getShowData();
                     foreach($allDataShows as $allDataShow){
                         $showId = $allDataShow['id'];
@@ -211,14 +210,25 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                     
                     $countFormvalid +=1;
                 }
-                if($countFormvalid == 2){
+                if($formValid)
+                {
+
+                    // $allDataVenues = getDataVenue();
+                    $venueId = $_POST['name-venue'];
+                    $countFormvalid +=1;
+                }
+                if($countFormvalid == 3){
                     insertShowDateTime($showId,  $dateTimeId);
+                    insertDetailData($showId,   $venueId );
                     header("Location:/seller");
                 }
             }
             else{
-                editShow( $_GET['showId'],$title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer); 
-                header("Location:/seller");
+                if($formValid){
+                    editShow( $_GET['showId'],$title, $description,  $typeId,  $runningTime,  $language,  $subtitle, $imgShow,  $trailer); 
+                    header("Location:/seller");
+
+                }
             }
                 
                

@@ -42,6 +42,20 @@ function insertShowDateTime(int $show_id, int $datetime_id) : bool
             return $statement->rowCount() > 0;
 
      }
+     
+function insertDetailData(int $show_id, int $venue_id) : bool
+    {
+           global $connection;
+               $statement=$connection->prepare('insert into detail (show_id, venue_id) values ( :showid, :venueid)');
+               $statement->execute([
+                   ':showid' => $show_id,
+                   ':venueid' => $venue_id,
+
+               ]);
+            return $statement->rowCount() > 0;
+
+     }
+
 function getDateTimeData() : array
 {
     global $connection;
@@ -57,6 +71,7 @@ function getDataVenue() : array
     $statement->execute();
     return $statement->fetchAll(PDO::FETCH_ASSOC);
 }
+
 
 
 

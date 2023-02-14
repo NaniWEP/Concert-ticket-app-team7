@@ -12,7 +12,7 @@ function getshowbyId($id) : array
 function getVenuebyId($id) : array
 {
     global $connection;
-    $statement = $connection->prepare("SELECT venues.name,venues.address FROM detail right join venues on venues.id = detail.venue_id where show_id=$id;");
+    $statement = $connection->prepare("SELECT venues.name,venues.address,venues.id FROM detail right join venues on venues.id = detail.venue_id where show_id=$id;");
     $statement->execute();
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
