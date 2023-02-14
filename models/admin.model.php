@@ -1,9 +1,9 @@
 <?php
 require "database/database.php";
-function register(string $username, string $password, string  $email, $date_of_birth, $role_id ) : bool
+function register(string $username, string $password, string  $email, $date_of_birth, string  $role_id ) : bool
 {
     global $connection;
-    $statement = $connection->prepare("insert into users (name,email, password,date_of_birth,role_id) values (:name,:email, :password,:date_of_birth,:role_id)");
+    $statement = $connection->prepare("insert into users (name,email, password,date_of_birth,role_id) values (:name, :email, :password, :date_of_birth, :role_id)");
     $statement->execute([
         ':name' => $username,
         ':email' => $email,
@@ -31,8 +31,20 @@ function deleteUser($id)
 function getUserById($id) : array
 {
     global $connection;
-    $statement = $connection->prepare("select * from users where id = $id");
-    $statement->execute();
+    $statement = $connection->prepare("select * from users where id = :id");
+    $statement->execute([
+        ':id'=>$id
+    ]);
+    return $statement -> fetch(PDO::FETCH_ASSOC);
+}
+// ------------------ROLE OF SELLRT
+function getRowById($id) : array
+{
+    global $connection;
+    $statement = $connection->prepare("select name from roles where id = :id");
+    $statement->execute([
+        ':id'=>$id
+    ]);
     return $statement -> fetch(PDO::FETCH_ASSOC);
 }
 
