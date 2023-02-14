@@ -1,19 +1,25 @@
 const choicePayment = document.getElementById ("choicePayment");
 const overly = document.getElementById ("overly");
+// ABA dom
 const abaChosen = document.getElementById ("abaChoose");
 const abaPayment = document.getElementById ("abaPayment");
-const creditCardChoose = document.getElementById ("creditCardChoose");
-const backBtn = document.getElementById ("back");
+const backABABtn = document.getElementById ("abaBack");
+let choiceOfPayment = true;
+
+// Credit Card dom
+const creditCardChosen = document.getElementById ("creditCardChoose");
+const creditCardPayment = document.getElementById ("creditCardPayment");
+const backCreditCardBtn = document.getElementById ("creditCardback");
+
 var cardNumber = document.getElementById('cardNumber');
 var expireDate = document.getElementById('expireDate');
-let choiceOfPayment = true;
 
 function showABAPayment(){
 
     abaPayment.id = "showABAPayment";
     choicePayment.id = "chosenPayment";
     choiceOfPayment = false;
-    console.log(creditCardChoose);
+    console.log(choiceOfPayment)
 
 }
 function closeABAPayment()
@@ -21,21 +27,41 @@ function closeABAPayment()
     document.getElementById ("showABAPayment").id = "abaPayment";
     document.getElementById ("chosenPayment").id = "choicePayment";
     choiceOfPayment = true;
-    console.log(choiceOfPayment);
+}
+function showCreditCardPayment()
+{
 
+    creditCardPayment.id = "showCreditCardPayment";
+    choicePayment.id = "chosenPayment";
+    choiceOfPayment = false;
+    console.log(choiceOfPayment)
+}
+function closeCreditCardPayment()
+{
+    document.getElementById ("showCreditCardPayment").id = "creditCardPayment";
+    document.getElementById ("chosenPayment").id = "choicePayment";
+    choiceOfPayment = true;
 }
 // // show ABA Payment
-// if (choiceOfPayment == true)  
-// {
-//     abaChosen.addEventListener("click", showABAPayment)
-// }
+if (choiceOfPayment == true)  
+{
+    abaChosen.addEventListener("click", showABAPayment)
+}
+backABABtn.addEventListener("click", closeABAPayment);
+
 // show Credit Card Payment
 if (choiceOfPayment == true)  
 {
-    creditCardChoose.addEventListener("click", showABAPayment)
+    creditCardChosen.addEventListener("click", showCreditCardPayment)
 }
 
-backBtn.addEventListener("click", closeABAPayment);
+backCreditCardBtn.addEventListener("click", closeCreditCardPayment)
+
+console.log(choiceOfPayment)
+
+
+
+
 
 // expire date
 expireDate.onkeyup = function (e) {

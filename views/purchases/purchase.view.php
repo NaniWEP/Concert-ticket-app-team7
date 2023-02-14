@@ -4,10 +4,8 @@ require "views/partials/head.php";
 ?>
 
 <div id="overly"  class="flex justify-center items-center w-full h-screen">
-    <span id="overly" class="absolute w-full h-full opacity-0 bg-red-300 pointer-events-none z-10"></span>
-   
     <!-- Choice of payment -->
-    <div id="choicePayment-" class=" justify-center items-center w-full ">
+    <div id="choicePayment" class=" justify-center items-center w-full ">
         <div class="block p-6  rounded-lg shadow-lg bg-white max-w-md">
             <div class="flex justify-between items-center mb-2">
                 <h3 class="mb-3 text-gray-900 text-2xl leading-tight font-semibold flex items-center justify-center">Choose way to pay</h3>
@@ -47,7 +45,7 @@ require "views/partials/head.php";
         <div class="block p-6  rounded-lg shadow-lg bg-white max-w-md">
             <div class="flex justify-between items-center mb-2 w-96">
                 <div class="flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="back" class="w-6 h-6 font-semibold hover:bg-zinc-300 hover:rounded-lg ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="abaBack" class="w-6 h-6 font-semibold hover:bg-zinc-300 hover:rounded-lg ">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                     </svg>
 
@@ -68,11 +66,11 @@ require "views/partials/head.php";
         </div>
     </div>
     <!-- Credit Card payment -->
-    <div id="creditCardPayment-" class=" justify-center items-center w-full hidden">
+    <div id="creditCardPayment" class=" justify-center items-center w-full">
         <div class="block p-6  rounded-lg shadow-lg bg-white max-w-md">
             <div class="flex justify-between items-center mb-2 w-96">
                 <div class="flex items-center gap-3">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="back" class="w-6 h-6 font-semibold hover:bg-zinc-300 hover:rounded-lg ">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="creditCardback" class="w-6 h-6 font-semibold hover:bg-zinc-300 hover:rounded-lg ">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
                     </svg>
 

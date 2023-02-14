@@ -16,5 +16,8 @@
 }
 
 #creditCardPayment{
+    display: none;
+}
+#showCreditCardPayment{
     display: flex;
 }
