@@ -7,7 +7,7 @@ $password ="";
 $role = "";
 $hash = "";
 $formValid = true;
-$datas = getShowData();
+$datas = getUserData();
 
     if ($_SERVER['REQUEST_METHOD'] == 'GET')
     {

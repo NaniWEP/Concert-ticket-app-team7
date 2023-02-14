@@ -52,9 +52,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
             if ($data['email'] == $email && password_verify( $password,$data['password']))
             {
                 $formValid = true;
-                setcookie("username", $data['name'], time() + 3600);
-                setcookie ("email",$_POST["email"], time() + 3600);
-                setcookie ("password",$_POST["password"], time() + 3600);
+               
                 $role_id = $data['role_id'];
             }
             else{
@@ -67,6 +65,9 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     {   
         if ($role_id == 3){
             header("Location:/");
+            setcookie("username", $data['name'], time() + 3600);
+            setcookie ("email",$_POST["email"], time() + 3600);
+            setcookie ("password",$_POST["password"], time() + 3600);
         }
     }
 }

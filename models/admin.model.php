@@ -9,11 +9,11 @@ function register(string $username, string $password, string  $email, $date_of_b
         ':email' => $email,
         ':password' => $password,
         ':date_of_birth' => $date_of_birth,
-        ':role_id' => $role_id
+        ':role_id' => $role_id,
     ]);
     return $statement->rowCount() > 0;
 }
-function getShowData() : array
+function getUserData() : array
 {
    global $connection;
    $statement = $connection->prepare("select * from users");
@@ -35,3 +35,5 @@ function getUserById($id) : array
     $statement->execute();
     return $statement -> fetch(PDO::FETCH_ASSOC);
 }
+
+

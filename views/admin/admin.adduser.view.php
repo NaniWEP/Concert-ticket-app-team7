@@ -1,6 +1,21 @@
 <?php
 require 'views/partials/head.php';
 require 'controllers/admin/admin.adduser.validation.php';
+$name ="";
+$email ="";
+$password ="";
+$role ="";
+$dateOfBirth ="";
+
+if (isset($_GET['showId'])) {
+    $id = $_GET['showId'];
+    $user = getUserById($id);
+    $name = $user["name"];
+    $email = $user["email"];
+    $password = $user["password"];
+    $role = $user["role_id"];
+    $dateOfBirth = $user["date_of_birth"];
+}
 ?>
 <div class="relative flex flex-col justify-center min-h-screen overflow-hidden w-full ">
         <div
@@ -9,22 +24,22 @@ require 'controllers/admin/admin.adduser.validation.php';
             <form action='' class="mt-6" method="get">
                 <div class="mt-4">
                     <label for="text" class="block  font-sans ">Username</label>
-                    <input type="text" placeholder="username" name='username' value='<?php echo isset($_GET['username']) ? $_GET['username'] : ''; ?>'
+                    <input type="text" placeholder="username" name='username' value="<?php echo $name; ?>" value='<?php echo isset($_GET['username']) ? $_GET['username'] : ''; ?>'
                         class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 ">                        
                 </div>
                 <div class="mt-4">
                     <label for="email" class="block font-sans ">Email</label>
-                    <input type="email" placeholder="email" name='email' value='<?php echo isset($_GET['email']) ? $_GET['email'] : ''; ?>' 
+                    <input type="email" placeholder="email" name='email' value="<?php echo $email;?>" value='<?php echo isset($_GET['email']) ? $_GET['email'] : ''; ?>' 
                         class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 ">                        
                 </div>
                 <div class="mt-4">
                         <label for="password" class="block font-sans ">Password</label>
-                        <input type="password" placeholder="password" name='password'  value='<?php echo isset($_GET['password']) ? $_GET['password'] : ''; ?>'
+                        <input type="password" placeholder="password" name='password'  value="<?php echo $password;?>" value='<?php echo isset($_GET['password']) ? $_GET['password'] : ''; ?>'
                         class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 ">                                    
                 </div>              
                 <label class="block mt-6">
                     <span class="text-gray-700 focus:border-black">Roles</span>
-                    <select class="form-select mt-1 block w-full px-4 py-2 text-gray-700 focus:border-black" name= 'role' value='<?php echo isset($_GET['role']) ? $_GET['role'] : ''; ?>' >
+                    <select class="form-select mt-1 block w-full px-4 py-2 text-gray-700 focus:border-black" name= 'role'  value="<?php echo $role;?>"  value='<?php echo isset($_GET['role']) ? $_GET['role'] : ''; ?>' >
                         <option>select roles...</option>           
                         <option value= '1'>admin</option>
                         <option value= '2'>seller</option>
@@ -33,7 +48,7 @@ require 'controllers/admin/admin.adduser.validation.php';
                 </label>
                 <div class="mt-4">
                         <label for="password" class="block font-sans ">Date of birth</label>
-                        <input type="date" placeholder="password" name='date-of-birth'  value='<?php echo isset($_GET['date-of-birth']) ? $_GET['date-of-birth'] : ''; ?>' 
+                        <input type="date" placeholder="password" name='date-of-birth'  value="<?php echo $dateOfBirth;?>"  value='<?php echo isset($_GET['date-of-birth']) ? $_GET['date-of-birth'] : ''; ?>' 
                         class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 ">                                          
                 </div> 
                 <div class="mt-6">
