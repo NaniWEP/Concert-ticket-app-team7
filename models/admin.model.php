@@ -1,9 +1,9 @@
 <?php
 require "database/database.php";
-function register(string $username, string $password, string  $email, $date_of_birth, $role_id ) : bool
+function register(string $username, string $password, string  $email, $date_of_birth, string  $role_id ) : bool
 {
     global $connection;
-    $statement = $connection->prepare("insert into users (name,email, password,date_of_birth,role_id) values (:name,:email, :password,:date_of_birth,:role_id)");
+    $statement = $connection->prepare("insert into users (name,email, password,date_of_birth,role_id) values (:name, :email, :password, :date_of_birth, :role_id)");
     $statement->execute([
         ':name' => $username,
         ':email' => $email,
