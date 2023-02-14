@@ -5,7 +5,6 @@ session_start();
 require "models/form.model.php";
 //====================================================================
 $passwordError = '';
-$formValid = true;
 $userName = '';
 $password = '';
 $email='';
@@ -34,7 +33,6 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
             }
         }
     }
-    
     if (empty($_POST["password"])) 
     {
         $passwordError = "Please enter your password";
@@ -46,30 +44,24 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         $password = $_POST['password'];
         foreach($datas as $data)
         {
-
             if ($data['email'] == $email && password_verify( $password,$data['password']))
             {
-                
                 $role_id = $data['role_id'];
+                $formValid = true;
             }
             else{
                 $passwordError = "Your password is not correct";
-                $formValid = false;
                 $colorErrorPassword  = true;
             }
         }           
     }
     if($formValid)
     {   
-        if ($role_id == 1){
-            header("Location:/");
-        }elseif($role_id == 2){
-            header("Location:/");
-        }if($role_id == 2 || $role_id == 1)
+        if($role_id == 2 || $role_id == 1)
         {
+            header("Location:/");
             setcookie ("adminEmail",$_POST["email"], time() + 3600);
             setcookie ("adminPassword",$_POST["password"], time() + 3600);
         }
     }
-
 }
