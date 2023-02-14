@@ -1,4 +1,4 @@
-<div class="carousel-inner relative w-full overflow-hidden">
+<div  class="carousel-inner relative w-full overflow-hidden h-[500px]">
             <div class="carousel-item active relative float-left w-full ">
                 <div class="slideshow-container">
 
@@ -16,7 +16,7 @@
                   ?>
 
                     <div class="mySlides fade">
-                        <img src="assets/banners/<?= $banner ?>" class="h-96 w-full">
+                        <img src="assets/banners/<?= $banner ?>"  class="absolute bg-center left-0 w-full z-1">
                     </div>
 
                   <?php

@@ -1,0 +1,20 @@
+
+#abaPayment{
+    display: none;
+}
+
+#choicePayment {
+    display: flex;
+}
+
+#chosenPayment{
+    display: none;
+}
+
+#showABAPayment{
+    display: flex;
+}
+
+#creditCardPayment{
+    display: flex;
+}
