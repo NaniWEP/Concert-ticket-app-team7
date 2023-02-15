@@ -26,7 +26,7 @@ foreach ($showResult as $dataInfor)
                 <p class="font-sans"> <?= $description; ?> </p>
             </div>
             <div id="btn-detail">
-                <button id="more-information" class="font-sans"><a id="more-detail-btn" href="<?php echo "/detail?name=$title&picture=assets/movies/$poster" ?>">more information</a></button>
+                <button id="more-information" class="font-sans"><a id="more-detail-btn" href="<?php echo "/detail?id=$dataInfor[id]"?>">more information</a></button>
                 <button id="see-ticket" class="font-sans bg-red-500">See ticket</button>
             </div>
         </div>

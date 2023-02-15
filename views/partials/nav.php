@@ -74,14 +74,12 @@
                     <a href="#" class="text-white  hover:underline font-sans" aria-current="page">Home</a>
                 </li>
                 <li>
-                    <a href="#" class="text-white  hover:underline font-sans">Company</a>
+                    <a href="#" class="text-white  hover:underline font-sans">About us</a>
                 </li>
                 <li>
-                    <a href="#" class="text-white  hover:underline font-sans">Team</a>
+                    <a href="#" class="text-white  hover:underline font-sans">Contect us</a>
                 </li>
                 <li>
-                    <a href="#" class="text-white hover:underline font-sans">Features</a>
-                </li>
             </ul>
     </div>
 </nav>
