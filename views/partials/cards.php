@@ -1,25 +1,20 @@
 <?php
 require 'controllers/searchs/search.controller.php';
-
 ?>
 
 <div class="grid grid-cols-4 gap-4 max-h-full max-w-full">
 <?php
-// $dataInfors = getShowData();
 $title = '';
 $description = '';
 $poster = '';
 foreach ($showResult as $dataInfor)
 {
-    if($dataInfor['type_id']==1){
         $title = $dataInfor['title'];
         $description = $dataInfor['description'];
         $poster = $dataInfor['img'];
     
     
-?>
- 
-                    
+?>                  
     <div class="flex flex-wrap hover:shadow-2xl " id="card" >
         <div class=" p-2 md:p-4 " id="container-card">
             
@@ -39,6 +34,6 @@ foreach ($showResult as $dataInfor)
         
 <?php
     }
-}
+
 ?>
 </div>

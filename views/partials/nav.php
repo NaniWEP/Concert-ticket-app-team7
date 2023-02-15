@@ -16,6 +16,7 @@
             </div>
             <form action="" method="get" class="flex flex-row gap-4">
                 <input type="search" name="search" id="default-search" class="block w-96 p-2 pl-10 text-sm text-gray-900  border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 font-sans" value='<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>' placeholder="Search..." required>
+                <input type="text" value='<?php if(isset($_GET['category'])){ echo $_GET['category'];}?>' name='category' style='display:none'>
                 <button class='bg-red-500 hover:bg-red-800 text-white  py-2 px-4 rounded inline-flex items-center'>search</button>    
             </form>
         </div>
