@@ -12,13 +12,14 @@ $language = '';
 $subtitle = ''; 
 $venueName = '';
 $venueAddress ='';
+$type_id = '';
 if(isset($_GET['showId'])){
   $id = $_GET['showId'];
   $dateTime = getDatetime($id);
   $type = type($id);
   $date = $dateTime['date'];
   $time = $dateTime['time'];
-  $type =  $_GET['type'];
+  $type_id =  $_GET['type'];
   $runningTime = $show['running_time'];
   $trailer = $show['trailer'];
   $description = $show['description'];
@@ -26,15 +27,14 @@ if(isset($_GET['showId'])){
   $language =$show['language'];
   $subtitle =  $show['subtitle'];
   $venue = getVenuebyId($id);
-  $venueName =  $venue['name'] ;
-  $venueAddress = $venue['address'];
+  $venueName =  $venue['id'] ;
+  $venueAddress = $venue['id'];
 }
-
 $getVenues = getDataVenue();
 ?>
 
-<div class="min-h-screen bg-gray-100 p-0 sm:p-12">
-  <div class="mx-auto max-w-md px-6 py-12 bg-white border-0 shadow-lg sm:rounded-3xl">
+<div class="">
+  <div class="mx-auto max-w-md px-6 py-12 bg-white rounded-lg shadow-2xl  ">
     <h1 class="text-2xl font-bold mb-8 ml-24">create new show</h1>
     <form action="" method="post" enctype="multipart/form-data" >
           <div class="relative z-0 w-full mb-5">
@@ -43,26 +43,46 @@ $getVenues = getDataVenue();
             <label for="title" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter title</label>
             <small class="text-[#B60505]"> <?php echo $titleError; ?></small> 
           </div>
-        <div class="flex space-x-4">
-            <div class="relative z-0 w-full mb-5">
-              <input type="text" placeholder=" " name="language"   value='<?php echo isset($_POST['language']) ? $_POST['language'] : $language ;?>'
-                class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-              <label for="language" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter language</label>
-              <small class="text-[#B60505]"> <?php echo $languageError; ?></small>
-            </div>
-            <div class="relative z-0 w-full mb-5 ">
-              <input type="text" name="subtitle" placeholder=" "  value='<?php echo isset($_POST['subtitle']) ? $_POST['subtitle'] : $subtitle; ?>'
-                class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-              <label for="subtitle" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter subtitle</label>
-              <small class="text-[#B60505]"> <?php echo $subtitleError; ?></small>
-            </div>
-        </div>
+          <div class="flex space-x-4">
+              <div class="relative z-0 w-full mb-5">
+                <input type="text" placeholder=" " name="language"   value='<?php echo isset($_POST['language']) ? $_POST['language'] : $language ;?>'
+                  class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                <label for="language" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter language</label>
+                <small class="text-[#B60505]"> <?php echo $languageError; ?></small>
+              </div>
+              <div class="relative z-0 w-full mb-5 ">
+                <input type="text" name="subtitle" placeholder=" "  value='<?php echo isset($_POST['subtitle']) ? $_POST['subtitle'] : $subtitle; ?>'
+                  class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                <label for="subtitle" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Enter subtitle</label>
+                <small class="text-[#B60505]"> <?php echo $subtitleError; ?></small>
+              </div>
+          </div>
           <div class="relative z-0 w-full mb-5">
             <select name="type-id"  onclick="this.setAttribute('value', this.value);"
               class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"  >
               <option value="" selected disabled hidden></option>
-              <option value="1" <?php echo (isset($_POST['type-id']) && $_POST['type-id'] || $type === '1') ? 'selected' : ''; ?>>Movie </option>
-              <option value="2" <?php echo (isset($_POST['type-id']) && $_POST['type-id'] || $type === '2') ? 'selected' :  ''; ?>>Concert</option>
+              <option value="1" <?php
+              if(isset($_POST['type-id'])){
+                 if($_POST['type-id'] === '1')
+                 {
+                   echo 'selected';
+                  }}
+                  else{if($type_id==='1')
+                  {
+                  echo 'selected';
+                  }}
+              ?>>Movie </option>
+              <option value="2" <?php
+              if(isset($_POST['type-id'])){
+                 if($_POST['type-id'] === '2')
+                 {
+                   echo 'selected';
+                  }}
+                  else{if($type_id==='2')
+                  {
+                  echo 'selected';
+                  }}
+              ?>>Concert </option>
             </select>
             <label for="select" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Select type of show</label>
             <small class="text-[#B60505]"> <?php echo $typeIdError; ?></small>
@@ -86,13 +106,26 @@ $getVenues = getDataVenue();
                   <select name="name-venue" placeholder=" " onclick="this.setAttribute('value', this.value);"
                     class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"  >
                       <option value="" selected disabled hidden></option>
-                  <?php 
-                  foreach ($getVenues as $getVenue)
-                  {?>
-                      <option value="<?php echo $getVenue['name'] ; ?>" <?php echo (isset($_POST['name-venue']) && $_POST['name-venue'] || $venueName ===  $getVenue['name'] ) ? 'selected' : ''; ?>><?php echo $getVenue['name']  ?> </option>
-                  <?php
-                  }
-                  ?>
+                      <?php 
+                          foreach ($getVenues as $getVenue)
+                      {?>
+                              <option value="<?php echo $getVenue['id'] ; ?>" <?php
+                              if(isset($_POST['name-venue'])){
+                                if($_POST['name-venue']===$getVenue['name']){
+                                  echo 'selected';
+                                }
+                              }
+                              else{
+                                if( $venueName ===$getVenue['id']){
+                                  echo 'selected';
+                                }
+                              } ?>> 
+                              <?php echo $getVenue['name']?>
+                              </option>
+                              
+                        <?php
+                        }
+                        ?>
                   </select>
                   <label for="name" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">name venue</label>
                   <small class="text-[#B60505]"> <?php echo $nameVenueError; ?></small>
@@ -101,13 +134,26 @@ $getVenues = getDataVenue();
                   <select name="address" placeholder=" " onclick="this.setAttribute('value', this.value);"
                         class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"  >
                           <option value="" selected disabled hidden></option>
-                      <?php 
-                      foreach ($getVenues as $getVenue)
-                      {?>
-                          <option value="<?php echo $getVenue['address'] ; ?>" <?php echo (isset($_POST['address']) && $_POST['address'] || $venueAddress  === $getVenue['address']) ? 'selected' : ''; ?>><?php echo $getVenue['address']  ?> </option>
-                      <?php
-                      }
-                      ?>
+                          <?php 
+                          foreach ($getVenues as $getVenue)
+                          {?>
+                              <option value="<?php echo $getVenue['id'] ; ?>"
+                              <?php if(isset($_POST['address']))
+                              {
+                                if($_POST['address']===$getVenue['address']){
+                                  echo 'selected';
+                                };
+                              }
+                              else{
+                                if($venueAddress === $getVenue['id']){
+                                  echo 'selected';
+                                }
+                              } ?>> <?php echo $getVenue['address']; ?>
+                            </option>
+                              
+                          <?php
+                          }
+                          ?>
                       </select>
                       <label for="address" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">address venue</label>
                       <small class="text-[#B60505]"> <?php echo $addressError; ?></small>
@@ -150,6 +196,8 @@ $getVenues = getDataVenue();
                 
                 </button>
           </div>
+          <p class="mt-6 mb-0 text-xs font-light text-end text-gray-700"><a href="/seller"
+                class="font-medium text-[#B60505] hover:underline">Back</a></p>
     </form>
   </div>
 </div>

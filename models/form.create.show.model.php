@@ -18,45 +18,60 @@
             return $statement->rowCount() > 0;
     }
 
-function insertDateTime(string $date, string $time) : bool
+    function insertDateTime(string $date, string $time) : bool
+        {
+            global $connection;
+                $statement=$connection->prepare('insert into date_time (date, time) values ( :date, :time)');
+                $statement->execute([
+                    ':date' => $date,
+                    ':time' => $time,
+                ]);
+                return $statement->rowCount() > 0;
+        }
+
+
+    function insertShowDateTime(int $show_id, int $datetime_id) : bool
+        {
+            global $connection;
+                $statement=$connection->prepare('insert into show_datetime (show_id, datetime_id) values ( :showid, :datetimeid)');
+                $statement->execute([
+                    ':showid' => $show_id,
+                    ':datetimeid' => $datetime_id,
+
+                ]);
+                return $statement->rowCount() > 0;
+
+        }
+        
+    function insertDetailData(int $show_id, int $venue_id) : bool
+        {
+            global $connection;
+                $statement=$connection->prepare('insert into detail (show_id, venue_id) values ( :showid, :venueid)');
+                $statement->execute([
+                    ':showid' => $show_id,
+                    ':venueid' => $venue_id,
+
+                ]);
+                return $statement->rowCount() > 0;
+
+        }
+
+    function getDateTimeData() : array
     {
-           global $connection;
-               $statement=$connection->prepare('insert into date_time (date, time) values ( :date, :time)');
-               $statement->execute([
-                   ':date' => $date,
-                   ':time' => $time,
-               ]);
-            return $statement->rowCount() > 0;
+        global $connection;
+        $statement = $connection->prepare("select * from date_time");
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
     }
 
-
-function insertShowDateTime(int $show_id, int $datetime_id) : bool
+    function getDataVenue() : array
     {
-           global $connection;
-               $statement=$connection->prepare('insert into show_datetime (show_id, datetime_id) values ( :showid, :datetimeid)');
-               $statement->execute([
-                   ':showid' => $show_id,
-                   ':datetimeid' => $datetime_id,
+        global $connection;
+        $statement = $connection->prepare("select * from venues");
+        $statement->execute();
+        return $statement->fetchAll(PDO::FETCH_ASSOC);
+    }
 
-               ]);
-            return $statement->rowCount() > 0;
-
-     }
-function getDateTimeData() : array
-{
-    global $connection;
-    $statement = $connection->prepare("select * from date_time");
-    $statement->execute();
-    return $statement->fetchAll(PDO::FETCH_ASSOC);
-}
-
-function getDataVenue() : array
-{
-    global $connection;
-    $statement = $connection->prepare("select * from venues");
-    $statement->execute();
-    return $statement->fetchAll(PDO::FETCH_ASSOC);
-}
 
 
 
