@@ -26,9 +26,12 @@ function type_show($id) : array
     return $statement->fetch(PDO::FETCH_ASSOC);
 }
 //delete shows by id
-function deleteShow($id) {
+function deleteShow($id):bool {
     global $connection;
-    $statement = $connection->prepare(" delete from shows where id = $id ");
-    $statement->execute();
+    $statement = $connection->prepare(" delete from shows where id = :id ");
+    $statement->execute([
+        ':id' => $id
+    ]);
+    return $statement->rowCount() > 0;
 }
 
