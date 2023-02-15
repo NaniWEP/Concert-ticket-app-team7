@@ -9,9 +9,11 @@ require "views/partials/head.php";
         <div class="block p-6  rounded-lg shadow-lg bg-white max-w-md">
             <div class="flex justify-between items-center mb-2">
                 <h3 class="mb-3 text-gray-900 text-2xl leading-tight font-semibold flex items-center justify-center">Choose way to pay</h3>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:bg-zinc-300 hover:rounded-lg">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <a href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="cancel" onclick="cancelPayment(event)" class="w-6 h-6 hover:bg-red-500 hover:rounded-lg">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </a>
             </div>
             <!-- ABA Choice -->
             <div id="abaChoose" class="mb-4 flex items-center gap-5 p-3 rounded-lg hover:bg-zinc-300 hover:rounded-lg">
@@ -52,9 +54,11 @@ require "views/partials/head.php";
                     <img src="assets/purchases/aba-pay.png" alt="" width="70" class="">
                     <h3 class="text-gray-900 text-2xl leading-tight font-semibold flex items-center justify-center">ABA PAY</h3>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-semibold hover:bg-zinc-300 hover:rounded-lg   ">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <a href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="cancel" onclick="cancelPayment(event)" class="w-6 h-6 font-semibold hover:bg-red-500 hover:rounded-lg   ">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </a>
             </div>
             <div class="mb-4 flex items-center justify-center gap-5 p-3 rounded-lg hover:bg-zinc-300 hover:rounded-lg">
                 <div class="flex flex-col justify-center items-center p-7">
@@ -77,9 +81,11 @@ require "views/partials/head.php";
                     <img src="assets/purchases/credit-card.png" alt="" width="70" class="">
                     <h3 class="text-gray-900 text-2xl leading-tight font-semibold flex items-center justify-center">Credit/Debit Card</h3>
                 </div>
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 font-semibold hover:bg-zinc-300 hover:rounded-lg   ">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
-                </svg>
+                <a href="/">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" id="cancel" onclick="cancelPayment(event)" class="w-6 h-6 font-semibold hover:bg-red-500 hover:rounded-lg   ">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </a>
             </div>
             <div class="mb-4 flex items-center justify-center gap-5 p-3 rounded-lg">
                 <!-- Form inter credit card info -->

@@ -1,5 +1,5 @@
 const choicePayment = document.getElementById ("choicePayment");
-const overly = document.getElementById ("overly");
+const cancelBtn = document.querySelector ("#cancel");
 // ABA dom
 const abaChosen = document.getElementById ("abaChoose");
 const abaPayment = document.getElementById ("abaPayment");
@@ -33,6 +33,7 @@ function showCreditCardPayment()
 
     creditCardPayment.id = "showCreditCardPayment";
     choicePayment.id = "chosenPayment";
+    cancelBtn.id = "cancel1";
     choiceOfPayment = false;
     console.log(choiceOfPayment)
 }
@@ -57,7 +58,13 @@ if (choiceOfPayment == true)
 
 backCreditCardBtn.addEventListener("click", closeCreditCardPayment)
 
-console.log(choiceOfPayment)
+function cancelPayment(event)
+{
+    let index = event.target.parentElement.parentElement.parentElement;
+    console.log(index);
+}
+
+// cancelBtn.addEventListener ("click", cancelPayment)
 
 
 
