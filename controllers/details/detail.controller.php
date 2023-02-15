@@ -1,6 +1,7 @@
 
 <?php
 require 'models/detail.model.php';
+require 'models/form.edit.model.php';
 
 $movie_id = $_GET['id'];
 $datas = getShowData();
@@ -27,3 +28,4 @@ foreach($datas as $data)
 }
 $date_time = getDatetime($id);
 $type = type($id);
+$venus = getVenuebyId($id);

@@ -1,15 +1,6 @@
-
-<script>
-
-</script>
-
-
-
 <?php
 session_start();
 require "models/form.model.php";
-
-
 // ========================================================================================= //
 
 $userNameError ="";
@@ -24,7 +15,6 @@ $comfirmPasswordError = "";
 $comfirmPassword = "";
 $formValid = true;
 $datas = getUserData();
-
 
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST')

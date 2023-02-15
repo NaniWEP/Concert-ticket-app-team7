@@ -7,8 +7,8 @@ require 'views/partials/nav.php' ;
 ?>
 <section class=" body-font overflow-hidden bg-black text-white" >
   <div class="container px-5 py-24 mx-auto mr-96">
-    <div class="lg:w-3/5 ml-24 flex flex-wrap">
-        <img alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" src="assets/movies/<?php echo $img ?>">
+    <div class="lg:w-3/5 ml-20 flex flex-wrap">
+        <img alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" src="assets/shows/<?php echo $img ?>">
         <div class="lg:w-1/2 w-full lg:pl-14  lg:mt-0">
           <h1 class="text-3xl title-font font-medium mb-3 text-white"><?php echo  $movie_name ;?></h1>
           <div class="flex mb-4">
@@ -54,10 +54,10 @@ require 'views/partials/nav.php' ;
   <div class="flex justify-center ">
     <iframe width="1150" height="500" src="<?php echo $trailer ?>" title="65 - Official Trailer - Only In Cinemas March 17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>              
   </div>
+</section>
   <?php
     require 'views/partials/footer.php';
   ?>
-</section>
 
 
 

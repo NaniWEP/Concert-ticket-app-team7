@@ -1,7 +1,7 @@
-<?php  
-    require 'views/partials/head.php';
-    require 'controllers/forms/register/form.register.controller.validate.php';
-?>
+    <?php  
+        require 'views/partials/head.php';
+        require 'controllers/forms/register/form.register.controller.validate.php';
+    ?>
     <div class="flex w-full pl-6 pt-6">
         <a href="/" class="text-white " >
             <button class="w-full px-4 py-2  tracking-wide text-white font-sans transition-colors duration-200 transform bg-[#B60505] rounded-md hover:bg-[#B60505] focus:outline-none focus:bg-[#B60505]">
@@ -14,9 +14,8 @@
         <div flex flex-col justify-center items-center >
             <img src="../../assets/logo.png" class="w-16 ml-32 text-[#B60505]" alt="">
             <h1 class="text-3xl font-semibold text-center text-[#B60505] ">REGISTER</h1>
-            
         </div>
-                        <form action='' class="mt-6" method="post" >
+        <form action='' class="mt-6" method="post" >
                 <div class="mt-4">
                     <label for="text" class="block  font-sans ">Username</label>
                     <input type="text" placeholder="username" name='username' value='<?php echo isset($_POST['username']) ? $_POST['username'] : ''; ?>'
@@ -61,6 +60,5 @@
             class="font-medium text-[#B60505] hover:underline">Log in</a></p>
         </div>
     </div>
-
 <?php
 require "views/partials/footer.php";

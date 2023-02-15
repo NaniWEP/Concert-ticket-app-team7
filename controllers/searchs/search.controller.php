@@ -1,8 +1,4 @@
 <?php
-
-// $typeShow='';
-
-
 function input($data) : string 
 {
     $data = trim($data);
