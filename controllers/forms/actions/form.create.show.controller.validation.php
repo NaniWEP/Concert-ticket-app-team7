@@ -36,7 +36,7 @@ $image = "";
 $image_tmp_name = "";
 $imageFolder = "";
 $countFormvalid =0;
-
+$Todaydate = date('Y-m-d');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {  
@@ -129,9 +129,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         // validation date
         if (empty($_POST["date"]))
         {
-            $dateError = "Please enter trailer";
+            $dateError = "Please enter date";
             $colorErrorName  = true;
             $formValid = false;
+        }
+        elseif( $_POST["date"]<$Todaydate){
+            $dateError = "Date must be today and future";
+            $colorErrorName  = true;
+            $formValid = false;
+            
         }
         else
         {
