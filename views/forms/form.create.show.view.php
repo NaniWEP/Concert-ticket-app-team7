@@ -196,8 +196,8 @@ $getVenues = getDataVenue();
                 
                 </button>
           </div>
-          <p class="mt-6 mb-0 text-xs font-light text-end text-gray-700"><a href="/seller"
-                class="font-medium text-[#B60505] hover:underline">Back</a></p>
+          <p class="mt-8 text-1xl font-light text-center text-gray-700"><a href="/seller"
+            class="font-medium text-[#B60505] hover:underline">Back</a></p>
     </form>
   </div>
 </div>
