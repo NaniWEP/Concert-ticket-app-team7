@@ -2,13 +2,13 @@
 <?php
 require 'views/partials/head.php';
 require 'controllers/details/detail.controller.php';
-require 'views/partials/nav.php' 
+require 'views/partials/nav.php' ;
 
 ?>
 <section class=" body-font overflow-hidden bg-black text-white" >
   <div class="container px-5 py-24 mx-auto mr-96">
-    <div class="lg:w-3/5 ml-24 flex flex-wrap">
-        <img alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" src="<?php echo $_GET['picture']?>">
+    <div class="lg:w-3/5 ml-20 flex flex-wrap">
+        <img alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" src="assets/shows/<?php echo $img ?>">
         <div class="lg:w-1/2 w-full lg:pl-14  lg:mt-0">
           <h1 class="text-3xl title-font font-medium mb-3 text-white"><?php echo  $movie_name ;?></h1>
           <div class="flex mb-4">
@@ -148,6 +148,7 @@ require 'views/partials/nav.php'
   <?php
     require 'views/partials/footer.php';
   ?>
+
 
 
 

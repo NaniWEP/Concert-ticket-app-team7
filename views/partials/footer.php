@@ -85,6 +85,6 @@
         </div>
         <script src = 'views/js/dialog.js' ></script> 
         <script src = 'views/js/banner.js' ></script>   
-  
+        <script src = 'views/js/show.password.js' ></script>   
     </body>
 </html>

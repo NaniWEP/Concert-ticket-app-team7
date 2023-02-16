@@ -16,6 +16,7 @@
             </div>
             <form action="" method="get" class="flex flex-row gap-4">
                 <input type="search" name="search" id="default-search" class="block w-96 p-2 pl-10 text-sm text-gray-900  border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 font-sans" value='<?php echo isset($_GET['search']) ? $_GET['search'] : ''; ?>' placeholder="Search..." required>
+                <input type="text" value='<?php if(isset($_GET['category'])){ echo $_GET['category'];}?>' name='category' style='display:none'>
                 <button class='bg-red-500 hover:bg-red-800 text-white  py-2 px-4 rounded inline-flex items-center'>search</button>    
             </form>
         </div>
@@ -29,11 +30,13 @@
                     <div id = "form-dialog" style="display: none" class="  sticky z-20"> 
                         <dialog open class="bg-black">
                             <section>
-                                <div  class="flex">
+                                <div  class="flex  mb-2">
                                     <i class="fa fa-user-circle mt-1 text-[#B60505]"></i> 
-                                    <a href="#" class="ml-2 hover:text-[#B60505] text-[#f5f5f5] font-sans"> <?= $_COOKIE['username']  ?> </a>
+
+                                    <a href="<?php if($_COOKIE['role_id'] === '1'){echo "/admin";} elseif ($_COOKIE['role_id'] === '2'){echo "/seller";} else{echo "/";} ?>" class="ml-2  hover:text-[#B60505] text-[#f5f5f5] font-sans">
+                                         <?= $_COOKIE['username']  ?> </a>
                                 </div>
-                                <div class="flex mt-2">
+                                <div class="flex ">
                                     <i class="fa fa-sign-in mt-1 text-[#B60505]" aria-hidden="true" ></i> 
                                     <a href="controllers/forms/logout/logout.controller.php" class="ml-3 hover:text-[#B60505] text-[#f5f5f5] font-sans"> Log out </a>
                                 </div> 
@@ -46,12 +49,7 @@
                     <div id = "form-dialog" style="display: none" class="  sticky z-20"> 
                         <dialog open class="bg-black">
                             <section>
-                                
-                                <div  class="flex">
-                                    <i class="fa fa-user-o mt-1 text-[#B60505]"></i> 
-                                    <a href="#" class="ml-3 hover:text-[#B60505] text-[#f5f5f5] font-sans"> Admin </a>
-                                </div>
-                                <div class="flex mt-2">
+                                <div class="flex mb-2">
                                     <i class="fa fa-sign-in mt-1 text-[#B60505]" aria-hidden="true" ></i> 
                                     <a href="/login" class="ml-3 hover:text-[#B60505] text-[#f5f5f5] font-sans"> Log in </a>
                                 </div> 
@@ -73,14 +71,12 @@
                     <a href="#" class="text-white  hover:underline font-sans" aria-current="page">Home</a>
                 </li>
                 <li>
-                    <a href="#" class="text-white  hover:underline font-sans">Company</a>
+                    <a href="#" class="text-white  hover:underline font-sans">About us</a>
                 </li>
                 <li>
-                    <a href="#" class="text-white  hover:underline font-sans">Team</a>
+                    <a href="#" class="text-white  hover:underline font-sans">Contect us</a>
                 </li>
                 <li>
-                    <a href="#" class="text-white hover:underline font-sans">Features</a>
-                </li>
             </ul>
     </div>
 </nav>
