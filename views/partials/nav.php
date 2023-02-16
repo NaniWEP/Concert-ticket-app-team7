@@ -30,11 +30,13 @@
                     <div id = "form-dialog" style="display: none" class="  sticky z-20"> 
                         <dialog open class="bg-black">
                             <section>
-                                <div  class="flex">
+                                <div  class="flex  mb-2">
                                     <i class="fa fa-user-circle mt-1 text-[#B60505]"></i> 
-                                    <a href="#" class="ml-2 hover:text-[#B60505] text-[#f5f5f5] font-sans"> <?= $_COOKIE['username']  ?> </a>
+
+                                    <a href="<?php if($_COOKIE['role_id'] === '1'){echo "/admin";} elseif ($_COOKIE['role_id'] === '2'){echo "/seller";} else{echo "/";} ?>" class="ml-2  hover:text-[#B60505] text-[#f5f5f5] font-sans">
+                                         <?= $_COOKIE['username']  ?> </a>
                                 </div>
-                                <div class="flex mt-2">
+                                <div class="flex ">
                                     <i class="fa fa-sign-in mt-1 text-[#B60505]" aria-hidden="true" ></i> 
                                     <a href="controllers/forms/logout/logout.controller.php" class="ml-3 hover:text-[#B60505] text-[#f5f5f5] font-sans"> Log out </a>
                                 </div> 
@@ -47,12 +49,7 @@
                     <div id = "form-dialog" style="display: none" class="  sticky z-20"> 
                         <dialog open class="bg-black">
                             <section>
-                                
-                                <div  class="flex">
-                                    <i class="fa fa-user-o mt-1 text-[#B60505]"></i> 
-                                    <a href="#" class="ml-3 hover:text-[#B60505] text-[#f5f5f5] font-sans"> Admin </a>
-                                </div>
-                                <div class="flex mt-2">
+                                <div class="flex mb-2">
                                     <i class="fa fa-sign-in mt-1 text-[#B60505]" aria-hidden="true" ></i> 
                                     <a href="/login" class="ml-3 hover:text-[#B60505] text-[#f5f5f5] font-sans"> Log in </a>
                                 </div> 

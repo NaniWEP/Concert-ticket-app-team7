@@ -68,20 +68,20 @@ $Todaydate = date('Y-m-d');
         {
             $email = $_POST["email"];
             $emailPattern = preg_match('/\\S+@\\S+\\.\\S+/', $email);
-            foreach($datas as $data){
+            foreach($datas as $data)
+            {
                 if ($data['email'] == $email){
                     $formValid = false;
                     $colorErrorEmail  = true;
                     $emailError = "This email is already in use.";
                 }
-            if(!$emailPattern)
-            {
-                $emailError = "Please enter a property email";
-                $colorErrorEmail  = true;
-                $formValid = false;
-            }
-        }
-            
+                if(!$emailPattern)
+                {
+                    $emailError = "Please enter a property email";
+                    $colorErrorEmail  = true;
+                    $formValid = false;
+                }
+            }    
         }
         if (empty($_POST["password"]))
         {
