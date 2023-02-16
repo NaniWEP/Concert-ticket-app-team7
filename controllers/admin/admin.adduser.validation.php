@@ -62,20 +62,22 @@ $datas = getUserData();
         {
             $email = $_POST["email"];
             $emailPattern = preg_match('/\\S+@\\S+\\.\\S+/', $email);
-            foreach($datas as $data)
-            {
-                if ($data['email'] == $email){
-                    $formValid = false;
-                    $colorErrorEmail  = true;
-                    $emailError = "This email is already in use.";
-                }
-                if(!$emailPattern)
+            if(empty($_GET['showId'])){
+                foreach($datas as $data)
                 {
-                    $emailError = "Please enter a property email";
-                    $colorErrorEmail  = true;
-                    $formValid = false;
-                }
-            }    
+                    if ($data['email'] == $email){
+                        $formValid = false;
+                        $colorErrorEmail  = true;
+                        $emailError = "This email is already in use.";
+                    }
+                }  
+            }
+            if(!$emailPattern)
+            {
+                $emailError = "Please enter a property email";
+                $colorErrorEmail  = true;
+                $formValid = false;
+            } 
         }
         // validate password--------------
         if (empty($_POST["password"]))
@@ -113,11 +115,22 @@ $datas = getUserData();
                 $colorRoleError = true;
                 $formValid = false;
             }
-        }    
-        if($formValid)
+        } 
+        if(! isset($_GET['showId'])){
+            if($formValid)
+            {
+                register($userName, $hash , $email , $dateOfBirth, $role);
+                header("Location:/admin");
+            }
+        } 
+        else  
         {
-            register($userName, $hash , $email , $dateOfBirth, $role); 
-            header("Location:/admin");
+            if($formValid)
+            {
+                editShow($_GET['showId'],$userName, $email, $hash , $role,$dateOfBirth);
+                header("Location:/admin");
+            }
         }
+        
 }
     
