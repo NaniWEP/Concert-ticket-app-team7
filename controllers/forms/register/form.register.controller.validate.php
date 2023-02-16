@@ -134,7 +134,8 @@ $Todaydate = date('Y-m-d');
             setcookie ("email",$_POST["email"], time() + 3600);
             setcookie ("password",$_POST["password"], time() + 3600);
             setcookie ("username",$_POST["username"], time() + 3600);
-            register($userName, $hash, $email, $dateOfBirth, 3 );
+            setcookie("role_id", 3, time() + 3600);
+            register($userName, $hash, $email, $dateOfBirth,3 );
             header("Location:/");
         }
 }
