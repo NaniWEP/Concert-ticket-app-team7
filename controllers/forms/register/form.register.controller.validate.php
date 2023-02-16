@@ -2,6 +2,7 @@
 session_start();
 require "models/form.model.php";
 // ========================================================================================= //
+// Return current date from the remote server
 
 $userNameError ="";
 $userName = "";
@@ -15,8 +16,7 @@ $comfirmPasswordError = "";
 $comfirmPassword = "";
 $formValid = true;
 $datas = getUserData();
-
-
+$Todaydate = date('Y-m-d');
     if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         // validation user name
@@ -48,7 +48,12 @@ $datas = getUserData();
             $userDateOfBirthError = "Please enter your date of birth";
             $colorErrorDateOfBirth  = true;
             $formValid = false; 
-        }else
+        }elseif(($_POST["date-of-birth"])>= $Todaydate){
+            $userDateOfBirthError = "Your date of birth cannot today and future";
+            $colorErrorDateOfBirth  = true;
+            $formValid = false;
+        }
+        else
         {
             $dateOfBirth = $_POST["date-of-birth"];
         }
