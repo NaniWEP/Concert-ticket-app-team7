@@ -3,16 +3,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* font-family: serif; */
 }
 body
 {
-    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: #eef2f3;
-
 
 }
 
@@ -146,9 +143,7 @@ dialog menu {
     border: none;
 }
 
-
 /* style form create show */
-
 .-z-1 {
     z-index: -1;
   }
@@ -178,7 +173,6 @@ dialog menu {
 
   input:focus ~ label,
   select:focus ~ label {
-    /* @apply text-black; left-0; */
     --tw-text-opacity: 1;
     color: rgba(0, 0, 0, var(--tw-text-opacity));
     left: 0px;
@@ -191,4 +185,8 @@ dialog menu {
 #th{
     color: white;
     font-size: 15px;
+}
+#table_row{
+    color: red;
+
 }

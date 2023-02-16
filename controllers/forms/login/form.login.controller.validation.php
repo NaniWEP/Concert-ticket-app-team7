@@ -1,12 +1,11 @@
 
-
 <?php
 
 session_start();
 require "models/form.model.php";
 //====================================================================
-$passwordError = '';
 $formValid = false;
+$passwordError = '';
 $userName = '';
 $password = '';
 $email='';
@@ -18,8 +17,8 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
     if(empty($_POST["email"]))
     {
-        $emailError = "Please enter your Eemail";
-        $colorErrorPass  = true;
+        $emailError = "Please enter your email";
+        $colorErrorEmail  = true;
         $formValid = false;
     }
     elseif (isset($_POST["email"]))
@@ -29,17 +28,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
             if ($data['email'] == $email)
             {
                 $emaillValueCookie = $_POST["email"];
-
             }else{
-                $emailError = "Does not find user's Eemail";
+                $emailError = "Does not find user's email";
+                $colorErrorEmail  = true;
             }
         }
-        
     }
     if (empty($_POST["password"])) 
     {
         $passwordError = "Please enter your password";
-        $colorErrorPass  = true;
+        $colorErrorPassword  = true;
         $formValid = false;
     }
     elseif (isset($_POST["password"]))
@@ -47,33 +45,32 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
         $password = $_POST['password'];
         foreach($datas as $data)
         {
-
             if ($data['email'] == $email && password_verify( $password,$data['password']))
             {
-                $formValid = true;
-                setcookie("username", $data['name'], time() + 3600);
-                setcookie ("email",$_POST["email"], time() + 3600);
-                setcookie ("password",$_POST["password"], time() + 3600);
                 $role_id = $data['role_id'];
+                $formValid = true;
             }
             else{
                 $passwordError = "Your password is not correct";
+                $colorErrorPassword  = true;
             }
         }           
     }
+
     if($formValid)
-    {   
+    {   setcookie("username", $data['name'], time() + 3600);
+
+        setcookie ("email",$_POST["email"], time() + 3600);
+        setcookie ("password",$_POST["password"], time() + 3600);
+        setcookie("role_id", $role_id, time() + 3600);
         if ($role_id == 3){
             header("Location:/");
         }
-    elseif($role_id == 2){
-        header("Location:/seller");
-    }
-    elseif($role_id == 1){
-        header("Location:/admin");    
-    }
+        elseif($role_id == 2){
+            header("Location:/seller");
+        }
+        elseif($role_id == 1){
+            header("Location:/admin");    
+        }
     }
 }
-
-
-
