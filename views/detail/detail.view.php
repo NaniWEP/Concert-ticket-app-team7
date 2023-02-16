@@ -144,10 +144,10 @@ require 'views/partials/nav.php'
           </div>
       </div>
   </div>
+</section>
   <?php
     require 'views/partials/footer.php';
   ?>
-</section>
 
 
 

@@ -1,4 +1,6 @@
 <?php
+// require "models/purchase.model.php";
+
 
 $ownerName = "";
 $ownerNameError = "";
@@ -69,5 +71,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
     if($formValid)
     {
         echo "yes";
+        // creditCard($userId, $ownerName, $cardNamber, $expireDate, $cvvNumber);
     }   
 }

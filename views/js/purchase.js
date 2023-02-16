@@ -64,22 +64,14 @@ function cancelPayment(event)
     console.log(index);
 }
 
-// cancelBtn.addEventListener ("click", cancelPayment)
-
-
-
-
-
 // expire date
 expireDate.onkeyup = function (e) {
-    // document.getElementById("ex").innerHTML = expireDate.value;
     var expireNum = this.value;
     console.log(expireNum);
     this.value = expireNum.replace(/^(\d{2})(?:\/?)(\d{1,2})$/, `$1/$2`).replace(/^(\d{2})\/$/, '$1');
 }
-// 
+// Card number
 cardNumber.onkeyup = function(e) {
-    // document.getElementById("name").innerHTML = cardNum.value;
     if (this.value == this.lastValue) return;
     var caretPosition = this.selectionStart;
     var sanitizedValue = this.value.replace(/[^0-9]/gi, '');
@@ -100,17 +92,3 @@ cardNumber.onkeyup = function(e) {
     this.value = this.lastValue = parts.join(' ');
     this.selectionStart = this.selectionEnd = caretPosition;
 }
-
-
-// abaChosen.addEventListener("click", () => 
-// abaPayment.id = "showABAPayment"
-// )
-// abaChosen.addEventListener("click", () => 
-// choicePayment.id = "chosenPayment"
-// )
-// overly.addEventListener("click", () => 
-// abaPayment.id = "abaClose"
-// )
-// overly.addEventListener("click", () => 
-// choice.id = "choosingPayment"
-// )

@@ -143,7 +143,10 @@ require "controllers/purchases/purchase.validate.php";
                     </div>
                     <div class="mt-6 w-full">
                         <button  class="w-full px-4 py-2 tracking-wide text-white  font-sans transition-colors duration-200 transform bg-[#B60505] rounded-md hover:bg-[#B60505] focus:outline-none focus:bg-[#B60505]">
-                            Pay 
+                           <span>
+                            $ 8.50
+                           </span> 
+                           PAY 
                         </button>
                     </div>
                 </form>
