@@ -1,16 +1,18 @@
 <?php
-require 'views/partials/head.php';
 require 'controllers/forms/login/form.login.controller.validate.php';
 ?>
+<script src="https://cdn.tailwindcss.com"></script>
+<body class=" font-sans max-w-full bg-[url('assets/bg-login.png')] bg-contain ">
+<div class=" flex flex-col items-center justify-center w-full m-0">
  <div class="flex w-full pl-6 pt-6">
-    <a href="/" class="text-white " >
+    <a href="/" class="text-white ">
         <button class="w-full px-4 py-2  tracking-wide text-white font-sans transition-colors duration-200 transform bg-[#B60505] rounded-md hover:bg-[#B60505] focus:outline-none focus:bg-[#B60505]">
             BACK
         </button>
     </a>
 </div>
-<div class="relative flex flex-col justify-center min-h-screen overflow-hidden w-96">
-    <div class="w-full p-6 m-auto bg-white border-t border-[#B60505] rounded shadow-lg shadow-red-800/50 lg:max-w-md">
+<div class="relative flex flex-col justify-center min-h-screen overflow-hidden w-96 ">
+    <div class="w-full p-6 m-auto bg-white border-t border-[#B60505] rounded shadow-lg shadow-red-800/50 lg:max-w-md ">
         <img src="../../assets/logo.png" class="w-16 ml-32 text-[#B60505]" alt="">
         <form action="" class="mt-6" method="post">
             <div class="mt-4">
