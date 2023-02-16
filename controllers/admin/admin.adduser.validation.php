@@ -13,6 +13,7 @@ $roleError = "";
 $hash = "";
 $formValid = true;
 $datas = getUserData();
+$Todaydate = date('Y-m-d');
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
@@ -45,6 +46,11 @@ $datas = getUserData();
             $dateError = "please enter your birthday";
             $colorDateError = true;
             $formValid = false; 
+        }
+        elseif($_POST["date-of-birth"] >= $Todaydate){
+            $dateError = "Your date of birth cannot today and future";
+            $colorDateError = true;
+            $formValid = false;
         }
         else
         {

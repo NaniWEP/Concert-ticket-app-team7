@@ -28,6 +28,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
             if ($data['email'] == $email)
             {
                 $emaillValueCookie = $_POST["email"];
+                $userName = $data['name'];
             }else{
                 $emailError = "Does not find user's email";
                 $colorErrorEmail  = true;
@@ -58,18 +59,22 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
     }
 
     if($formValid)
-    {   setcookie("username", $data['name'], time() + 3600);
-
+    {   
+        setcookie("username",$userName, time() + 3600);
         setcookie ("email",$_POST["email"], time() + 3600);
         setcookie ("password",$_POST["password"], time() + 3600);
-        setcookie("role_id", $role_id, time() + 3600);
+       
         if ($role_id == 3){
+            setcookie("role_id", 3, time() + 3600);
             header("Location:/");
+            
         }
         elseif($role_id == 2){
+            setcookie("role_id", 2, time() + 3600);
             header("Location:/seller");
         }
         elseif($role_id == 1){
+            setcookie("role_id", 1, time() + 3600);
             header("Location:/admin");    
         }
     }
