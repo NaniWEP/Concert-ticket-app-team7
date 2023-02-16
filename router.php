@@ -9,9 +9,9 @@ $routes = [
     '/show' => 'controllers/forms/actions/form.create.show.controller.php',
     '/seller' => 'controllers/sellers/seller.controller.php',
     '/edit' =>'controllers/forms/actions/form.edit.show.controller.php',
-    // '/adminLogin' => 'controllers/forms/login.admin/form.admin.login.controller.php',
     '/admin' => 'views/admin/admin.view.php',
     '/adduser' => 'controllers/admin/admin.adduser.controller.php',
+    '/forgetpassword'=>'views/forms/forgetPassword/form.forget.password.gmail.view.php',
 
 
 ];

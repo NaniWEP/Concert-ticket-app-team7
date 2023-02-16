@@ -1,3 +1,4 @@
+
 <?php
   require 'views/partials/head.php';
   require 'controllers/forms/login/form.login.controller.validation.php';
@@ -19,36 +20,19 @@
                 <div class="w-full">
                     <img src="../../assets/logo.png" class="w-16 ml-36 text-[#B60505]" alt="">
                     <h1 class="mb-4 text-2xl font-bold text-center text-gray-700">
-                        Log in
+                        Reset Password
                     </h1>
-                    <form action="#" method="post">
+                    <form action="" method="post">
                         <div>
                             <label class="block text-sm">Email</label>
                             <input type="email"
                             class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 <?php if ($colorErrorEmail){ echo "border-[#B60505]";} ?>"
-                            name='email'  placeholder="email" value='<?php echo isset($_POST['email']) ? $_POST['email'] : ''; ?>'>
+                            name='email'  placeholder="email" value=''>
                             <small class="text-[#B60505]"> <?php echo $emailError; ?></small>
                         </div>
-                        <div>
-                            <label class="block mt-4 text-sm">Password</label>
-                            <input
-                            class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 <?php if ($colorErrorPassword){ echo "border-[#B60505]";} ?>"
-                            type="password" placeholder="password" id="myInputPassword" name="password" value="<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>" >
-                            <div class="flex mt-2">
-                                <input type="checkbox" onclick=" myFunctionInputPassword()"> <br>
-                                <p class="text-xs mt-1 ml-1"> Show password</p>
-
-                            </div>
-                            <small class="text-[#B60505]"> <?php echo $passwordError; ?></small>
-                        </div>
-                        <p class="mt-4">
-                            <a class="text-sm  hover:underline cursor-pointer " href = '<?php echo'/forgetpassword'?>'>
-                                Forgot your password?
-                            </a>
-                        </p>
                         <button 
                             class="w-full mt-4 px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#B60505] rounded-md hover:bg-[#B60505] focus:outline-none focus:bg-[#B60505]">
-                            Log in
+                            Submit
                         </button>
                     </form>
                     <p class="mt-8 text-xs font-light text-center text-gray-700"> Don't have an account? 
