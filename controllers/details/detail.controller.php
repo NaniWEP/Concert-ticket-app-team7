@@ -2,9 +2,14 @@
 <?php
 require 'models/detail.model.php';
 require 'models/form.edit.model.php';
-
+date_default_timezone_set('Asia/bangkok');
+$day =  date("d");
+$month =  date("m");
+$year =  date("y");
+$timeNow = date("h:i");
 $movie_id = $_GET['id'];
-$datas = getShowData();
+$showDatas = getShowData();
+$venuesDatas = getVenueData();
 $description = '';
 $id = '';
 $language = '';
@@ -12,18 +17,18 @@ $subtitle = '';
 $time = '';
 $trailer = '';
 $poster = '';
-foreach($datas as $data)
+foreach($showDatas as $showData)
 {
-    if ($movie_id== $data['id']) 
+    if ($movie_id== $showData['id']) 
     {
-        $description = $data['description'];
-        $id = $data['id'];
-        $language = $data['language'];
-        $subtitle = $data['subtitle'];
-        $time = $data['running_time'];
-        $trailer = $data['trailer'];
-        $movie_name= $data['title'];
-        $img = $data['img'];
+        $description = $showData['description'];
+        $id = $showData['id'];
+        $language = $showData['language'];
+        $subtitle = $showData['subtitle'];
+        $time = $showData['running_time'];
+        $trailer = $showData['trailer'];
+        $movie_name= $showData['title'];
+        $img = $showData['img'];
     }
 }
 $date_time = getDatetime($id);

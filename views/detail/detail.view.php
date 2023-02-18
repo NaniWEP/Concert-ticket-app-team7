@@ -6,7 +6,7 @@ require 'views/partials/nav.php' ;
 
 ?>
 <section class=" body-font overflow-hidden bg-black text-white" >
-  <div class="container px-5 py-24 mx-auto mr-96">
+  <div class="container px-5 py-24 mx-auto ">
     <div class="lg:w-3/5 ml-20 flex flex-wrap">
         <img alt="ecommerce" class="lg:w-1/2 w-full object-cover object-center rounded border border-gray-200" src="assets/shows/<?php echo $img ?>">
         <div class="lg:w-1/2 w-full lg:pl-14  lg:mt-0">
@@ -50,99 +50,75 @@ require 'views/partials/nav.php' ;
         </div>
     </div>
   </div>
-  <div class="flex justify-center ">
-    <iframe width="1150" height="500" src="<?php echo $trailer ?>" title="65 - Official Trailer - Only In Cinemas March 17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>              
+
+  <div class="flex justify-center">
+    <iframe width="1110" height="500" src="<?php echo $trailer ?>" title="65 - Official Trailer - Only In Cinemas March 17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="rounded-lg"></iframe>              
   </div>
-  <div class="bg-gray-200 border-l-[12px] border-t-[8px] border-[#B60505] m-10 p-10 flex mr-20 rounded-lg ">
-    <div  class="mr-20 flex ">
-      <div class="text-[#B60505] text-2xl hover:border-b-[3px] border-[#B60505] ">Today</div>
+  <!-- Date -->
+  <div class="flex w-full justify-center items-center">
+    <div  class=" flex w-[87%]  max-w-96 mt-5 p-10 bg-gray-300 rounded-lg">
+      <div class=" text-2xl text-red-400 hover:text-[#B60505] border-[#B60505] ">Today <?= $day."-".$month."-".$year?></div>
       <svg aria-hidden="true" focusable="false" data-prefix="far" data-icon="arrow-alt-circle-right" class="w-20 h-8" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
         <path fill="blackColor" d="M504 256C504 119 393 8 256 8S8 119 8 256s111 248 248 248 248-111 248-248zm-448 0c0-110.5 89.5-200 200-200s200 89.5 200 200-89.5 200-200 200S56 366.5 56 256zm72 20v-40c0-6.6 5.4-12 12-12h116v-67c0-10.7 12.9-16 20.5-8.5l99 99c4.7 4.7 4.7 12.3 0 17l-99 99c-7.6 7.6-20.5 2.2-20.5-8.5v-67H140c-6.6 0-12-5.4-12-12z"></path>
       </svg>
-      <div class="text-black text-2xl "><?php echo  $date_time['date'];?></div>
+      <div class="text-black text-2xl "><?= $date_time['date'];?></div>
     </div>
   </div>
+  <!-- times -->
   <div class="container mx-auto px-20">
-      <div class="flex flex-col w-full" style="cursor: auto;">
-        <div class="grid gap-36 gap-y-10 grid-cols-1 sm:grid-cols-2 my-2  w-full">
-          <div class="metric-card  bg-slate-700  rounded-lg p-4 max-w-72 w-full " style="cursor: auto;">
-              <div class="w-20">
-                  <img src="../../assets/moveis../../major-logo.png" alt="">
-              </div>
-              <div class="text-white ">MAJOR CINEPLEX</div>
-              <div class="py-13">
-                  <div class="flex flex-wrap justify-center gap-4 p-4 ">
-                    <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
-                      15:25
-                    </div>
-                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
-                      20:20
-                    </div>
-                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white   text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
-                      15:02
-                    </div>
-                  </div>
-              </div>
-          </div>
-          <div class="metric-card bg-slate-700 rounded-lg p-4 max-w-72 w-full" style="cursor: auto;">
-              <div class="w-20">
-                  <img src="../../assets/moveis../../legend-logo.png" alt="">
-              </div>
-              <div class="text-white ">LEGEND CINEMA</div>
-              <div class=" py-13">
-                  <div class="flex flex-wrap justify-center gap-4 p-4 ">
-                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
-                      14:12
-                    </div>
-                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
-                      16:40
-                     </div>
-                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
-                      13:50
-                    </div>
-                  </div>
-              </div>
-          </div>
-          <div class="metric-card bg-slate-700  rounded-lg p-4 max-w-72 w-full" style="cursor: auto;">
-              <div class="w-20">
-                  <img src="../../assets/moveis../../major-logo.png" alt="">
-              </div>
-              <div class="text-white ">MAJOR CINEPLEX</div>
-              <div class=" py-13">
-                  <div class="flex flex-wrap justify-center gap-4 p-4 ">
-                      <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
-                        18:20
-                      </div>
-                      <div class="border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
-                        20:10
-                      </div>
-                      <div class="border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
-                        17:08
-                      </div>
-                  </div>
-              </div>
-          </div>
-          <div class="metric-card bg-slate-700   rounded-lg p-4 max-w-72 w-full" style="cursor: auto;">
-              <div class="w-20  ">
-                  <img src="../../assets/moveis../../legend-logo.png" alt="">
-              </div>
-              <div class="text-white ">LEGEND CINEMA</div>
-              <div class=" py-13">
-                  <div class="flex flex-wrap justify-center gap-4 p-4 ">
-                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
-                      12:32
-                    </div>
-                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2 mr-10">
-                      23:22
-                    </div>
-                    <div class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
-                      15:40
-                    </div>
-                  </div>
+    <div class="flex flex-col w-full" style="cursor: auto;">
+      <div class="grid gap-32 gap-y-10 grid-cols-1 sm:grid-cols-2 my-2  w-full">
+        <?php
+          foreach ($venuesDatas as $data)
+          {
+          ?>
+
+          <div class="metric-card bg-slate-700 rounded-lg p-4 max-w-72 w-full " style="cursor: auto;">
+            <div class="flex items-center  gap-2 w-full">
+              <img src="assets/<?= $data['logo'] ?>"  width="70" alt="" >
+              <div class="text-white flex flex-col">
+                <?= $data['name'] ?>
+                <span class="text-gray-400">Hall-01</span>
               </div>
             </div>
+            <div class="grid gap-x-8 gap-y-4 grid-cols-3 p-4">
+              <a href="" class = "flex justify-center items-center">
+                <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
+                  09:45
+                </div>
+              </a>
+              <a href="" class = "flex justify-center items-center">
+                <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
+                  13:00
+                </div>
+              </a>
+              <a href="" class = "flex justify-center items-center">
+                <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
+                  14:45
+                </div>
+              </a>
+              <a href="" class = "flex justify-center items-center">
+                <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
+                  15:15
+                </div>
+              </a>
+              <a href="" class = "flex justify-center items-center">
+                <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
+                  16:15
+                </div>
+              </a>
+              <a href="" class = "flex justify-center items-center">
+                <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
+                  18:45
+                </div>
+              </a>
+            </div>
           </div>
+          <?php 
+          }
+        ?>
       </div>
+    </div>
   </div>
 </section>
   <?php
