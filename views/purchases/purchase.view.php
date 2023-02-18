@@ -118,12 +118,14 @@ require "controllers/purchases/purchase.validate.php";
                 {
                    if ($userActivated)
                    {
-                        echo '<span>'.'Enjoy yout time' . '</span>';
                     ?>
-
-                    <a href="/"  class="mt-6 w-full">
-                        <button id="payBtn" class="w-full px-4 py-2 tracking-wide text-white  font-sans transition-colors duration-200 transform bg-[#B60505] rounded-md hover:bg-[#B60505] focus:outline-none focus:bg-[#B60505]">
-                            <span><?= 'Pay Now' ?></span>
+                    <span>Enjoy yout time</span>
+                    <div>
+                        
+                    </div>
+                    <a href=""  class="mt-3 w-full">
+                        <button id="saveCreditCard" class="w-full px-4 py-2 tracking-wide text-white  font-sans transition-colors duration-200 transform bg-[#B60505] rounded-md hover:bg-[#B60505] focus:outline-none focus:bg-[#B60505]">
+                            <span>Comfirm</span>
                         </button>
                     </a>
                     <?php
