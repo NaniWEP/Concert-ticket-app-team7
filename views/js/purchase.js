@@ -1,5 +1,6 @@
 const choicePayment = document.getElementById ("choicePayment");
 const cancelBtn = document.querySelector ("#cancel");
+const payBtn = document.querySelector ("#payBtn");
 // ABA dom
 const abaChosen = document.getElementById ("abaChoose");
 const abaPayment = document.getElementById ("abaPayment");
@@ -62,7 +63,10 @@ function cancelPayment(event)
 {
     let index = event.target.parentElement.parentElement.parentElement;
     console.log(index);
-}
+};
+function paymentBtn(){
+    alert ("no")
+};
 
 // expire date
 expireDate.onkeyup = function (e) {

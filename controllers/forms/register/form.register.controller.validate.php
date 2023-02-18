@@ -131,10 +131,10 @@ $Todaydate = date('Y-m-d');
 
         if($formValid)
         {
-            setcookie ("email",$_POST["email"], time() + 3600);
-            setcookie ("password",$_POST["password"], time() + 3600);
-            setcookie ("username",$_POST["username"], time() + 3600);
-            setcookie("role_id", 3, time() + 3600);
+            setcookie ("email",$_POST["email"], time() + (86400 * 30));
+            setcookie ("password",$_POST["password"], time() + (86400 * 30));
+            setcookie ("username",$_POST["username"], time() + (86400 * 30));
+            setcookie("role_id", 3, time() + (86400 * 30));
             register($userName, $hash, $email, $dateOfBirth,3 );
             header("Location:/");
         }

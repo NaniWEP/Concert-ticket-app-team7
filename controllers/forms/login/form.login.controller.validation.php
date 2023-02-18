@@ -12,6 +12,7 @@ $email='';
 $emailError='';
 $datas = getUserData();
 $role_id = '';
+$userId = '';
 
 if($_SERVER['REQUEST_METHOD'] == 'POST')
 {
@@ -29,6 +30,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
             {
                 $emaillValueCookie = $_POST["email"];
                 $userName = $data['name'];
+                $userId = $data['id'];
             }else{
                 $emailError = "Does not find user's email";
                 $colorErrorEmail  = true;
@@ -60,21 +62,23 @@ if($_SERVER['REQUEST_METHOD'] == 'POST')
 
     if($formValid)
     {   
-        setcookie("username",$userName, time() + 3600);
-        setcookie ("email",$_POST["email"], time() + 3600);
-        setcookie ("password",$_POST["password"], time() + 3600);
+        setcookie("username",$userName, time() + (86400 * 30));
+        setcookie ("email",$_POST["email"], time() + (86400 * 30));
+        setcookie ("password",$_POST["password"], time() + (86400 * 30));
+        setcookie ("id",$userId, time() + (86400 * 30));
+
        
         if ($role_id == 3){
-            setcookie("role_id", 3, time() + 3600);
+            setcookie("role_id", 3, time() + (86400 * 30));
             header("Location:/");
             
         }
         elseif($role_id == 2){
-            setcookie("role_id", 2, time() + 3600);
+            setcookie("role_id", 2, time() + (86400 * 30));
             header("Location:/seller");
         }
         elseif($role_id == 1){
-            setcookie("role_id", 1, time() + 3600);
+            setcookie("role_id", 1, time() + (86400 * 30));
             header("Location:/admin");    
         }
     }
