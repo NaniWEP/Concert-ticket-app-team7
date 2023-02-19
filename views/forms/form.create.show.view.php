@@ -106,9 +106,9 @@ $getVenues = getDataVenue();
                   <select name="name-venue" placeholder=" " onclick="this.setAttribute('value', this.value);"
                     class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200"  >
                       <option value="" selected disabled hidden></option>
-                      <?php 
-                          foreach ($getVenues as $getVenue)
-                      {?>
+                        <?php 
+                            foreach ($getVenues as $getVenue)
+                        {?>
                               <option value="<?php echo $getVenue['id'] ; ?>" <?php
                               if(isset($_POST['name-venue'])){
                                 if($_POST['name-venue']===$getVenue['name']){
@@ -155,8 +155,8 @@ $getVenues = getDataVenue();
                           }
                           ?>
                       </select>
-                      <label for="address" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">address venue</label>
-                      <small class="text-[#B60505]"> <?php echo $addressError; ?></small>
+                    <label for="address" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">address venue</label>
+                    <small class="text-[#B60505]"> <?php echo $addressError; ?></small>
               </div>
           </div>
           <div class="relative z-0 w-full mb-5">
@@ -196,8 +196,8 @@ $getVenues = getDataVenue();
                 
                 </button>
           </div>
-          <p class="mt-6 mb-0 text-xs font-light text-end text-gray-700"><a href="/seller"
-                class="font-medium text-[#B60505] hover:underline">Back</a></p>
+          <p class="mt-8 text-1xl font-light text-center text-gray-700"><a href="/seller"
+            class="font-medium text-[#B60505] hover:underline">Back</a></p>
     </form>
   </div>
 </div>

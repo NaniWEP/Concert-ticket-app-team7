@@ -1,16 +1,8 @@
-
-<script>
-
-</script>
-
-
-
 <?php
 session_start();
 require "models/form.model.php";
-
-
 // ========================================================================================= //
+// Return current date from the remote server
 
 $userNameError ="";
 $userName = "";
@@ -24,9 +16,7 @@ $comfirmPasswordError = "";
 $comfirmPassword = "";
 $formValid = true;
 $datas = getUserData();
-
-
-
+$Todaydate = date('Y-m-d');
     if ($_SERVER['REQUEST_METHOD'] == 'POST')
     {
         // validation user name
@@ -58,7 +48,12 @@ $datas = getUserData();
             $userDateOfBirthError = "Please enter your date of birth";
             $colorErrorDateOfBirth  = true;
             $formValid = false; 
-        }else
+        }elseif(($_POST["date-of-birth"])>= $Todaydate){
+            $userDateOfBirthError = "Your date of birth cannot today and future";
+            $colorErrorDateOfBirth  = true;
+            $formValid = false;
+        }
+        else
         {
             $dateOfBirth = $_POST["date-of-birth"];
         }
@@ -73,20 +68,20 @@ $datas = getUserData();
         {
             $email = $_POST["email"];
             $emailPattern = preg_match('/\\S+@\\S+\\.\\S+/', $email);
-            foreach($datas as $data){
+            foreach($datas as $data)
+            {
                 if ($data['email'] == $email){
                     $formValid = false;
                     $colorErrorEmail  = true;
                     $emailError = "This email is already in use.";
                 }
-            if(!$emailPattern)
-            {
-                $emailError = "Please enter a property email";
-                $colorErrorEmail  = true;
-                $formValid = false;
-            }
-        }
-            
+                if(!$emailPattern)
+                {
+                    $emailError = "Please enter a property email";
+                    $colorErrorEmail  = true;
+                    $formValid = false;
+                }
+            }    
         }
         if (empty($_POST["password"]))
         {
@@ -136,9 +131,10 @@ $datas = getUserData();
 
         if($formValid)
         {
-            setcookie ("email",$_POST["email"], time() + 3600);
-            setcookie ("password",$_POST["password"], time() + 3600);
-            setcookie ("username",$_POST["username"], time() + 3600);
+            setcookie ("email",$_POST["email"], time() + (86400 * 30));
+            setcookie ("password",$_POST["password"], time() + (86400 * 30));
+            setcookie ("username",$_POST["username"], time() + (86400 * 30));
+            setcookie("role_id", 3, time() + (86400 * 30));
             register($userName, $hash, $email, $dateOfBirth,3 );
             header("Location:/");
         }

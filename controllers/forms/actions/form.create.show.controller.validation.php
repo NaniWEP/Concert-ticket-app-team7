@@ -2,8 +2,6 @@
 require 'models/form.create.show.model.php';
 require 'models/seller.model.php';
 require 'models/detail.model.php';
-
-
 // ========================================================================================= //
 
 $titleError ="";
@@ -36,20 +34,12 @@ $dateTimeId = "";
 $venueId = "";
 $image = "";
 $image_tmp_name = "";
-$image_folder = "";
+$imageFolder = "";
 $countFormvalid =0;
-
+$Todaydate = date('Y-m-d');
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST')
-{
-        if(isset($_POST['upload']))
-        {
-            $image = $_FILES['image']['name'];
-            $image_tmp_name=$_FILES['image']['tmp_name'];
-            $image_folder='assets/movies/'. $image;
-            move_uploaded_file($image_tmp_name, $image_folder);
-        }
-               
+{  
         // validation title
         if(empty($_POST["title"])){
             $titleError = "Please enter an username";
@@ -139,9 +129,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         // validation date
         if (empty($_POST["date"]))
         {
-            $dateError = "Please enter trailer";
+            $dateError = "Please enter date";
             $colorErrorName  = true;
             $formValid = false;
+        }
+        elseif( $_POST["date"]<$Todaydate){
+            $dateError = "Date must be today and future";
+            $colorErrorName  = true;
+            $formValid = false;
+            
         }
         else
         {
@@ -187,8 +183,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
         {
             $image = $_FILES['image']['name'];
             $image_tmp_name=$_FILES['image']['tmp_name'];
-            $image_folder='assets/movies/'. $image;
-            move_uploaded_file($image_tmp_name, $image_folder);
+            $imageFolder='assets/shows/'. $image;
+            move_uploaded_file($image_tmp_name, $imageFolder);
             if(!isset($_GET['action'])){
                 if($formValid){
                     $user_email = $_COOKIE['email'] ;
@@ -212,8 +208,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
                 }
                 if($formValid)
                 {
-
-                    // $allDataVenues = getDataVenue();
                     $venueId = $_POST['name-venue'];
                     $countFormvalid +=1;
                 }

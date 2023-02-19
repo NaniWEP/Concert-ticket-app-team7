@@ -1,4 +1,4 @@
-            <footer class="p-4  sm:p-6 bg-[#202124] w-full mt-20">
+            <footer class="p-4  sm:p-6 bg-[#202124] w-full ">
                 <div class="md:flex md:justify-between">
                     
                     <div class="mb-6 md:mb-0">
@@ -85,5 +85,6 @@
         </div>
         <script src = 'views/js/dialog.js' ></script> 
         <script src = 'views/js/banner.js' ></script>   
+        <script src = 'views/js/show.password.js' ></script>   
     </body>
 </html>

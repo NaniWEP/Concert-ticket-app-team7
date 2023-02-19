@@ -1,6 +1,13 @@
   <?php 
     require 'views/partials/head.php' ;
-    require 'views/partials/nav.php'  ?>
+    require 'views/partials/nav.php';
+    $type='Lists All';
+   
+
+    if(isset($_GET['category'])){
+      $type= $_GET['category'];
+    }
+    ?>
   
         <!-- slide sho -->
      
@@ -19,7 +26,7 @@
             <section class="overflow-hidden max-w-full text-gray-700 ">
               
                 <div class="container px-5 py-2  lg:pt-12 lg:px-10">
-                 <h2 class='text-white text-2xl '>Movie</h2>
+                 <h2 class='text-white text-2xl '><?php echo $type ;?></h2>
                     <?php require 'views/partials/cards.php';?>
                 </div>
             </section>

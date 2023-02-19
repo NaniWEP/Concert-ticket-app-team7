@@ -8,8 +8,15 @@ $routes = [
     '/detail' => 'views/detail/detail.view.php',
     '/show' => 'controllers/forms/actions/form.create.show.controller.php',
     '/seller' => 'controllers/sellers/seller.controller.php',
+    '/purchase' => 'controllers/purchases/purchase.controller.php',
     '/edit' =>'controllers/forms/actions/form.edit.show.controller.php',
     '/ticket' =>'views/tickets/ticket.view.php',
+    '/seat' => 'controllers/seats/seat.controller.php',
+    // '/adminLogin' => 'controllers/forms/login.admin/form.admin.login.controller.php',
+    '/admin' => 'views/admin/admin.view.php',
+    '/adduser' => 'controllers/admin/admin.adduser.controller.php',
+
+
 ];
 
 if (array_key_exists($uri, $routes)) {
