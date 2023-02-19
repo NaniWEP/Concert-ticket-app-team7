@@ -82,32 +82,32 @@ require 'views/partials/nav.php' ;
               </div>
             </div>
             <div class="grid gap-x-8 gap-y-4 grid-cols-3 p-4">
-              <a href="" class = "flex justify-center items-center">
+              <a href="/seat" class = "flex justify-center items-center">
                 <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
                   09:45
                 </div>
               </a>
-              <a href="" class = "flex justify-center items-center">
+              <a href="/seat" class = "flex justify-center items-center">
                 <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
                   13:00
                 </div>
               </a>
-              <a href="" class = "flex justify-center items-center">
+              <a href="/seat" class = "flex justify-center items-center">
                 <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
                   14:45
                 </div>
               </a>
-              <a href="" class = "flex justify-center items-center">
+              <a href="/seat" class = "flex justify-center items-center">
                 <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
                   15:15
                 </div>
               </a>
-              <a href="" class = "flex justify-center items-center">
+              <a href="/seat" class = "flex justify-center items-center">
                 <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
                   16:15
                 </div>
               </a>
-              <a href="" class = "flex justify-center items-center">
+              <a href="/seat" class = "flex justify-center items-center">
                 <div  class=" border-t-[2px] border-[#B60505] flex sm:inline-flex justify-center items-center bg-black  hover:text-black hover:bg-white  text-white font-semibold text-center rounded-md outline-none transition duration-100 px-5 py-2">
                   18:45
                 </div>

@@ -80,7 +80,7 @@ require "views/partials/head.php";
                 </div>
                 <div class="button p-3 ml-5 mr-5 flex justify-center ">
                     <button class="flex mr-auto text-white bg-gray-300 border-0 py-2 px-6 focus:outline-none hover:bg-gray-400 rounded"><a href="" class="text-black">Back</a></button>
-                    <button class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"><a href="">Checkout</a></button>
+                    <button class="flex ml-auto text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded"><a href="/purchase">Checkout</a></button>
                 </div>
             </div>
         </div>
