@@ -1,14 +1,16 @@
 <?php
-  require 'views/partials/head.php';
-  require 'controllers/forms/login/form.login.controller.validation.php';
+require 'controllers/forms/login/form.login.controller.validation.php';
 ?>
- <div class="flex w-full pl-6 pt-6">
-        <a href="/" class="text-white " >
-            <button class="w-full px-4 py-2  tracking-wide text-white font-sans transition-colors duration-200 transform bg-[#B60505] rounded-md hover:bg-[#B60505] focus:outline-none focus:bg-[#B60505]">
-                BACK
-            </button>
-        </a>
-    </div>
+<script src="https://cdn.tailwindcss.com"></script>
+<body class=" font-sans max-w-full bg-[url('assets/bg-login.png')] bg-contain ">
+<div class=" flex flex-col items-center justify-center w-full m-0">
+<div class="flex w-full pl-6 pt-6">
+    <a href="/" class="text-white " >
+        <button class="w-full px-4 py-2  tracking-wide text-white font-sans transition-colors duration-200 transform bg-[#B60505] rounded-md hover:bg-[#B60505] focus:outline-none focus:bg-[#B60505]">
+            BACK
+        </button>
+    </a>
+</div>
 <div class="flex items-center min-h-screen ">
     <div class="flex-1 h-full max-w-4xl mx-auto bg-white rounded-lg shadow-2xl backdrop-invert-0">
         <div class="flex flex-col md:flex-row border border-black">
@@ -37,7 +39,6 @@
                             <div class="flex mt-2">
                                 <input type="checkbox" onclick=" myFunctionInputPassword()"> <br>
                                 <p class="text-xs mt-1 ml-1"> Show password</p>
-
                             </div>
                             <small class="text-[#B60505]"> <?php echo $passwordError; ?></small>
                         </div>
@@ -53,7 +54,7 @@
                     </form>
                     <p class="mt-8 text-xs font-light text-center text-gray-700"> Don't have an account? 
                         <a href="/register" class="font-medium text-[#B60505] hover:underline">Sign up</a>
-                     </p>
+                    </p>
                 </div>
             </div>
         </div>

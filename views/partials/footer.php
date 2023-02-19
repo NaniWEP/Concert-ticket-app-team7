@@ -31,23 +31,18 @@
                             </div>
                         </div>
                     </div>
-                                 <!-- <i class="fa fa-google mt-1 text-white hover:text-[#B60505]" aria-hidden="true" ></i>
-                                <i class="fa fa-youtube-play mt-1 text-white hover:text-[#B60505]" aria-hidden="true" ></i>
-                                <i class="fa fa-facebook mt-1 text-white hover:text-[#B60505]" aria-hidden="true" ></i>
-                                <i class="fa fa-twitter w-full mt-1 text-white hover:text-[#B60505]" aria-hidden="true" ></i> -->
-                            
                     <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                         <div>
                             <h2 class="mb-6 text-lg font-semibold  uppercase text-red-500 font-sans">About Us</h2>
                             <ul class="text-gray-600 dark:text-gray-400">
                                 <li class="mb-4">
-                                    <a href="https://flowbite.com/" class="hover:underline hover:text-red-800 text-white font-sans"> Who We Are</a>
+                                    <a href="#" class="hover:underline hover:text-red-800 text-white font-sans"> Who We Are</a>
                                 </li>
                                 <li class="mb-4">
-                                    <a href="https://tailwindcss.com/" class="hover:underline hover:text-red-800 text-white font-sans">Ticketmaster Blog </a>
+                                    <a href="#" class="hover:underline hover:text-red-800 text-white font-sans">Ticketmaster Blog </a>
                                 </li>
                                 <li class="mb-4">
-                                    <a href="https://tailwindcss.com/" class="hover:underline hover:text-red-800 text-white font-sans">Ticketmaster Blog </a>
+                                    <a href="#" class="hover:underline hover:text-red-800 text-white font-sans">TCinemas</a>
                                 </li>
                             </ul>
                         </div>
@@ -55,13 +50,13 @@
                             <h2 class="mb-6 text-lg font-semibold  uppercase text-red-500 font-sans ">Our Network</h2>
                             <ul class="text-gray-600 dark:text-gray-400">
                                 <li class="mb-4">
-                                    <a href="https://github.com/themesberg/flowbite" class="hover:underline hover:text-red-800 text-white font-sans">Live Natio</a>
+                                    <a href="#" class="hover:underline hover:text-red-800 text-white font-sans">Live Natio</a>
                                 </li>
                                 <li class="mb-4">
-                                    <a href="https://discord.gg/4eeurUVvTy" class="hover:underline hover:text-red-800 text-white font-sans">House of Blues</a>
+                                    <a href="#" class="hover:underline hover:text-red-800 text-white font-sans">House of Blues</a>
                                 </li>
                                 <li>
-                                    <a href="https://discord.gg/4eeurUVvTy" class="hover:underline hover:text-red-800 text-white font-sans">House of Blues</a>
+                                    <a href="#" class="hover:underline hover:text-red-800 text-white font-sans">New & Activity</a>
                                 </li>
                             </ul>
                         </div>
@@ -75,7 +70,7 @@
                                     <a href="#" class="hover:underline text-white hover:text-red-800 font-sans">AWS/Allianz</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="hover:underline text-white hover:text-red-800 font-sans">AWS/Allianz</a>
+                                    <a href="#" class="hover:underline text-white hover:text-red-800 font-sans">Now Showing</a>
                                 </li>
                             </ul>
                         </div>

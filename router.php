@@ -6,6 +6,11 @@ $routes = [
     '/register' => 'controllers/forms/register/form.register.controller.php',
     '/login' => 'controllers/forms/login/form.login.controller.php',
     '/detail' => 'controllers/details/detail.controller.php',
+    '/show' => 'controllers/forms/actions/form.create.show.controller.php',
+    '/seller' => 'controllers/sellers/seller.controller.php',
+    '/edit' =>'controllers/forms/actions/form.edit.show.controller.php',
+    '/admin' => 'views/admin/admin.view.php',
+    '/adduser' => 'controllers/admin/admin.adduser.controller.php',
 
 ];
 

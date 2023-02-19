@@ -1,8 +1,10 @@
 
-<?php  
-    require 'views/partials/head.php';
+<?php   
     require 'controllers/forms/register/form.register.controller.validate.php';
 ?>
+<script src="https://cdn.tailwindcss.com"></script>
+<body class=" font-sans max-w-full bg-[url('assets/bg-login.png')] bg-contain ">
+<div class=" flex flex-col items-center justify-center w-full m-0">
 <div class="flex w-full pl-6 pt-6">
     <a href="/" class="text-white " >
         <button class="w-full px-4 py-2  tracking-wide text-white font-sans transition-colors duration-200 transform bg-[#B60505] rounded-md hover:bg-[#B60505] focus:outline-none focus:bg-[#B60505]">
@@ -41,14 +43,20 @@
             <label for="password" class="block font-sans ">Password</label>
             <input type="password" placeholder="password" name='password' id="myInputPassword"  value='<?php echo isset($_POST['password']) ? $_POST['password'] : ''; ?>'
             class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 <?php if ($colorErrorPassword){ echo "border-[#B60505]";} ?>">
-            <input type="checkbox" onclick=" myFunctionInputPassword()"> Show password <br>
+            <div class="flex mt-2">
+                 <input type="checkbox" onclick=" myFunctionInputPassword()"> <br>
+                 <p class="text-xs mt-1 ml-1"> Show password</p>   
+            </div>  
             <small class="text-[#B60505]"> <?php echo $passwordError; ?></small>
         </div>
         <div class="mt-4">
             <label for="password" class="block font-sans ">Comfirm password</label>
             <input type="password" placeholder="comfirm password" name='comfirmPassword' id="myInputComfirmPassword"  value='<?php echo isset($_POST['comfirmPassword']) ? $_POST['comfirmPassword'] : ''; ?>'
             class="block w-full px-4 py-2 mt-2 text-gray-700 bg-white border rounded-md focus:border-black focus:ring-red-300 focus:outline-none focus:ring focus:ring-opacity-40 <?php if ($colorErrorComfirm){ echo "border-[#B60505]";} ?>"> 
-            <input type="checkbox" onclick="myFunctionInputComfirmPassword()"> Show comfirm password <br>         
+            <div class="flex mt-2">
+                <input type="checkbox" onclick="myFunctionInputComfirmPassword()"> <br>   
+                <p class="text-xs mt-1 ml-1"> Show comfirm password</p>   
+            </div>   
             <small class="text-[#B60505]"> <?php echo $comfirmPasswordError; ?></small>
         </div>
         <div class="mt-6">
