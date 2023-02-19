@@ -12,6 +12,7 @@ $routes = [
     '/edit' =>'controllers/forms/actions/form.edit.show.controller.php',
     // '/adminLogin' => 'controllers/forms/login.admin/form.admin.login.controller.php',
     '/admin' => 'views/admin/admin.view.php',
+    '/seat' => 'views/seats/seat.view.php',
     '/adduser' => 'controllers/admin/admin.adduser.controller.php',
 
 
