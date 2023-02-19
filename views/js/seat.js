@@ -33,10 +33,8 @@ letter.forEach(seat => {
         {
             count += 1
             total_seat += seatList[key] + ' ';
-            totalPrice.textContent = seatPrice * count            
         };
-        console.log (total_seat);
-        console.log (count);
+        totalPrice.textContent = seatPrice * count            
         totalSeat.textContent = total_seat;
     })
 });

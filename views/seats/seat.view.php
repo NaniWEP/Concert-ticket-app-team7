@@ -1,10 +1,10 @@
 <?php
 require "views/partials/head.php";
-// require "models/partials/head.php";
+
 ?>
-<div id="seat-information" class="text-white w-full mt-[40px] ">
-    <div class="movie-container width-full text-white flex p-5">
-        <div class="container flex flex-1 flex-col gap-2.5 width-full  p-4 ">
+<div id="seat-information" class="text-white w-[100%] mt-[40px] ">
+    <div class="movie-container max-w-full text-white flex p-5">
+        <div class="container flex flex-1 flex-col gap-5 w-full  p-4 ">
             <h1 class="text-[28px] text-center font-bold">SELECT YOUR SEAT</h1>
             <div class="w-full">
                 <div class="flex flex-col justify-center items-center bg-gray-700 bg-opacity-[75%] p-2.5 rounded-[30px]" style="perspective: 1000px;">
