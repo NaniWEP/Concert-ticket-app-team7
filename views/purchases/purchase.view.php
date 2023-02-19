@@ -66,7 +66,7 @@ require "controllers/purchases/purchase.validate.php";
                 ?>
                     <div class="mb-4 flex items-center justify-center gap-5 p-3 rounded-lg hover:bg-zinc-300 hover:rounded-lg">
                     <div class="flex flex-col justify-center items-center p-7">
-                        <h2 class="text-lg text-black-500 font-medium" >8.50 USD</h2>
+                        <h2 class="text-lg text-black-500 font-medium" > 9 USD</h2>
                         <p class="text-black-500 ">Scan to pay</p>
                         <img src="assets/purchases/qr-code1.jpg" alt="" width="180">
                     </div>
@@ -125,7 +125,7 @@ require "controllers/purchases/purchase.validate.php";
                     </div>
                     <a href=""  class="mt-3 w-full">
                         <button id="saveCreditCard" class="w-full px-4 py-2 tracking-wide text-white  font-sans transition-colors duration-200 transform bg-[#B60505] rounded-md hover:bg-[#B60505] focus:outline-none focus:bg-[#B60505]">
-                            <span>Comfirm</span>
+                            <a href="/ticket">Comfirm</a>
                         </button>
                     </a>
                     <?php
@@ -188,7 +188,7 @@ require "controllers/purchases/purchase.validate.php";
                             <small class="flex justify-start w-full font-bold text-black pt-2">(Your Credit Card Will Be Saved.)</small>
                             <a href=""  class="mt-3 w-full">
                                 <button id="saveCreditCard" class="w-full px-4 py-2 tracking-wide text-white  font-sans transition-colors duration-200 transform bg-[#B60505] rounded-md hover:bg-[#B60505] focus:outline-none focus:bg-[#B60505]">
-                                    <span>Comfirm</span>
+                                    <a href="/ticket">Comfirm</a>
                                     <?php 
                                         if (!$formValid){
                                             echo '<script>alert("Something went wrong!")</script>';
