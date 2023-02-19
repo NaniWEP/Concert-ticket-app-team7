@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST')
 {  
         // validation title
         if(empty($_POST["title"])){
-            $titleError = "Please enter an username";
+            $titleError = "Please enter an title of show";
             $colorErrorName  = true;
             $formValid = false;
         }

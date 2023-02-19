@@ -51,8 +51,8 @@ require 'views/partials/nav.php' ;
     </div>
   </div>
 
-  <div class="flex justify-center ">
-    <iframe width="1150" height="500" src="<?php echo $trailer ?>" title="65 - Official Trailer - Only In Cinemas March 17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>              
+  <div class="flex justify-center  ">
+    <iframe width="1050" height="500" src="<?php echo $trailer ?>" title="65 - Official Trailer - Only In Cinemas March 17" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>              
   </div>
 </section>
   <?php

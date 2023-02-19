@@ -68,7 +68,7 @@
     <div class="max-w-screen-xl px-4 py-3 md:px-6 md:-mr-96">
             <ul class="flex flex-row space-x-8 text-sm font-medium ">
                 <li>
-                    <a href="#" class="text-white  hover:underline font-sans" aria-current="page">Home</a>
+                    <a href="/" class="text-white  hover:underline font-sans" aria-current="page">Home</a>
                 </li>
                 <li>
                     <a href="#" class="text-white  hover:underline font-sans">About us</a>
