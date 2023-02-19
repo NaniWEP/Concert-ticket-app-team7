@@ -34,3 +34,4 @@ foreach($showDatas as $showData)
 $date_time = getDatetime($id);
 $type = type($id);
 $venus = getVenuebyId($id);
+
