@@ -9,7 +9,7 @@ $routes = [
     '/show' => 'controllers/forms/actions/form.create.show.controller.php',
     '/seller' => 'controllers/sellers/seller.controller.php',
     '/edit' =>'controllers/forms/actions/form.edit.show.controller.php',
-
+    '/ticket' =>'views/tickets/ticket.view.php',
 ];
 
 if (array_key_exists($uri, $routes)) {
